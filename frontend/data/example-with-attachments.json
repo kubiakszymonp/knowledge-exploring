@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "id": "wawel",
+      "title": "Zamek Królewski na Wawelu",
+      "text": "Wawel to kompleks architektoniczny na wzgórzu nad Wisłą. Był siedzibą królów Polski przez ponad 500 lat.",
+      "tags": ["zamek", "historia", "kraków"],
+      "meta": {
+        "year": 1000,
+        "type": "zamek"
+      },
+      "attachments": [
+        {
+          "id": "wawel_photo_1",
+          "type": "image",
+          "url": "https://example.com/wawel.jpg",
+          "description": "Widok z dziedzińca"
+        },
+        {
+          "id": "wawel_map",
+          "type": "map",
+          "url": "https://example.com/wawel-map.svg",
+          "description": "Plan zamku"
+        }
+      ]
+    },
+    {
+      "id": "katedra_wawelska",
+      "title": "Katedra Wawelska",
+      "text": "Bazylika archikatedralna św. Stanisława i św. Wacława - miejsce koronacji i pochówków polskich królów.",
+      "tags": ["kościół", "historia", "architektura"],
+      "attachments": [
+        {
+          "id": "katedra_photo",
+          "type": "image",
+          "url": "https://example.com/katedra.jpg"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "wawel",
+      "to": "katedra_wawelska",
+      "label": "zawiera"
+    }
+  ]
+}
+
