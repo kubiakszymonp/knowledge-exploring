@@ -1,0 +1,65 @@
+[
+  {
+    "from": "root_brama",
+    "to": "hist_powstanie",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Brama Floriańska mogła zmienić losy całego Krakowa?",
+    "generatedAt": "2025-12-27T16:57:50.108Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_gotyk_renesans",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Bramie Floriańskiej groził zanik? Poznaj jej dramatyczną ewolucję!",
+    "generatedAt": "2025-12-27T16:57:51.566Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_upadek_ocalenie",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Brama Floriańska mogła zniknąć na zawsze? Odkryj dramatyczną prawdę!",
+    "generatedAt": "2025-12-27T16:57:52.748Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_materialy",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Brama Floriańska skrywa sekrety budowlane, które mogą zszokować?",
+    "generatedAt": "2025-12-27T16:57:54.056Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_uklad",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Brama Floriańska skrywa tajemnice obrony, które wstrząsnęły Krakowem?",
+    "generatedAt": "2025-12-27T16:57:55.595Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "mil_straz_barbakan",
+    "style": "shocking",
+    "teaser": "Czy strażnicy Bramy Floriańskiej naprawdę bronili Krakowa przed nieuchronnym upadkiem?",
+    "generatedAt": "2025-12-27T16:57:56.757Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_ceremonie_handel",
+    "style": "shocking",
+    "teaser": "Czy Brama Floriańska naprawdę zmieniała losy miasta? Szokujące odkrycia czekają!",
+    "generatedAt": "2025-12-27T16:57:57.916Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_legendy",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Święty Florian chroni Bramy Królewskiej przed pożarem? Odkryj więcej!",
+    "generatedAt": "2025-12-27T16:57:59.501Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że Brama Floriańska to symbol polskiej tożsamości narodowej?",
+    "generatedAt": "2025-12-27T16:58:00.968Z"
+  }
+]

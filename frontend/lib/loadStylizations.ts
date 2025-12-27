@@ -52,17 +52,16 @@ export async function getNodeStylization(
   return null;
 }
 
-// Pobiera stylizację krawędzi
+// Pobiera stylizację krawędzi (zależy tylko od edgeStyle, nie od articleStyle)
 export async function getEdgeStylization(
   fromId: string,
   toId: string,
-  articleStyle: ArticleStyle,
   edgeStyle: EdgeStyle
 ): Promise<StylizedEdge | null> {
   const edgeKey = `${fromId}__${toId}`;
   try {
     const response = await fetch(
-      `/stylizations/edges/${articleStyle}_${edgeStyle}/${edgeKey}.json`
+      `/stylizations/edges/${edgeStyle}/${edgeKey}.json`
     );
     if (response.ok) {
       return await response.json();
@@ -93,13 +92,12 @@ export async function getNodeStylizations(nodeId: string): Promise<StylizedArtic
 // Pobiera wszystkie stylizacje dla krawędzi
 export async function getEdgeStylizations(
   fromId: string,
-  toId: string,
-  articleStyle: ArticleStyle = "adult"
+  toId: string
 ): Promise<StylizedEdge[]> {
   const stylizations: StylizedEdge[] = [];
 
   for (const edgeStyle of AVAILABLE_EDGE_STYLES) {
-    const stylization = await getEdgeStylization(fromId, toId, articleStyle, edgeStyle);
+    const stylization = await getEdgeStylization(fromId, toId, edgeStyle);
     if (stylization) {
       stylizations.push(stylization);
     }

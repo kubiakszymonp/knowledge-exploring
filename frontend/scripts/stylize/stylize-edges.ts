@@ -112,7 +112,10 @@ Treść: "${toText}"
 
 WYMAGANIA:
 - Zajawka powinna mieć 10-15 słów
-- Zachęć do kliknięcia i przejścia do następnego artykułu
+- Musi naturalnie zachęcać do kliknięcia i przejścia do następnego artykułu
+- Wyobraź sobie że użytkownik ma otwarty artykuł a zajawka jest na dole artykułu, musi naturalnie zachęcać do kliknięcia i rozwinięcia tej docelowej sekcji
+- Zajawka musi stanowić naturalny tytuł i nagłówek sekcji
+- musi mieć sens logiczny i naturalny w kontekście artykułu
 - Użyj stylu: ${style.name}
 - Zwróć JSON: { "teaser": "..." }`;
 
@@ -142,14 +145,13 @@ async function generateForEdgeStyle(
   stylizedArticles: Map<string, StylizedArticle>,
   edgeStyleName: string,
   edgeStyle: Style,
-  articleStyleName: string,
   outputDir: string
 ): Promise<number> {
   const outputPath = path.resolve(
     import.meta.dirname,
     outputDir,
     "edges",
-    `${articleStyleName}_${edgeStyleName}`
+    edgeStyleName
   );
   fs.mkdirSync(outputPath, { recursive: true });
 
@@ -261,7 +263,6 @@ async function main() {
         stylizedArticles,
         edgeStyleName,
         edgeStyles[edgeStyleName],
-        articleStyleName,
         outputDir
       )
     )

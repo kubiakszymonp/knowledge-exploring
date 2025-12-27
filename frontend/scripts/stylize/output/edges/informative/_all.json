@@ -1,0 +1,65 @@
+[
+  {
+    "from": "root_brama",
+    "to": "hist_powstanie",
+    "style": "informative",
+    "teaser": "Poznaj szczegółową genezę i funkcje Bramy Floriańskiej w średniowieczu.",
+    "generatedAt": "2025-12-27T16:57:50.207Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_gotyk_renesans",
+    "style": "informative",
+    "teaser": "Poznaj historię przebudowy Bramy Floriańskiej i jej architektoniczne innowacje.",
+    "generatedAt": "2025-12-27T16:57:51.534Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_upadek_ocalenie",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak zmiany militarno-urbanistyczne wpłynęły na Bramę Floriańską.",
+    "generatedAt": "2025-12-27T16:57:52.740Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_materialy",
+    "style": "informative",
+    "teaser": "Poznaj materiały i techniki budowlane Bramy Floriańskiej w Krakowie.",
+    "generatedAt": "2025-12-27T16:57:54.329Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_uklad",
+    "style": "informative",
+    "teaser": "Odkryj szczegóły architektury i obrony Bramy Floriańskiej!",
+    "generatedAt": "2025-12-27T16:57:55.575Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "mil_straz_barbakan",
+    "style": "informative",
+    "teaser": "Poznaj rolę strażników Bramy Floriańskiej oraz ich znaczenie dla obrony Krakowa.",
+    "generatedAt": "2025-12-27T16:57:56.688Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_ceremonie_handel",
+    "style": "informative",
+    "teaser": "Odkryj, jak Brama Floriańska wpływała na społeczność i gospodarkę Krakowa.",
+    "generatedAt": "2025-12-27T16:57:57.768Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_legendy",
+    "style": "informative",
+    "teaser": "Odkryj rolę Świętego Floriana w symbolice Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T16:57:59.126Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
+    "style": "informative",
+    "teaser": "Odkryj architekturę i symbolikę Bramy Floriańskiej w naszym szczegółowym artykule.",
+    "generatedAt": "2025-12-27T16:58:00.293Z"
+  }
+]

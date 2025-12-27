@@ -41,7 +41,7 @@ interface DiscoveredSection {
 
 interface QuestionOption {
   edge: KnowledgeEdge;
-  stylizedEdge: StylizedEdge | null;
+  stylizedEdge: StylizedEdge;
   targetNode: KnowledgeNode;
 }
 
@@ -66,17 +66,10 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
     [edges]
   );
 
-  // Losuj pytania (z seed bazującym na liczbie odkrytych sekcji)
-  const pickRandomEdges = useCallback(
-    (edgeList: KnowledgeEdge[], count: number = 3, seed: string) => {
-      const seededRandom = (s: string, i: number) => {
-        const hash = s.split("").reduce((a, b) => ((a << 5) - a + b.charCodeAt(0)) | 0, 0);
-        return ((hash + i * 9973) % 10000) / 10000;
-      };
-      const shuffled = [...edgeList].sort(
-        (a, b) => seededRandom(seed + a.to, 0) - seededRandom(seed + b.to, 0)
-      );
-      return shuffled.slice(0, count);
+  // Pobierz pierwsze N krawędzi (stabilna kolejność)
+  const pickEdges = useCallback(
+    (edgeList: KnowledgeEdge[], count: number = 3) => {
+      return edgeList.slice(0, count);
     },
     []
   );
@@ -85,16 +78,13 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
   const loadQuestions = useCallback(
     async (discoveredIds: Set<string>) => {
       const availableEdges = getAllAvailableEdges(discoveredIds);
-      // Seed na podstawie liczby odkrytych - daje różne losowania przy każdym kroku
-      const seed = `step-${discoveredIds.size}`;
-      const selectedEdges = pickRandomEdges(availableEdges, 3, seed);
+      const selectedEdges = pickEdges(availableEdges, 3);
 
-      const questions: QuestionOption[] = await Promise.all(
+      const allQuestions = await Promise.all(
         selectedEdges.map(async (edge) => {
           const stylizedEdge = await getEdgeStylization(
             edge.from,
             edge.to,
-            articleStyle,
             edgeStyle
           );
           const targetNode = nodeMap.get(edge.to)!;
@@ -102,9 +92,13 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
         })
       );
 
+      // Tylko pytania z wczytaną zajawką
+      const questions = allQuestions.filter(
+        (q): q is QuestionOption => q.stylizedEdge !== null
+      );
       setCurrentQuestions(questions);
     },
-    [getAllAvailableEdges, pickRandomEdges, articleStyle, edgeStyle, nodeMap]
+    [getAllAvailableEdges, pickEdges, edgeStyle, nodeMap]
   );
 
   // Inicjalizacja - załaduj root
@@ -272,7 +266,7 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
                                  disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <span className="text-lg text-stone-700 group-hover:text-amber-700 transition-colors">
-                        {q.stylizedEdge?.teaser || `Czym jest ${q.targetNode.title}?`}
+                        {q.stylizedEdge.teaser}
                       </span>
                       {loadingQuestion === q.edge.to && (
                         <span className="ml-2 text-amber-500 animate-pulse">...</span>

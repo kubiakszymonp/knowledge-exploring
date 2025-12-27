@@ -1,0 +1,65 @@
+[
+  {
+    "from": "root_brama",
+    "to": "hist_powstanie",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jakie tajemnice kryje Brama Floriańska? Odkryj jej średniowieczne sekrety!",
+    "generatedAt": "2025-12-27T16:57:50.304Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_gotyk_renesans",
+    "style": "clickbait",
+    "teaser": "Odkryj tajemnice gotyckiej przebudowy Bramy Floriańskiej! Co się zmieniło?",
+    "generatedAt": "2025-12-27T16:57:51.649Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_upadek_ocalenie",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jak zmiany militarne wpłynęły na Bramę Floriańską? Odkryj nieznane fakty!",
+    "generatedAt": "2025-12-27T16:57:53.057Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_materialy",
+    "style": "clickbait",
+    "teaser": "Jakie tajemnice kryją się w materiałach Bramy Floriańskiej? Odkryj teraz!",
+    "generatedAt": "2025-12-27T16:57:54.871Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_uklad",
+    "style": "clickbait",
+    "teaser": "Jak Brama Floriańska chroniła Kraków? Odkryj jej tajemnice obronne!",
+    "generatedAt": "2025-12-27T16:57:56.023Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "mil_straz_barbakan",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, co naprawdę działo się za murami Bramy Floriańskiej?",
+    "generatedAt": "2025-12-27T16:57:57.141Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_ceremonie_handel",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jak Brama Floriańska wpłynęła na losy Krakowa? Odkryj sekrety!",
+    "generatedAt": "2025-12-27T16:57:58.555Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_legendy",
+    "style": "clickbait",
+    "teaser": "Czy święty Florian naprawdę chronił Bramę Floriańską? Odkryj tajemnice jego symboliki!",
+    "generatedAt": "2025-12-27T16:57:59.901Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jak Jan Matejko zmienił Bramę Floriańską na zawsze? Odkryj prawdę!",
+    "generatedAt": "2025-12-27T16:58:01.193Z"
+  }
+]

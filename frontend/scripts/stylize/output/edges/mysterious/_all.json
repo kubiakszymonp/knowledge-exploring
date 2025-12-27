@@ -1,0 +1,65 @@
+[
+  {
+    "from": "root_brama",
+    "to": "hist_powstanie",
+    "style": "mysterious",
+    "teaser": "Co kryje się za murami Bramy Floriańskiej? Odkryj jej sekrety!",
+    "generatedAt": "2025-12-27T16:57:50.254Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_gotyk_renesans",
+    "style": "mysterious",
+    "teaser": "Jakie sekrety kryje ewolucja Bramy Floriańskiej? Odkryj fascynującą przemianę!",
+    "generatedAt": "2025-12-27T16:57:51.924Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "hist_upadek_ocalenie",
+    "style": "mysterious",
+    "teaser": "Czy Brama Floriańska skrywa jeszcze inne sekrety swojej przemiany?",
+    "generatedAt": "2025-12-27T16:57:53.569Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_materialy",
+    "style": "mysterious",
+    "teaser": "Jakie sekrety skrywa struktura Bramy Floriańskiej? Odkryj jej tajemnice materiałów.",
+    "generatedAt": "2025-12-27T16:57:54.913Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_uklad",
+    "style": "mysterious",
+    "teaser": "Co kryje się w murach Bramy Floriańskiej? Odkryj niezbadane sekrety obronności.",
+    "generatedAt": "2025-12-27T16:57:56.538Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "mil_straz_barbakan",
+    "style": "mysterious",
+    "teaser": "Jakie sekrety kryje Brama Floriańska? Odkryj zapomniane historie jej strażników.",
+    "generatedAt": "2025-12-27T16:57:57.963Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_ceremonie_handel",
+    "style": "mysterious",
+    "teaser": "Jakie sekrety kryje Brama Floriańska w ekonomicznym obliczu Krakowa?",
+    "generatedAt": "2025-12-27T16:57:59.199Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_legendy",
+    "style": "mysterious",
+    "teaser": "Czy święty Florian skrywa tajemnice Bramy Floriańskiej? Odkryj je teraz.",
+    "generatedAt": "2025-12-27T16:58:00.341Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
+    "style": "mysterious",
+    "teaser": "Czy ukryte sekrety Bramy Floriańskiej zmienią Twoje postrzeganie Krakowa?",
+    "generatedAt": "2025-12-27T16:58:01.703Z"
+  }
+]
