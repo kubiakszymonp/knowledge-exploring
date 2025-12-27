@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { StyleSettings } from "@/components/StyleSettings";
-import { SectionImage } from "@/components/SectionImage";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ArticleSection } from "@/components/ArticleSection";
+import { ExplorationQuestions } from "@/components/ExplorationQuestions";
 import {
   getNodeStylization,
   getEdgeStylization,
@@ -13,7 +13,6 @@ import {
   ArticleStyle,
   EdgeStyle,
 } from "@/lib/loadStylizations";
-import { ChevronDown } from "lucide-react";
 
 interface KnowledgeNode {
   id: string;
@@ -222,6 +221,12 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
   // Czy odkryliśmy wszystkie węzły?
   const allDiscovered = discoveredSections.length === nodes.length;
 
+  // Prepare questions for ExplorationQuestions component
+  const preparedQuestions = currentQuestions.map(q => ({
+    id: q.edge.to,
+    teaser: q.stylizedEdge.teaser,
+  }));
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/30 to-stone-100 flex flex-col">
       {/* Główna treść - ciągły artykuł */}
@@ -232,38 +237,11 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
           </div>
         ) : (
           <article className="space-y-0">
-            {/* Zdjęcie główne */}
-            {imageUrl && (
-              <div className="relative aspect-[21/9] rounded-xl overflow-hidden mb-8 shadow-lg">
-                <Image
-                  src={imageUrl}
-                  alt={rootNode?.title || ""}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            )}
-
-            {/* Główny tytuł */}
-            <header className="mb-8">
-              <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 leading-tight">
-                {discoveredSections[0]?.article?.title || rootNode?.title}
-              </h1>
-              {rootNode?.tags && rootNode.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {rootNode.tags.map((tag) => (
-                    <Badge 
-                      key={tag} 
-                      variant="outline"
-                      className="border-amber-300 text-amber-700 bg-amber-50"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </header>
+            {/* Hero with image and title */}
+            <ArticleHero
+              imageUrl={imageUrl}
+              title={discoveredSections[0]?.article?.title || rootNode?.title || ""}
+            />
 
             {/* Odkryte sekcje - ciągły artykuł */}
             <div className="prose prose-stone prose-lg max-w-none">
@@ -271,79 +249,31 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
                 const text = section.article?.text || section.node.text;
                 const isFirst = index === 0;
                 const imageAttachment = section.node.attachments?.find(a => a.type === "image");
-                const imageUrl = imageAttachment?.url && !imageAttachment.url.includes("example.com") 
+                const sectionImageUrl = imageAttachment?.url && !imageAttachment.url.includes("example.com") 
                   ? imageAttachment.url 
-                  : null;
+                  : undefined;
                 
                 return (
-                  <section
+                  <ArticleSection
                     key={section.nodeId}
-                    id={`section-${section.nodeId}`}
-                    className={`${!isFirst ? "pt-6" : ""} animate-in fade-in slide-in-from-bottom-4 duration-500`}
-                  >
-                    {/* Podtytuł dla sekcji (nie dla root) */}
-                    {!isFirst && (
-                      <h2 className="text-2xl font-serif font-semibold text-stone-700 mb-4 flex items-center gap-2">
-                        <span className="w-8 h-px bg-amber-400" />
-                        {section.article?.title || section.node.title}
-                      </h2>
-                    )}
-                    
-                    {/* Obraz sekcji (jeśli istnieje i nie jest pierwszą sekcją) */}
-                    {!isFirst && imageUrl && (
-                      <SectionImage
-                        url={imageUrl}
-                        description={imageAttachment?.description}
-                        position={index % 2 === 0 ? "right" : "left"}
-                      />
-                    )}
-                    
-                    {/* Treść sekcji */}
-                    {text.split("\n\n").map((paragraph, i) => (
-                      <p 
-                        key={i} 
-                        className="text-stone-700 leading-relaxed mb-4 text-lg"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
-                  </section>
+                    nodeId={section.nodeId}
+                    title={section.article?.title || section.node.title}
+                    text={text}
+                    imageUrl={sectionImageUrl}
+                    imageDescription={imageAttachment?.description}
+                    isFirst={isFirst}
+                    index={index}
+                  />
                 );
               })}
             </div>
 
             {/* Pytania - "baton" do dalszej eksploracji */}
-            {currentQuestions.length > 0 && (
-              <div className="mt-12 pt-8 border-t border-stone-200">
-                <div className="flex items-center gap-2 mb-6">
-                  <ChevronDown className="w-5 h-5 text-amber-500" />
-                  <span className="text-sm font-medium text-stone-500 uppercase tracking-wide">
-                    Czytaj dalej
-                  </span>
-                </div>
-
-                <div className="space-y-3">
-                  {currentQuestions.map((q) => (
-                    <button
-                      key={q.edge.to}
-                      onClick={() => discoverSection(q.edge.to)}
-                      disabled={loadingQuestion !== null}
-                      className="w-full text-left p-4 rounded-lg bg-white border border-stone-200 
-                                 hover:border-amber-400 hover:bg-amber-50/50 
-                                 transition-all duration-200 group
-                                 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <span className="text-lg text-stone-700 group-hover:text-amber-700 transition-colors">
-                        {q.stylizedEdge.teaser}
-                      </span>
-                      {loadingQuestion === q.edge.to && (
-                        <span className="ml-2 text-amber-500 animate-pulse">...</span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
+            <ExplorationQuestions
+              questions={preparedQuestions}
+              onSelectQuestion={discoverSection}
+              loadingQuestionId={loadingQuestion}
+            />
 
             {/* Koniec artykułu - wszystko odkryte */}
             {allDiscovered && (
