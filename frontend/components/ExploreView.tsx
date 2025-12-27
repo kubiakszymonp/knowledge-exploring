@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { StyleSettings } from "@/components/StyleSettings";
+import { SectionImage } from "@/components/SectionImage";
 import {
   getNodeStylization,
   getEdgeStylization,
@@ -215,6 +216,10 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
               {discoveredSections.map((section, index) => {
                 const text = section.article?.text || section.node.text;
                 const isFirst = index === 0;
+                const imageAttachment = section.node.attachments?.find(a => a.type === "image");
+                const imageUrl = imageAttachment?.url && !imageAttachment.url.includes("example.com") 
+                  ? imageAttachment.url 
+                  : null;
                 
                 return (
                   <section
@@ -228,6 +233,15 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
                         <span className="w-8 h-px bg-amber-400" />
                         {section.article?.title || section.node.title}
                       </h2>
+                    )}
+                    
+                    {/* Obraz sekcji (jeśli istnieje i nie jest pierwszą sekcją) */}
+                    {!isFirst && imageUrl && (
+                      <SectionImage
+                        url={imageUrl}
+                        description={imageAttachment?.description}
+                        position={index % 2 === 0 ? "right" : "left"}
+                      />
                     )}
                     
                     {/* Treść sekcji */}
