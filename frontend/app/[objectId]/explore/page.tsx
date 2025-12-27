@@ -23,14 +23,8 @@ export default async function ExplorePage({ params }: PageProps) {
       nodes={nodes}
       edges={edges}
       rootNodeId={rootNode.id}
+      objectId={objectId}
     />
   );
-}
-
-export function generateMetadata() {
-  return {
-    title: "Eksploruj - Knowledge Explorer",
-    description: "Eksploruj wiedzę interaktywnie",
-  };
 }
 

@@ -24,7 +24,7 @@ export function ArticleHero({ imageUrl, title }: ArticleHeroProps) {
       )}
       
       {/* Title below image - black text */}
-      <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 leading-tight">
+      <h1 className="text-2xl sm:text-3xl font-serif font-bold text-stone-800 leading-tight">
         {title}
       </h1>
     </header>

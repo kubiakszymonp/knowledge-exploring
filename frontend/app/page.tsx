@@ -1,41 +1,153 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const MapPreview = dynamic(() => import("@/components/MapPreview").then(mod => mod.MapPreview), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full bg-stone-200 animate-pulse" />
+  ),
+});
+
+const places = [
+  {
+    id: "brama_florianska",
+    name: "Brama Floriańska",
+    image: "https://picsum.photos/seed/brama-tile/600/400",
+    description: "Gotycka brama miejska z XIV wieku",
+  },
+  {
+    id: "sukiennice",
+    name: "Sukiennice",
+    image: "https://picsum.photos/seed/sukiennice/600/400",
+    description: "Renesansowe centrum handlu",
+  },
+  {
+    id: "wawel",
+    name: "Zamek Królewski na Wawelu",
+    image: "https://picsum.photos/seed/wawel-castle/600/400",
+    description: "Siedziba polskich królów",
+  },
+];
+
+const trail = {
+  name: "Droga Królewska",
+  description: "Historyczny trakt koronacyjny królów polskich",
+  stops: [
+    { id: "brama_florianska", name: "Brama Floriańska", image: "https://picsum.photos/seed/trail-1/200/200" },
+    { id: "sukiennice", name: "Sukiennice", image: "https://picsum.photos/seed/trail-2/200/200" },
+    { id: "kosciol_mariacki", name: "Kościół Mariacki", image: "https://picsum.photos/seed/trail-3/200/200" },
+    { id: "wawel", name: "Wawel", image: "https://picsum.photos/seed/trail-4/200/200" },
+  ],
+};
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      {/* Hero */}
-      <header className="flex-1 flex items-center justify-center">
-        <div className="container mx-auto px-6 py-16 text-center max-w-3xl">
-          <Badge variant="secondary" className="mb-4">
-            Proof of Concept
-          </Badge>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-            Knowledge Explorer
-          </h1>
-          <p className="text-lg text-muted-foreground mb-4">
-            Interaktywna eksploracja wiedzy przez graf połączonych faktów.
-          </p>
-          <ul className="text-muted-foreground mb-8 space-y-2">
-            <li>• Wizualizacja grafu wiedzy</li>
-            <li>• Stylizacje treści dla różnych odbiorców</li>
-            <li>• Zajawki na połączeniach ułatwiające nawigację</li>
-          </ul>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/brama_florianska/explore">Eksploruj Bramę Floriańską</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/brama_florianska/graph">Zobacz Graf</Link>
-            </Button>
-          </div>
+    <div className="min-h-screen bg-stone-50">
+      {/* Header */}
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+        <div className="container mx-auto px-6 py-4">
+          <h1 className="text-xl font-semibold text-stone-800">Knowledge Explorer</h1>
         </div>
       </header>
 
+      <main className="container mx-auto px-6 py-12 space-y-16">
+        {/* Hero Section */}
+        <section className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
+            Odkrywaj wiedzę inaczej
+          </h2>
+          <p className="text-stone-600 leading-relaxed">
+            Eksploruj zabytki Krakowa przez interaktywne artykuły. 
+            Wybierz temat, klikaj w pytania i buduj własną ścieżkę odkrywania. 
+            Dostosuj styl tekstu do swoich preferencji — dla dzieci, dorosłych lub z humorem.
+          </p>
+        </section>
+
+        {/* Map Section */}
+        <section>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <div className="h-64 sm:h-80">
+              <MapPreview />
+            </div>
+            <Link
+              href="/map"
+              className="flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-medium py-4 transition-colors"
+            >
+              <span>Eksploruj na mapie</span>
+              <span>→</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* Places Section */}
+        <section>
+          <h2 className="text-2xl font-serif font-bold text-stone-800 mb-6">Miejsca</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {places.map((place) => (
+              <Link
+                key={place.id}
+                href={`/${place.id}/explore`}
+                className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="relative aspect-[3/2]">
+                  <Image
+                    src={place.image}
+                    alt={place.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+                    {place.name}
+                  </h3>
+                  <p className="text-sm text-stone-500 mt-1">{place.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Trail Section */}
+        <section>
+          <h2 className="text-2xl font-serif font-bold text-stone-800 mb-2">{trail.name}</h2>
+          <p className="text-stone-500 mb-6">{trail.description}</p>
+          
+          <div className="relative">
+            {/* Line connecting stops */}
+            <div className="absolute top-8 left-8 right-8 h-0.5 bg-amber-200 hidden sm:block" />
+            
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {trail.stops.map((stop, i) => (
+                <Link
+                  key={stop.id}
+                  href={`/${stop.id}/explore`}
+                  className="group relative flex flex-col items-center text-center"
+                >
+                  <div className="relative z-10 w-16 h-16 rounded-full overflow-hidden ring-4 ring-amber-100 group-hover:ring-amber-400 transition-all shadow-md">
+                    <Image
+                      src={stop.image}
+                      alt={stop.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <span className="mt-3 text-sm font-medium text-stone-700 group-hover:text-amber-700 transition-colors">
+                    {i + 1}. {stop.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
       {/* Footer */}
-      <footer className="border-t py-6 text-center text-sm text-muted-foreground">
-        <p>Knowledge Explorer • Proof of Concept</p>
+      <footer className="border-t py-6 text-center text-sm text-stone-400 mt-12">
+        Knowledge Explorer • Demo
       </footer>
     </div>
   );

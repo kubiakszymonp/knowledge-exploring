@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
+import Link from "next/link";
 import { StyleSettings } from "@/components/StyleSettings";
 import { ArticleHero } from "@/components/ArticleHero";
 import { ArticleSection } from "@/components/ArticleSection";
 import { ExplorationQuestions } from "@/components/ExplorationQuestions";
+import { Button } from "@/components/ui/button";
 import {
   getNodeStylization,
   getEdgeStylization,
@@ -31,6 +33,7 @@ interface ExploreViewProps {
   nodes: KnowledgeNode[];
   edges: KnowledgeEdge[];
   rootNodeId: string;
+  objectId: string;
 }
 
 interface DiscoveredSection {
@@ -45,7 +48,7 @@ interface QuestionOption {
   targetNode: KnowledgeNode;
 }
 
-export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
+export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewProps) {
   // Ładowanie stylów z localStorage (tylko przy mount)
   const [articleStyle, setArticleStyle] = useState<ArticleStyle>(() => {
     if (typeof window !== "undefined") {
@@ -283,6 +286,15 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
                 </p>
               </div>
             )}
+
+            {/* Button to view graph */}
+            <div className="mt-12 pt-8 border-t border-stone-200 flex justify-center">
+              <Button asChild variant="outline" size="lg">
+                <Link href={`/${objectId}/graph`}>
+                  Zobacz graf wiedzy
+                </Link>
+              </Button>
+            </div>
           </article>
         )}
       </main>
