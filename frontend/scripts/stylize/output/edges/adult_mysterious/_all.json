@@ -1,135 +1,65 @@
 [
   {
     "from": "root_brama",
-    "to": "sec_historia",
+    "to": "hist_powstanie",
     "style": "mysterious",
-    "teaser": "Co skrywa historia Bramy Floriańskiej? Odkryj jej sekrety i tajemnice.",
-    "generatedAt": "2025-12-27T11:05:08.832Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_1_powstanie",
-    "style": "mysterious",
-    "teaser": "Czy wiesz, jak Brama Floriańska strzegła sekretów średniowiecznego Krakowa?",
-    "generatedAt": "2025-12-27T11:05:10.765Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_2_gotycka",
-    "style": "mysterious",
-    "teaser": "Jakie tajemnice kryje gotycka przebudowa Bramy Floriańskiej? Odkryj je teraz!",
-    "generatedAt": "2025-12-27T11:05:12.494Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_3_renesans",
-    "style": "mysterious",
-    "teaser": "Co skrywa renesansowy blask Bramy Floriańskiej? Odkryj jej tajemnice.",
-    "generatedAt": "2025-12-27T11:05:13.877Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_4_upadek",
-    "style": "mysterious",
-    "teaser": "Czy mur ma swoje tajemnice? Odkryj, jak historia zmieniła jego los.",
-    "generatedAt": "2025-12-27T11:05:15.493Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_5_ocalenie",
-    "style": "mysterious",
-    "teaser": "Jakie sekrety skrywa historia ocalenia Bramy Floriańskiej? Przekonaj się sam!",
-    "generatedAt": "2025-12-27T11:05:17.356Z"
+    "teaser": "Co kryje się za murami Bramy Floriańskiej? Odkryj jej tajemnice średniowiecza.",
+    "generatedAt": "2025-12-27T11:41:53.431Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_architektura",
+    "to": "hist_gotyk_renesans",
     "style": "mysterious",
-    "teaser": "Jakie sekrety kryje architektura Bramy Floriańskiej? Odkryj je teraz.",
-    "generatedAt": "2025-12-27T11:05:18.631Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_1_material",
-    "style": "mysterious",
-    "teaser": "Czy wiesz, co skrywa wnętrze Bramy Floriańskiej? Odkryj jej sekrety!",
-    "generatedAt": "2025-12-27T11:05:19.969Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_2_uklad",
-    "style": "mysterious",
-    "teaser": "Co kryje się za murami? Odkryj sekrety układu Bramy Floriańskiej.",
-    "generatedAt": "2025-12-27T11:05:21.608Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_3_dekoracje",
-    "style": "mysterious",
-    "teaser": "Czy znasz tajemnice ukryte w dekoracjach Bramy Floriańskiej?",
-    "generatedAt": "2025-12-27T11:05:23.144Z"
+    "teaser": "Jakie tajemnice skrywa architektoniczna ewolucja Bramy Floriańskiej? Przekonaj się sam!",
+    "generatedAt": "2025-12-27T11:41:54.693Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_militaria",
+    "to": "hist_upadek_ocalenie",
     "style": "mysterious",
-    "teaser": "Jakie sekrety kryje militarna funkcja Bramy Floriańskiej? Odkryj je teraz.",
-    "generatedAt": "2025-12-27T11:05:24.584Z"
-  },
-  {
-    "from": "sec_militaria",
-    "to": "mil_1_straz",
-    "style": "mysterious",
-    "teaser": "Jakie sekrety kryje codzienna obrona Bramy Floriańskiej? Odkryj je teraz!",
-    "generatedAt": "2025-12-27T11:05:26.015Z"
-  },
-  {
-    "from": "sec_militaria",
-    "to": "mil_2_barbakan",
-    "style": "mysterious",
-    "teaser": "Czy tajemnica Barbakanów kryje w sobie więcej niż myślisz?",
-    "generatedAt": "2025-12-27T11:05:27.143Z"
+    "teaser": "Czy Brama Floriańska kryje więcej tajemnic, niż możesz sobie wyobrazić?",
+    "generatedAt": "2025-12-27T11:41:55.850Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_kultura",
+    "to": "arch_materialy",
     "style": "mysterious",
-    "teaser": "Czy wiesz, jakie sekrety kryje kulturowa dusza Bramy Floriańskiej?",
-    "generatedAt": "2025-12-27T11:05:28.518Z"
+    "teaser": "Jakie sekrety skrywa struktura Bramy Floriańskiej? Odkryj je tutaj.",
+    "generatedAt": "2025-12-27T11:41:57.465Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "cult_1_krolewska",
+    "from": "root_brama",
+    "to": "arch_uklad",
     "style": "mysterious",
-    "teaser": "Co kryje się za bramą, która otwiera wrota królewskich ceremonii?",
-    "generatedAt": "2025-12-27T11:05:30.210Z"
+    "teaser": "Co skrywa się w murach Bramy Floriańskiej? Odkryj tajemnice obronnej architektury!",
+    "generatedAt": "2025-12-27T11:41:59.196Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "cult_2_rzemioslo",
+    "from": "root_brama",
+    "to": "mil_straz_barbakan",
     "style": "mysterious",
-    "teaser": "Jakie sekrety handlu kryje Brama Floriańska? Odkryj ich tajemniczy świat.",
-    "generatedAt": "2025-12-27T11:05:31.849Z"
+    "teaser": "Kim byli strażnicy Bramy Floriańskiej? Odkryj ich tajemnice w obronie Krakowa.",
+    "generatedAt": "2025-12-27T11:42:00.498Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "legend_1_florian",
+    "from": "root_brama",
+    "to": "cult_ceremonie_handel",
     "style": "mysterious",
-    "teaser": "Czy wiesz, kto naprawdę strzeże Bramy Floriańskiej przed ogniem i złem?",
-    "generatedAt": "2025-12-27T11:05:34.306Z"
+    "teaser": "Jakie sekrety handlowe kryje Brama Floriańska? Odkryj ich tajemnice teraz!",
+    "generatedAt": "2025-12-27T11:42:01.780Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "curio_1_wysokosc",
+    "from": "root_brama",
+    "to": "cult_legendy",
     "style": "mysterious",
-    "teaser": "Jak wysoka jest moc Bramy Floriańskiej? Odkryj jej tajemnice konstrukcyjne!",
-    "generatedAt": "2025-12-27T11:05:35.638Z"
+    "teaser": "Czy święty Florian naprawdę strzeże bramy? Odkryj ukryte tajemnice jego symboliki!",
+    "generatedAt": "2025-12-27T11:42:03.908Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "curio_2_matejko",
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
     "style": "mysterious",
-    "teaser": "Jaką tajemnicę skrywa Brama Floriańska w dziełach Jana Matejki?",
-    "generatedAt": "2025-12-27T11:05:37.687Z"
+    "teaser": "Jakie sekrety skrywa architektoniczna potęga Bramy Floriańskiej?",
+    "generatedAt": "2025-12-27T11:42:05.135Z"
   }
 ]

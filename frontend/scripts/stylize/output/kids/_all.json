@@ -2,141 +2,71 @@
   {
     "nodeId": "root_brama",
     "style": "kids",
-    "title": "Brama Floriańska – Wielka Brama Krakowa",
-    "text": "Stoisz obok Bramy Floriańskiej. To najważniejsza zachowana brama miejska Krakowa. Jest częścią średniowiecznego systemu fortyfikacji. Przez ponad 700 lat pełniła funkcję militarnego wejścia do miasta. Była punktem kontroli handlu oraz ceremonialnym początkiem Drogi Królewskiej. Jej architektura, symbolika i historia tworzą wielowarstwową opowieść o obronności, prestiżu i ciągłości miejskiej tradycji.",
-    "generatedAt": "2025-12-24T14:12:01.028Z"
+    "title": "Brama Floriańska – Magiczne Wrota do Krakowa",
+    "text": "Brama Floriańska to bardzo ważne wrota w Krakowie. To jedno z najstarszych wejść do miasta, które przetrwało przez ponad 700 lat! Dawniej pełniło wiele ról. Było to miejsce, przez które wchodzili żołnierze, a także handlarze z towarami. Wyobrażacie sobie, jak przez te bramy przechodziły tłumy ludzi, dźwigających różne skarby? \n\nBrama jest nie tylko piękna, ale też bardzo ciekawa! Jej murki i dekoracje mówią nam o dawnych czasach, kiedy miasto musiało być bronić się przed wrogami. Stała się początkiem Drogi Królewskiej – to ścieżka, którą szli królowie i ważni goście. To właśnie przez te wrota zaczynała się ich wielka podróż po mieście! \n\nCzyż to nie fascynujące, że możemy stanąć w miejscu, które ma tak długą historię? Brama Floriańska to nie tylko kawałek historii, ale także magiczne wrota do przygód i opowieści o Krakowie!",
+    "generatedAt": "2025-12-27T11:38:52.621Z"
   },
   {
-    "nodeId": "sec_historia",
+    "nodeId": "hist_powstanie",
     "style": "kids",
-    "title": "Historia Bramy Floriańskiej dla dzieci",
-    "text": "Patrzysz na Bramę Floriańską. To część Krakowa i jego długiej historii. Najpierw powstała w XIII wieku. Później przeszła gotycką przebudowę. Potem rozwijała się w epoce renesansu. Potem Brama zaczęła stopniowo tracić swoją militarną rolę. W XIX wieku Brama została ocalona. Każdy z tych okresów zostawił na niej widoczny ślad.",
-    "generatedAt": "2025-12-24T14:12:27.515Z"
+    "title": "Brama Floriańska – boczna wrota do Krakowa!",
+    "text": "Brama Floriańska to bardzo stara budowla, która powstała już w XIII wieku! Zrobiono ją, gdy Kraków odbudowywał się po ataku Tatarów. Wtedy była częścią ogromnych murów i wielu baszt, które miały chronić miasto. Dzięki nim Kraków był bezpieczny i nowoczesny.\n\nBrama miała dwie ważne role. Po pierwsze, była jak strażnik – kontrolowała, kto wchodzi do miasta. Dzięki temu wiedziano, kto przyjeżdża, a kto wyjeżdża. Po drugie, brama pomagała w handlu. Kupcy zatrzymywali się tutaj, żeby zapłacić cło, czyli taki specjalny podatek. Na początku brama była niska i prosta. Była zbudowana tak, aby bronić północnej części Krakowa!",
+    "generatedAt": "2025-12-27T11:38:57.638Z"
   },
   {
-    "nodeId": "sec_architektura",
+    "nodeId": "hist_gotyk_renesans",
     "style": "kids",
-    "title": "Architektura Bramy Floriańskiej — dla dzieci",
-    "text": "Stoisz obok Bramy Floriańskiej. Teraz opowiem o jej architekturze. Architektura bramy obejmuje następujące rzeczy. Po pierwsze materiały budowlane — z czego jest zrobiona. Po drugie układ przestrzenny — jak brama stoi na miejscu i jak prowadzą do niej drogi. Po trzecie funkcje obronne — jak brama chroni miasto. Po czwarte rozwiązania techniczne — specjalne techniki i sprzęt, które pomagają bramie działać. Po piąte dekoracje dodane przez kolejne epoki — ozdoby, które dodawano w różnych czasach.",
-    "generatedAt": "2025-12-24T14:12:39.591Z"
+    "title": "Ciekawe zmiany Bramy Floriańskiej",
+    "text": "Bramę Floriańską budowano w XIV i XV wieku. Wtedy ją podwyższono, żeby była jeszcze bardziej majestatyczna. Zyskała gotycki wygląd, co oznacza, że ma strzeliste kształty, jak wysokie okna i ostry, szpiczasty dach. Mury są grube i mocne, a brama ma wiele małych otworów, przez które strzelcy mogli bronić miasta. Wygląda naprawdę potężnie! \n\nW Krakowie, gdzie znajduje się ta brama, było w tamtym czasie wiele ważnych wydarzeń. Królowie i różne ważne osoby wjeżdżali przez nią do miasta. Brama była nie tylko zabezpieczeniem, ale także pokazywała, jak ważne jest to miejsce. \n\nW epoce renesansu, czyli później, brama została odnowiona. Zmieniono jej wygląd, dodano ładne ornamenty i poprawiono dach. Usprawniono też miejsce, gdzie mieszkała straż, aby mieli wygodniej. Dzięki tym zmianom brama stała się piękniejsza i dalej chroniła miasto, ale także stała się ważnym symbolem Krakowa. Z daleka widać ją doskonale!",
+    "generatedAt": "2025-12-27T11:39:04.395Z"
   },
   {
-    "nodeId": "sec_militaria",
+    "nodeId": "hist_upadek_ocalenie",
     "style": "kids",
-    "title": "Jak Brama Floriańska broniła Krakowa",
-    "text": "Stoimy przed Bramą Floriańską. To kluczowy punkt obronny miasta. Stacjonowała tu straż. Kontrolowano wjazdy. Współpracowano z Barbakanem. Jej konstrukcja była projektowana tak, aby umożliwić skuteczną obronę w czasie oblężeń.",
-    "generatedAt": "2025-12-24T14:13:10.715Z"
+    "title": "Bramka Floriańska — historia, która przetrwała",
+    "text": "W średniowieczu w największych miastach budowano wysokie mury, żeby chronić je przed atakami. To była taka wielka, mocna osłona! Ale w XVII wieku zaczęły się zmieniać sposoby wojowania. Nowe bronie, jak armaty, sprawiły, że mury już nie były takie skuteczne. Utrzymanie ich było drogie, a niektórzy zaczęli je zaniedbywać. \n\nBrama Floriańska, będąca częścią murów, traciła na znaczeniu. Fosy, które kiedyś były głębokimi rowami z wodą, zaczęto zasypać, a baszty wykorzystywano do przechowywania różnych rzeczy zamiast pełnienia funkcji obronnych. Wszyscy mówili, że te stare mury przeszkadzają w rozwoju miasta. \n\nW latach 1817–1830 złożono nawet plany, żeby zburzyć Bramę Floriańską i wszystkie mury. Ale na szczęście pojawił się Feliks Radwański, który bardzo się zatroszczył o to miejsce. Przekonywał ludzi, że jeśli zburzą bramę, stracą część swojej historii i kultury! \n\nDzięki jego staraniom udało się ocalić Bramę Floriańską. Zaczęto ją odnawiać, żeby była piękna i aby przypominała o dawnych czasach. Dzisiaj brama jest symbolem naszej historii i kultury, a także pamiątką z czasów zaborów, kiedy Polska była podzielona. To ważne miejsce, bo przypomina nam o naszych korzeniach!",
+    "generatedAt": "2025-12-27T11:39:13.529Z"
   },
   {
-    "nodeId": "sec_kultura",
+    "nodeId": "arch_materialy",
     "style": "kids",
-    "title": "Dlaczego Brama Floriańska jest ważna",
-    "text": "Stoisz obok Bramy Floriańskiej. To początek Drogi Królewskiej. Droga Królewska była ważną trasą miasta. Była miejscem ceremonii. Brama była także miejscem ruchu handlowego — ludzie przychodzili i kupowali różne rzeczy. Brama przenosiła symbole i legendy miasta — nosiła ważne znaki i historie. Zobacz, co ta brama opowiada, gdy patrzysz na nią z bliska.",
-    "generatedAt": "2025-12-24T14:13:50.595Z"
+    "title": "Wielka Brama Floriańska",
+    "text": "Brama Floriańska to naprawdę niezwykła budowla! Jej dolna część została zrobiona z lokalnego wapienia. To taki kamień, który łatwo można obrabiać i jest bardzo mocny. W wyższych partiach bramy użyto cegły. Dzięki temu brama nie jest za ciężka. Wyobraź sobie, że grubość murów na dole ma ponad 2 metry! To prawie jak grubość dwóch dorosłych ludzi! \n\nW środku bramy znajdziemy drewniane stropy, które były bardzo ważne. Kiedy brama była remontowana, stropy zostały wzmocnione, żeby było jeszcze bezpieczniej. Wykorzystanie różnych materiałów sprawia, że brama jest stabilna i mocna. To dla nas bardzo ważne, bo brama była kiedyś częścią obrony miasta Krakowa! A teraz możemy ją podziwiać i uczyć się o historii.",
+    "generatedAt": "2025-12-27T11:39:19.448Z"
   },
   {
-    "nodeId": "hist_1_powstanie",
+    "nodeId": "arch_uklad",
     "style": "kids",
-    "title": "Brama Floriańska — jak powstała i do czego służyła (dla dzieci)",
-    "text": "Brama powstała na końcu XIII wieku jako część odbudowy Krakowa po najazdach tatarskich. Razem z murami i ponad 40 basztami tworzyła jeden z najnowocześniejszych systemów obronnych w okolicy. Jej rola była dwie: militarna i administracyjna. Tu pilnowano ruch kupców, pobierano cła (opłaty za towary) i rejestrowano przyjezdnych. Na początku brama była niższa i surowsza. Służyła tylko obronie północnego odcinka miasta.",
-    "generatedAt": "2025-12-24T14:14:24.113Z"
+    "title": "Brama Floriańska – Fascynująca Twierdza",
+    "text": "Witaj przy Bramy Floriańskiej! To naprawdę wspaniałe miejsce. Wyobraź sobie dużą, mocną bramę, która kiedyś chroniła miasto przed wrogami. Ta brama miała ogromne wrota, które były zamykane, a także żelazną kratę. Nad przejazdem znajdowały się pomieszczenia, gdzie strażnicy pilnowali bezpieczeństwa. \n\nW bramie są spiralne schody, które prowadzą na różne piętra. Dzięki nim strażnicy mogli szybko biegać i bronić bramy. W ścianach znajdują się strzelnice, czyli małe otwory, przez które obrońcy mogli strzelać do napastników. Wszystko zostało zaprojektowane tak, żeby wrogowie mieli trudniej się dostać do środka.\n\nNa początku XIX wieku dodano piękny kartusz z orłem białym. Niektórzy mówią, że to miał pomóc bramie wyglądać jeszcze bardziej dostojnie. A na północnej stronie bramy umieszczono rzeźbę św. Floriana. To on strzeże przed pożarami i jest patronem miasta. Patrząc na ten zabytek, można poczuć, jak historia wciąż żyje w tym miejscu!",
+    "generatedAt": "2025-12-27T11:39:26.207Z"
   },
   {
-    "nodeId": "hist_2_gotycka",
+    "nodeId": "mil_straz_barbakan",
     "style": "kids",
-    "title": "Gotycka przebudowa Bramy Floriańskiej – jak brama stała się większa i silniejsza",
-    "text": "Stoisz obok Bramy Floriańskiej i patrzysz na nią. W XIV–XV wieku bramę podwyższono. Nadano jej gotycki charakter. Zrobiono ostrołukowy przejazd (to przejazd z ostrym łukiem). Zrobiono też wąskie strzelnice (małe otwory, przez które strzelano). Mury stały się masywne. Jest wyraźny podział kondygnacji. Z tego okresu pochodzi jej monumentalna forma, widoczna z daleka jako symbol potęgi miasta. Powiększenie bramy wiązało się także z prestiżem. Kraków był wtedy centrum politycznym i gospodarczym, a przez bramę wjeżdżali królowie i ważne delegacje.",
-    "generatedAt": "2025-12-24T14:14:51.384Z"
+    "title": "Brama Floriańska i jej strażnicy",
+    "text": "Dawno, dawno temu, w mieście Kraków, była ważna budowla, nazywana Bramą Floriańską. Ta brama była jak wielka ochrona dla miasta! Strażnicy, którzy tam pracowali, pilnowali, kto wchodzi i wychodzi. Musieli być bardzo czujni. Zbierali też opłaty, które nazywamy cłami, od osób chcących przejść.\n\nNa górze bramy znajdowały się miejsca dla łuczników i kuszników. Ci fajni strzelcy mogli szybko bronić miasta, jeśli ktoś chciał je zaatakować. Brama była ich domem w pracy, ale też mogła stać się miejscem niebezpiecznym, gdy nadciągał wróg.\n\nW XV wieku dodano do Bramy Floriańskiej nowe miejsce, które nazywa się Barbakan. Wyglądał jak mała warownia przed bramą, a za nim było specjalne, zakryte przejście. Dzięki temu, kiedy najeźdźcy starali się wbiec do miasta, musieli najpierw przejść przez długi i wąski korytarz. Taki system sprawiał, że Kraków był bardzo dobrze chroniony. A strażnicy byli gotowi, by bronić swojego miasta! To wszystko sprawiało, że Brama Floriańska była naprawdę wyjątkowa.",
+    "generatedAt": "2025-12-27T11:39:32.736Z"
   },
   {
-    "nodeId": "hist_3_renesans",
+    "nodeId": "cult_ceremonie_handel",
     "style": "kids",
-    "title": "Renesansowe przemiany Bramy Floriańskiej",
-    "text": "Wyobraź sobie, że stoisz obok Bramy Floriańskiej. W czasie renesansu bramę odnowiono. Dodano ładniejsze obramowania. Poprawiono dachy. Wzmocniono ganek obronny. Usprawniono system odprowadzania wody. Straż otrzymała wygodniejsze pomieszczenia. Brama zaczęła łączyć funkcję obrony z funkcją reprezentacyjną. Stała się nie tylko ważnym punktem strategicznym, ale także integralną częścią miejskiego krajobrazu.",
-    "generatedAt": "2025-12-24T14:15:05.274Z"
+    "title": "Brama Floriańska – Słynne Wejście do Miasta",
+    "text": "Wiecie, co to jest Brama Floriańska? To niezwykłe miejsce, przez które dawniej wjeżdżali królowie i ważne osoby w czasie wielkich uroczystości. Kiedy się odbywały, brama wyglądała pięknie, ozdobiona kolorowymi chorągwiami i zielenią. To tak, jakby brama miała na sobie elegancki strój! \n\nBrama Floriańska była jak magiczna brama, która prowadziła do najważniejszej części miasta. Przez nią przejeżdżali także kupcy, którzy chcieli sprzedawać swoje towary, a także wozacy z dalekich miejsc, takich jak Kleparz i Małopolska. Wokół bramy działo się dużo! Było mnóstwo sklepów i warsztatów, w których rzemieślnicy tworzyli różne rzeczy. \n\nCechy rzemieślnicze, czyli grupy ludzi, którzy zajmowali się różnymi zawodami, dbały o to, aby brama i mury były w dobrym stanie. Brama Floriańska była bardzo ważnym miejscem, bo przez nią przechodziły towary i wielu ludzi. Można powiedzieć, że była jak wielki filtr, który pomagał w organizacji handlu w mieście!",
+    "generatedAt": "2025-12-27T11:39:38.994Z"
   },
   {
-    "nodeId": "hist_4_upadek",
+    "nodeId": "cult_legendy",
     "style": "kids",
-    "title": "Dlaczego mury przestały chronić Kraków",
-    "text": "Jesteśmy tu obok Bramy Floriańskiej i widzimy wysokie mury. Od XVII wieku nie pasowały już do nowych czasów wojny. Armaty sprawiały, że mur był mniej skuteczny. Utrzymanie kosztowało coraz więcej pieniędzy. Gdy o mury nie dbano, brama zaczęła tracić znaczenie militarne. Fosy zasypywano. Baszty wykorzystywano jako magazyny. A cała linia murów uznawana była za przeszkodę w rozwoju urbanistycznym.",
-    "generatedAt": "2025-12-24T14:15:33.283Z"
+    "title": "Św. Florian i Brama Floriańska",
+    "text": "Czy wiesz, kto chronił miasto przed pożarami? To św. Florian! Mówi się, że dbał o północną część miasta i o Brama Floriańską. To takie ważne miejsce! Jego obrazek jest znajdziesz na murze bramy. Jest jak stróż, który opiekuje się strażakami i każdym, kto przechodzi przez bramę. \n\nChoć historia św. Floriana nie jest bezpośrednio o budowie bramy, to przez lata ludzie połączyli te dwie rzeczy. Dzięki temu brama zyskała wyjątkowe znaczenie. Stała się nie tylko miejsce do wejścia do miasta, ale także symbolem kultury i historii. Za każdym razem, gdy patrzysz na Brama Floriańską, pamiętaj, że św. Florian jest z nami, dbając o bezpieczeństwo!",
+    "generatedAt": "2025-12-27T11:39:48.726Z"
   },
   {
-    "nodeId": "hist_5_ocalenie",
+    "nodeId": "cult_wysokosc_matejko",
     "style": "kids",
-    "title": "Jak Brama Floriańska została ocalona w XIX wieku",
-    "text": "Stoisz obok Bramy Floriańskiej. W latach 1817–1830 planowano zburzyć całą linię murów i Bramę Floriańską. Wyobraź sobie, że brama mogłaby zniknąć. Jednak Brama Floriańska została uratowana dzięki interwencji Feliksa Radwańskiego. Mówił, że zniszczenie bramy byłoby utratą tożsamości miasta. Wtedy zaczęto ją odnawiać i nadano jej symboliczny charakter. Stała się świadectwem historii i polskiej kultury w okresie zaborów.",
-    "generatedAt": "2025-12-24T14:15:59.412Z"
-  },
-  {
-    "nodeId": "arch_1_material",
-    "style": "kids",
-    "title": "Materiały i konstrukcja Bramy Floriańskiej — dla dzieci",
-    "text": "Stoimy obok Bramy Floriańskiej. Zobacz, dolne części bramy wykonano z lokalnego wapienia. To twardy i łatwy do obróbki kamień. Wyższe kondygnacje zbudowano z cegły, bo cegła jest lżejsza i pomaga utrzymać całą konstrukcję. Grubość murów w przyziemiu przekraczała dwa metry. Wewnątrz były drewniane stropy, które później wzmacniano podczas renowacji budynku. Łączone materiały tworzą mieszankę, która jest stabilna. Taka konstrukcja to typowa cecha krakowskich budowli obronnych.",
-    "generatedAt": "2025-12-24T14:16:32.480Z"
-  },
-  {
-    "nodeId": "arch_2_uklad",
-    "style": "kids",
-    "title": "Jak wygląda układ Bramy Floriańskiej",
-    "text": "Stoisz obok Bramy Floriańskiej i widzisz jej układ. Masywny przejazd był zamykany wrotami i żelazną kratą. Nad przejazdem znajdowały się pomieszczenia straży. Spiralne schody w grubości murów łączą piętra. Strzelnice rozmieszczono tak, by bronić podejścia do bramy. Układ podporządkowano maksymalnemu spowolnieniu napastnika i ułatwieniu obrony.",
-    "generatedAt": "2025-12-24T14:17:18.998Z"
-  },
-  {
-    "nodeId": "arch_3_dekoracje",
-    "style": "kids",
-    "title": "Dekoracje na Bramie Floriańskiej",
-    "text": "Patrzysz na Bramę Floriańską. W XIX wieku dodano na niej dwie dekoracje. Pierwsza to barokowy kartusz z białym orłem. Z inicjatywy Jana Matejki powstał ten ozdobny znak, który wygląda jak tarcza. Od północy umieszczono płaskorzeźbę św. Floriana. Te ozdoby dały bramie wymiar symboliczny i narodowy, przekształcając ją z obiektu stricte militarnego w ikonę kultury i historii.",
-    "generatedAt": "2025-12-24T14:17:50.239Z"
-  },
-  {
-    "nodeId": "mil_1_straz",
-    "style": "kids",
-    "title": "Straż i obrona przy Bramy Floriańskiej",
-    "text": "Jesteśmy tu obok Bramy Floriańskiej. Strażnicy kontrolowali wjazdy, pobierali cła i w razie ataku bronili dostępu do miasta. W górnych kondygnacjach znajdowały się stanowiska dla łuczników, kuszników i później strzelców. Brama była zarówno punktem codziennej pracy, jak i miejscem narażonym na ataki.",
-    "generatedAt": "2025-12-24T14:18:23.070Z"
-  },
-  {
-    "nodeId": "mil_2_barbakan",
-    "style": "kids",
-    "title": "Barbakan i Brama Floriańska: jak razem chronią Kraków",
-    "text": "W XV wieku dobudowano Barbakan jako wysunięte przedbramie, połączone z Bramą Floriańską krytym przejściem. Barbakan przejmował pierwszy impet ataku. Napastnicy musieli pokonać długi, ciasny korytarz, zanim dotarli do bramy. Ten system czynił krakowskie fortyfikacje wyjątkowo skutecznymi.",
-    "generatedAt": "2025-12-24T14:18:46.624Z"
-  },
-  {
-    "nodeId": "cult_1_krolewska",
-    "style": "kids",
-    "title": "Początek Drogi Królewskiej dla dzieci",
-    "text": "Jesteśmy przy Bramie Floriańskiej. Przez nią wjeżdżali królowie, posłowie i uczestnicy uroczystości państwowych. Podczas ceremonii dekorowano ją chorągwiami i zielenią. To było symboliczne przejście ze zewnątrz miasta do reprezentacyjnego wnętrza miasta.",
-    "generatedAt": "2025-12-24T14:19:30.324Z"
-  },
-  {
-    "nodeId": "cult_2_rzemioslo",
-    "style": "kids",
-    "title": "Handel i rzemiosło przy Bramie Floriańskiej",
-    "text": "Stoisz tuż przy Bramie Floriańskiej i ją widzisz. Przez bramę wjeżdżali kupcy i wozacy z Kleparza i Małopolski. W pobliżu kwitł handel. Działały warsztaty. Cechy rzemieślnicze miały obowiązki związane z utrzymaniem fragmentów murów. Brama była ekonomicznym filtrem i ważnym węzłem ruchu towarowego.",
-    "generatedAt": "2025-12-24T14:19:52.251Z"
-  },
-  {
-    "nodeId": "legend_1_florian",
-    "style": "kids",
-    "title": "Legenda o św. Florianie — przy Bramie Floriańskiej",
-    "text": "Jesteśmy tu, przed Bramą Floriańską. Według miejscowej tradycji św. Florian chronił północną część miasta i samą bramę przed pożarami. Na fasadzie bramy widnieje jego wizerunek. To znak ochrony i opieki nad strażnikami. Legenda ta nie mówi o tym, jak powstała sama brama. Z bramą została jednak kulturowo związana.",
-    "generatedAt": "2025-12-24T14:20:11.995Z"
-  },
-  {
-    "nodeId": "curio_1_wysokosc",
-    "style": "kids",
-    "title": "Wysokość Bramy Floriańskiej i jej wyjątkowe cechy konstrukcji",
-    "text": "Stoisz tuż przy Bramy Floriańskiej. Ma około 33 metrów wysokości. Jest to jedna z najwyższych bram obronnych w tej części Europy. Dzięki temu mogła mieć dobry widok na wszystko wokół i wyglądała na potężne miasto. Konstrukcja łączy masywne kamienne dolne piętro z lżejszą ceglaną górną częścią. Do środka prowadzą spiralne schody. W bramie jest także wiele otworów strzelniczych, przez które można było strzelać.",
-    "generatedAt": "2025-12-24T14:20:49.014Z"
-  },
-  {
-    "nodeId": "curio_2_matejko",
-    "style": "kids",
-    "title": "Jak Jan Matejko pomógł Bramie Floriańskiej",
-    "text": "Stoisz tu obok Bramy Floriańskiej. Jan Matejko uważał ją za ważny symbol polskiej historii. To dzięki niemu na froncie budynku od strony miasta pojawił się biały orzeł w barokowym stylu. Barokowy styl to stary, ozdobny sposób tworzenia sztuki. Orzeł ten miał przypominać o narodowej tradycji w czasach zaborów. Jego interwencje sprawiły, że brama zyskała dodatkową warstwę znaczeń kulturowych.",
-    "generatedAt": "2025-12-24T14:21:19.922Z"
+    "title": "Brama Floriańska – Wysoka i Ciekawa!",
+    "text": "Czy wiecie, że Brama Floriańska ma aż 33 metry wysokości? To naprawdę wysoka brama! Dzięki temu, strażnicy mogli dobrze obserwować, co dzieje się w okolicy. Wygląda bardzo potężnie i robi wielkie wrażenie! \n\nBrama zbudowana jest z dużych, mocnych kamieni na dole, a na górze ma lżejsze cegły. Znajdują się tam także spiralne schody, które prowadzą na szczyt. Można tam zobaczyć wiele otworów, z których kiedyś strzelano, żeby bronić miasta.\n\nJeden z najsłynniejszych malarzy w Polsce, Jan Matejko, uważał Bramę Floriańską za bardzo ważny symbol naszego kraju. Dlatego na jej fasadzie, po stronie miasta, dodał wspaniałego orła białego w stylu barokowym. Ten orzeł przypominał wszystkim o polskiej tradycji, zwłaszcza w trudnych czasach, gdy Polska była pod zaborami. Dzięki Matejce brama ma jeszcze większe znaczenie dla nas wszystkich!",
+    "generatedAt": "2025-12-27T11:39:55.686Z"
   }
 ]

@@ -1,135 +1,65 @@
 [
   {
     "from": "root_brama",
-    "to": "sec_historia",
+    "to": "hist_powstanie",
     "style": "informative",
-    "teaser": "Dowiedz się, jak zmieniała się historia Bramy Floriańskiej na przestrzeni wieków.",
-    "generatedAt": "2025-12-27T11:05:08.455Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_1_powstanie",
-    "style": "informative",
-    "teaser": "Dowiedz się, jak Brama Floriańska służyła obronie Krakowa w średniowieczu.",
-    "generatedAt": "2025-12-27T11:05:09.936Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_2_gotycka",
-    "style": "informative",
-    "teaser": "Dowiedz się, jak gotycka przebudowa wpłynęła na reprezentacyjny charakter Bramy Floriańskiej.",
-    "generatedAt": "2025-12-27T11:05:11.572Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_3_renesans",
-    "style": "informative",
-    "teaser": "Dowiedz się, jak renesans wpłynął na wygląd Bramy Floriańskiej.",
-    "generatedAt": "2025-12-27T11:05:13.621Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_4_upadek",
-    "style": "informative",
-    "teaser": "Poznaj, jak zmieniała się rola murów wokół Bramy Floriańskiej.",
-    "generatedAt": "2025-12-27T11:05:14.872Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_5_ocalenie",
-    "style": "informative",
-    "teaser": "Dowiedz się, jak Feliks Radwański uratował Bramę Floriańską w XIX wieku.",
-    "generatedAt": "2025-12-27T11:05:16.347Z"
+    "teaser": "Poznaj średniowieczne korzenie Bramy Floriańskiej i jej funkcje obronne.",
+    "generatedAt": "2025-12-27T11:41:52.427Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_architektura",
+    "to": "hist_gotyk_renesans",
     "style": "informative",
-    "teaser": "Poznaj szczegóły architektoniczne Bramy Floriańskiej w naszym następnym artykule.",
-    "generatedAt": "2025-12-27T11:05:17.765Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_1_material",
-    "style": "informative",
-    "teaser": "Odkryj, jak materiały wpływają na konstrukcję Bramy Floriańskiej!",
-    "generatedAt": "2025-12-27T11:05:18.973Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_2_uklad",
-    "style": "informative",
-    "teaser": "Dowiedz się, jak przestrzenny układ Bramy Floriańskiej wspierał jej funkcje obronne.",
-    "generatedAt": "2025-12-27T11:05:21.000Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_3_dekoracje",
-    "style": "informative",
-    "teaser": "Odkryj, jak dekoracje Bramy Floriańskiej wpływają na jej historyczny wymiar.",
-    "generatedAt": "2025-12-27T11:05:22.838Z"
+    "teaser": "Odkryj, jak gotyk i renesans wpłynęły na wygląd Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T11:41:53.975Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_militaria",
+    "to": "hist_upadek_ocalenie",
     "style": "informative",
-    "teaser": "Odkryj militarne aspekty Bramy Floriańskiej w naszym kolejnym artykule.",
-    "generatedAt": "2025-12-27T11:05:24.434Z"
-  },
-  {
-    "from": "sec_militaria",
-    "to": "mil_1_straz",
-    "style": "informative",
-    "teaser": "Dowiedz się, jak strażnicy chronili Bramę Floriańską przed atakami.",
-    "generatedAt": "2025-12-27T11:05:26.013Z"
-  },
-  {
-    "from": "sec_militaria",
-    "to": "mil_2_barbakan",
-    "style": "informative",
-    "teaser": "Odkryj, jak Barbakan współpracował z Bramą Floriańską w obronie Krakowa.",
-    "generatedAt": "2025-12-27T11:05:27.448Z"
+    "teaser": "Dowiedz się, jak Brama Floriańska zmieniła swoje znaczenie w XIX wieku.",
+    "generatedAt": "2025-12-27T11:41:55.306Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_kultura",
+    "to": "arch_materialy",
     "style": "informative",
-    "teaser": "Dowiedz się, jak Brama Floriańska wpływa na kulturę Krakowa.",
-    "generatedAt": "2025-12-27T11:05:28.690Z"
+    "teaser": "Odkryj materiały i techniki budowy Bramy Floriańskiej — kliknij tutaj.",
+    "generatedAt": "2025-12-27T11:41:56.493Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "cult_1_krolewska",
+    "from": "root_brama",
+    "to": "arch_uklad",
     "style": "informative",
-    "teaser": "Dowiedz się, jak Brama Floriańska prowadziła na prestiżową Drogę Królewską.",
-    "generatedAt": "2025-12-27T11:05:30.032Z"
+    "teaser": "Odkryj szczegóły architektury i obronności Bramy Floriańskiej w naszym następnym artykule.",
+    "generatedAt": "2025-12-27T11:41:58.070Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "cult_2_rzemioslo",
+    "from": "root_brama",
+    "to": "mil_straz_barbakan",
     "style": "informative",
-    "teaser": "Dowiedz się, jak handel kształtował życie wokół Bramy Floriańskiej.",
-    "generatedAt": "2025-12-27T11:05:31.747Z"
+    "teaser": "Dowiedz się, jak strażnicy Bramy Floriańskiej chronili Kraków przed zagrożeniem.",
+    "generatedAt": "2025-12-27T11:41:59.706Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "legend_1_florian",
+    "from": "root_brama",
+    "to": "cult_ceremonie_handel",
     "style": "informative",
-    "teaser": "Odkryj, jak legenda o św. Florianie spleciona jest z Bramą Floriańską.",
-    "generatedAt": "2025-12-27T11:05:33.488Z"
+    "teaser": "Dowiedz się, jak Brama Floriańska kształtowała gospodarkę i społeczeństwo Krakowa.",
+    "generatedAt": "2025-12-27T11:42:01.000Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "curio_1_wysokosc",
+    "from": "root_brama",
+    "to": "cult_legendy",
     "style": "informative",
-    "teaser": "Dowiedz się, jak wygląda Brama Floriańska i jakie ma wymiary.",
-    "generatedAt": "2025-12-27T11:05:34.732Z"
+    "teaser": "Odkryj kulturowe znaczenie Świętego Floriana dla Bramy Floriańskiej!",
+    "generatedAt": "2025-12-27T11:42:02.228Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "curio_2_matejko",
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
     "style": "informative",
-    "teaser": "Odkryj, jak Jan Matejko wpłynął na symbolikę Bramy Floriańskiej.",
-    "generatedAt": "2025-12-27T11:05:36.787Z"
+    "teaser": "Dowiedz się więcej o architekturze i symbolice Bramy Floriańskiej!",
+    "generatedAt": "2025-12-27T11:42:03.400Z"
   }
 ]

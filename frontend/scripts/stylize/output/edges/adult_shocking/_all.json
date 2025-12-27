@@ -1,135 +1,65 @@
 [
   {
     "from": "root_brama",
-    "to": "sec_historia",
+    "to": "hist_powstanie",
     "style": "shocking",
-    "teaser": "Nie uwierzysz, co wydarzyło się z Bramą Floriańską przez wieki!",
-    "generatedAt": "2025-12-27T11:05:08.576Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_1_powstanie",
-    "style": "shocking",
-    "teaser": "Czy wiesz, że Brama Floriańska chroniła Kraków przed NAJAZDAMI TATARSKIMI?!",
-    "generatedAt": "2025-12-27T11:05:09.938Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_2_gotycka",
-    "style": "shocking",
-    "teaser": "Czy wiesz, że Brama Floriańska była świadkiem królewskich intryg? Sprawdź, jak!",
-    "generatedAt": "2025-12-27T11:05:12.096Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_3_renesans",
-    "style": "shocking",
-    "teaser": "Czy wiesz, że Bramę Floriańską zmieniono w elegancką ikonę renesansu?",
-    "generatedAt": "2025-12-27T11:05:13.528Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_4_upadek",
-    "style": "shocking",
-    "teaser": "Czy wiesz, że potężne mury Bramy Floriańskiej stały się bezużyteczne? Zaskakujące detale!",
-    "generatedAt": "2025-12-27T11:05:15.070Z"
-  },
-  {
-    "from": "sec_historia",
-    "to": "hist_5_ocalenie",
-    "style": "shocking",
-    "teaser": "Czy nie wiesz, że Brama Floriańska mogła zniknąć na zawsze? Odkryj jak!",
-    "generatedAt": "2025-12-27T11:05:16.723Z"
+    "teaser": "Czy wiesz, że Brama Floriańska była świadkiem brutalnych tatarskich najazdów?!",
+    "generatedAt": "2025-12-27T11:41:52.445Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_architektura",
+    "to": "hist_gotyk_renesans",
     "style": "shocking",
-    "teaser": "Czy wiesz, że tajemnice Bramy Floriańskiej kryją się w jej architekturze?! Zaskocz się!",
-    "generatedAt": "2025-12-27T11:05:17.966Z"
+    "teaser": "Czy wiesz, że Brama Floriańska przeszła niewiarygodną transformację? Odkryj jej sekrety!",
+    "generatedAt": "2025-12-27T11:41:53.701Z"
   },
   {
-    "from": "sec_architektura",
-    "to": "arch_1_material",
+    "from": "root_brama",
+    "to": "hist_upadek_ocalenie",
     "style": "shocking",
-    "teaser": "Czy wiesz, że mury Bramy Floriańskiej mają ponad dwa metry grubości? Odkryj to!",
-    "generatedAt": "2025-12-27T11:05:19.165Z"
+    "teaser": "Czy wiesz, że Brama Floriańska mogła zniknąć na zawsze?! Sprawdź, jak się uratowała!",
+    "generatedAt": "2025-12-27T11:41:55.002Z"
   },
   {
-    "from": "sec_architektura",
-    "to": "arch_2_uklad",
+    "from": "root_brama",
+    "to": "arch_materialy",
+    "style": "shocking",
+    "teaser": "Czy wiesz, że brama mogła kryć mroczne tajemnice? Odkryj, co kryje jej konstrukcja!",
+    "generatedAt": "2025-12-27T11:41:56.207Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "arch_uklad",
     "style": "shocking",
     "teaser": "Czy wiesz, że Brama Floriańska skrywa mroczne tajemnice obronne? Odkryj je teraz!",
-    "generatedAt": "2025-12-27T11:05:20.481Z"
-  },
-  {
-    "from": "sec_architektura",
-    "to": "arch_3_dekoracje",
-    "style": "shocking",
-    "teaser": "Czy wiesz, że Barokowe dekoracje mogą zmienić historię? Odkryj szokujące szczegóły!",
-    "generatedAt": "2025-12-27T11:05:21.815Z"
+    "generatedAt": "2025-12-27T11:41:57.519Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_militaria",
+    "to": "mil_straz_barbakan",
     "style": "shocking",
-    "teaser": "Czy wiesz, że Brama Floriańska była świadkiem brutalnych oblężeń? Odkryj jej tajemnice!",
-    "generatedAt": "2025-12-27T11:05:23.146Z"
-  },
-  {
-    "from": "sec_militaria",
-    "to": "mil_1_straz",
-    "style": "shocking",
-    "teaser": "Jak wyglądała codzienna walka na murach Bramy Floriańskiej? Szokujące fakty czekają!",
-    "generatedAt": "2025-12-27T11:05:24.749Z"
-  },
-  {
-    "from": "sec_militaria",
-    "to": "mil_2_barbakan",
-    "style": "shocking",
-    "teaser": "Nie uwierzysz, jak Barbakan zmienił losy krakowskiej obrony! Sprawdź to!",
-    "generatedAt": "2025-12-27T11:05:26.423Z"
+    "teaser": "Czy strażnicy Bramy Floriańskiej naprawdę stawiali czoła niebezpiecznym atakom? Odkryj ich tajemnice!",
+    "generatedAt": "2025-12-27T11:41:58.886Z"
   },
   {
     "from": "root_brama",
-    "to": "sec_kultura",
+    "to": "cult_ceremonie_handel",
     "style": "shocking",
-    "teaser": "Czy wiesz, że Brama Floriańska kryje mroczne sekrety kulturowe? Odkryj je teraz!",
-    "generatedAt": "2025-12-27T11:05:27.790Z"
+    "teaser": "Czy wiesz, że Brama Floriańska była ekonomicznym sercem Krakowa? Przekonaj się!",
+    "generatedAt": "2025-12-27T11:42:00.020Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "cult_1_krolewska",
+    "from": "root_brama",
+    "to": "cult_legendy",
     "style": "shocking",
-    "teaser": "Czy wiesz, że królowie wjeżdżali do miasta przez tę legendarną bramę?",
-    "generatedAt": "2025-12-27T11:05:29.444Z"
+    "teaser": "Czy wiesz, że święty Florian musiał ratować Bramę Floriańską przed pożarem?",
+    "generatedAt": "2025-12-27T11:42:01.119Z"
   },
   {
-    "from": "sec_kultura",
-    "to": "cult_2_rzemioslo",
+    "from": "root_brama",
+    "to": "cult_wysokosc_matejko",
     "style": "shocking",
-    "teaser": "Czy wiesz, że Brama Floriańska była kluczem do tajemniczego handlu?!",
-    "generatedAt": "2025-12-27T11:05:30.721Z"
-  },
-  {
-    "from": "sec_kultura",
-    "to": "legend_1_florian",
-    "style": "shocking",
-    "teaser": "Czy św. Florian naprawdę ocalił miasto przed zagładą? Odpowiedź Cię zszokuje!",
-    "generatedAt": "2025-12-27T11:05:32.363Z"
-  },
-  {
-    "from": "sec_kultura",
-    "to": "curio_1_wysokosc",
-    "style": "shocking",
-    "teaser": "33 metry wysokości? Odkryj, jak Bramie Floriańskiej udało się zdominować niebo!",
-    "generatedAt": "2025-12-27T11:05:33.693Z"
-  },
-  {
-    "from": "sec_kultura",
-    "to": "curio_2_matejko",
-    "style": "shocking",
-    "teaser": "Czy wiesz, że Matejko uratował Bramy Floriańskiej symbolikę przed zapomnieniem?",
-    "generatedAt": "2025-12-27T11:05:34.921Z"
+    "teaser": "Czy wiesz, że Brama Floriańska to symbol narodowej tożsamości? Odkryj jej sekrety!",
+    "generatedAt": "2025-12-27T11:42:02.250Z"
   }
 ]
