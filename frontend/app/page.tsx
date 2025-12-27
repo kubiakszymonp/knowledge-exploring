@@ -53,12 +53,12 @@ export default function Home() {
             temat, postać) to osobny graf z węzłami faktów i krawędziami
             nawigacyjnymi.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="/brama_florianska/graph">Zobacz Graf Demo</Link>
+              <Link href="/brama_florianska/explore">Eksploruj Bramę Floriańską</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#features">Funkcje</Link>
+              <Link href="/brama_florianska/graph">Zobacz Graf</Link>
             </Button>
           </div>
         </div>
