@@ -47,10 +47,24 @@ interface QuestionOption {
 }
 
 export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
-  const [articleStyle, setArticleStyle] = useState<ArticleStyle>("adult");
-  const [edgeStyle, setEdgeStyle] = useState<EdgeStyle>("informative");
+  // Ładowanie stylów z localStorage (tylko przy mount)
+  const [articleStyle, setArticleStyle] = useState<ArticleStyle>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("articleStyle");
+      return (saved as ArticleStyle) || "adult";
+    }
+    return "adult";
+  });
   
-  // Odkryte sekcje - budujemy artykuł stopniowo
+  const [edgeStyle, setEdgeStyle] = useState<EdgeStyle>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("edgeStyle");
+      return (saved as EdgeStyle) || "informative";
+    }
+    return "informative";
+  });
+  
+  // Odkryte sekcje - budujemy artykuł stopniowo (lokalny stan - resetuje się przy refresh)
   const [discoveredSections, setDiscoveredSections] = useState<DiscoveredSection[]>([]);
   const [currentQuestions, setCurrentQuestions] = useState<QuestionOption[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +72,15 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
 
   const nodeMap = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
   const rootNode = nodeMap.get(rootNodeId);
+
+  // Zapisz style do localStorage przy zmianie
+  useEffect(() => {
+    localStorage.setItem("articleStyle", articleStyle);
+  }, [articleStyle]);
+
+  useEffect(() => {
+    localStorage.setItem("edgeStyle", edgeStyle);
+  }, [edgeStyle]);
 
   // Pobierz WSZYSTKIE krawędzie prowadzące do nieodkrytych węzłów
   const getAllAvailableEdges = useCallback(
@@ -102,7 +125,7 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
     [getAllAvailableEdges, pickEdges, edgeStyle, nodeMap]
   );
 
-  // Inicjalizacja - załaduj root
+  // Inicjalizacja - załaduj root (tylko raz przy mount)
   useEffect(() => {
     const initRoot = async () => {
       if (!rootNode) return;
@@ -121,7 +144,38 @@ export function ExploreView({ nodes, edges, rootNodeId }: ExploreViewProps) {
     };
 
     initRoot();
-  }, [rootNodeId, rootNode, articleStyle, loadQuestions]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rootNodeId]);
+
+  // Przeładuj stylizacje przy zmianie stylów (bez resetowania odkrytych sekcji)
+  useEffect(() => {
+    const reloadStylizations = async () => {
+      if (discoveredSections.length === 0) return;
+
+      // Przeładuj stylizacje dla wszystkich odkrytych sekcji
+      const updatedSections = await Promise.all(
+        discoveredSections.map(async (section) => {
+          const article = await getNodeStylization(section.nodeId, articleStyle);
+          return {
+            ...section,
+            article,
+          };
+        })
+      );
+
+      setDiscoveredSections(updatedSections);
+
+      // Przeładuj pytania z nowym stylem krawędzi
+      const discoveredIds = new Set(discoveredSections.map((s) => s.nodeId));
+      await loadQuestions(discoveredIds);
+    };
+
+    // Nie wykonuj przy pierwszym renderze (discoveredSections jest puste)
+    if (discoveredSections.length > 0) {
+      reloadStylizations();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [articleStyle, edgeStyle]);
 
   // Odkryj nową sekcję po kliknięciu pytania
   const discoverSection = async (targetNodeId: string) => {
