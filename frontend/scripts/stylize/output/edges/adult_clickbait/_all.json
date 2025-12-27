@@ -1,0 +1,135 @@
+[
+  {
+    "from": "root_brama",
+    "to": "sec_historia",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, co naprawdę kryje się za historią Bramy Floriańskiej? Odkryj tajemnice!",
+    "generatedAt": "2025-12-27T11:05:08.904Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_1_powstanie",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jak Brama Floriańska zmieniła oblicze średniowiecznego Krakowa? Kliknij, by odkryć tajemnice!",
+    "generatedAt": "2025-12-27T11:05:10.447Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_2_gotycka",
+    "style": "clickbait",
+    "teaser": "Co kryje się za gotycką tajemnicą Bramy Floriańskiej? Odkryj jej sekrety!",
+    "generatedAt": "2025-12-27T11:05:11.891Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_3_renesans",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jak renesans odmienił Bramę Floriańską? Odkryj nieznane tajemnice!",
+    "generatedAt": "2025-12-27T11:05:13.879Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_4_upadek",
+    "style": "clickbait",
+    "teaser": "Czy naprawdę wiesz, co stało się z Bramą Floriańską? Szokujące szczegóły!",
+    "generatedAt": "2025-12-27T11:05:15.708Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_5_ocalenie",
+    "style": "clickbait",
+    "teaser": "Nie uwierzysz, jak blisko była śmierci Brama Floriańska!",
+    "generatedAt": "2025-12-27T11:05:16.915Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_architektura",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, co skrywa architektura Bramy Floriańskiej? Odkryj tajemnice już teraz!",
+    "generatedAt": "2025-12-27T11:05:19.047Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_1_material",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, co kryje się w murach Bramy Floriańskiej? Odkryj tajemnice!",
+    "generatedAt": "2025-12-27T11:05:20.289Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_2_uklad",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, że Brama Floriańska skrywa tajemnice obrony? Odkryj je teraz!",
+    "generatedAt": "2025-12-27T11:05:21.540Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_3_dekoracje",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jakie tajemnice kryją dekoracje Bramy Floriańskiej? Odkryj je teraz!",
+    "generatedAt": "2025-12-27T11:05:23.147Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_militaria",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, dlaczego Brama Floriańska była ostatnią linią obrony Krakowa?",
+    "generatedAt": "2025-12-27T11:05:24.393Z"
+  },
+  {
+    "from": "sec_militaria",
+    "to": "mil_1_straz",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, co naprawdę działo się na szczycie Bramy Floriańskiej?",
+    "generatedAt": "2025-12-27T11:05:25.582Z"
+  },
+  {
+    "from": "sec_militaria",
+    "to": "mil_2_barbakan",
+    "style": "clickbait",
+    "teaser": "Czy Barbakan kryje tajemnice, które zmieniły losy Krakowa? Odkryj to!",
+    "generatedAt": "2025-12-27T11:05:26.651Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_kultura",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jakie tajemnice kryje kulturowe serce Bramy Floriańskiej?",
+    "generatedAt": "2025-12-27T11:05:27.856Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "cult_1_krolewska",
+    "style": "clickbait",
+    "teaser": "Co kryje się za majestatycznym początkiem Drogi Królewskiej? Odkryj niespodzianki!",
+    "generatedAt": "2025-12-27T11:05:29.783Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "cult_2_rzemioslo",
+    "style": "clickbait",
+    "teaser": "Odkryj, jakie sekrety handlowe skrywała Brama Floriańska! Kliknij, by się dowiedzieć!",
+    "generatedAt": "2025-12-27T11:05:31.055Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "legend_1_florian",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, kto naprawdę chronił Bramę Floriańską przed ogniem? Odkryj tajemnicę!",
+    "generatedAt": "2025-12-27T11:05:33.078Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "curio_1_wysokosc",
+    "style": "clickbait",
+    "teaser": "Czy wiesz, jak wysoko sięga potęga Bramy Floriańskiej? Odkryj to!",
+    "generatedAt": "2025-12-27T11:05:34.437Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "curio_2_matejko",
+    "style": "clickbait",
+    "teaser": "Czy Jan Matejko zmienił historię Bramy Floriańskiej na zawsze? Odkryj prawdę!",
+    "generatedAt": "2025-12-27T11:05:36.047Z"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "informative": {
+    "name": "Informacyjna",
+    "description": "Stwórz krótką, rzeczową i konkretną zajawkę (10-15 słów), która informuje o relacji między dwoma artykułami."
+  },
+  "kids": {
+    "name": "Dla dzieci",
+    "description": "Stwórz krótką, entuzjastyczną i zachęcającą zajawkę (10-15 słów) dla dzieci. Użyj prostego języka i pytania, które wzbudzi ciekawość."
+  },
+  "clickbait": {
+    "name": "Clickbait",
+    "description": "Stwórz krótką, sensacyjną i niedopowiedzianą zajawkę (10-15 słów), która ma wywołać silną ciekawość."
+  },
+  "shocking": {
+    "name": "Szokująca",
+    "description": "Stwórz krótką, dramatyczną i przesadzoną zajawkę (10-15 słów), która ma zszokować lub zaskoczyć czytelnika."
+  },
+  "mysterious": {
+    "name": "Tajemnicza",
+    "description": "Stwórz krótką, intrygującą i tajemniczą zajawkę (10-15 słów), która buduje atmosferę niedopowiedzenia i zagadki."
+  }
+}
+

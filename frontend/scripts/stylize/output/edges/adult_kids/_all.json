@@ -1,0 +1,135 @@
+[
+  {
+    "from": "root_brama",
+    "to": "sec_historia",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak zmieniała się Brama Floriańska przez wieki? Sprawdź to!",
+    "generatedAt": "2025-12-27T11:05:08.833Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_1_powstanie",
+    "style": "kids",
+    "teaser": "Co robiła Brama Floriańska w średniowieczu? Dowiedz się więcej!",
+    "generatedAt": "2025-12-27T11:05:10.755Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_2_gotycka",
+    "style": "kids",
+    "teaser": "Czy chcesz odkryć sekrety gotyckiej Bramy Floriańskiej? Kliknij tutaj!",
+    "generatedAt": "2025-12-27T11:05:12.496Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_3_renesans",
+    "style": "kids",
+    "teaser": "Chcesz wiedzieć, jak Brama Floriańska stała się piękna? Kliknij tutaj!",
+    "generatedAt": "2025-12-27T11:05:13.722Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_4_upadek",
+    "style": "kids",
+    "teaser": "Chcesz wiedzieć, co stało się z murami? Kliknij i odkryj tajemnicę!",
+    "generatedAt": "2025-12-27T11:05:15.274Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_5_ocalenie",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak uratowano Bramę Floriańską? Kliknij, aby poznać tę historię!",
+    "generatedAt": "2025-12-27T11:05:16.912Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_architektura",
+    "style": "kids",
+    "teaser": "Czy zastanawiałeś się, jak zbudowano Bramę Floriańską? Sprawdź to teraz!",
+    "generatedAt": "2025-12-27T11:05:18.239Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_1_material",
+    "style": "kids",
+    "teaser": "Czy wiesz, z czego zbudowana jest Brama Floriańska? Sprawdź to!",
+    "generatedAt": "2025-12-27T11:05:19.342Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_2_uklad",
+    "style": "kids",
+    "teaser": "Co kryje się za masywnymi wrotami? Dowiedz się, klikając tutaj!",
+    "generatedAt": "2025-12-27T11:05:20.789Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_3_dekoracje",
+    "style": "kids",
+    "teaser": "Czy wiecie, jakie tajemnice kryją dekoracje Bramy Floriańskiej? Sprawdźcie!",
+    "generatedAt": "2025-12-27T11:05:22.327Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_militaria",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak broniła się Kraków? Odkryj tajemnice Bramy Floriańskiej!",
+    "generatedAt": "2025-12-27T11:05:24.170Z"
+  },
+  {
+    "from": "sec_militaria",
+    "to": "mil_1_straz",
+    "style": "kids",
+    "teaser": "Chcesz poznać tajemnice strażników Bramy Floriańskiej? Kliknij tutaj!",
+    "generatedAt": "2025-12-27T11:05:25.558Z"
+  },
+  {
+    "from": "sec_militaria",
+    "to": "mil_2_barbakan",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak Barbakan bronił Krakowa? Odkryj tę tajemnicę!",
+    "generatedAt": "2025-12-27T11:05:26.938Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_kultura",
+    "style": "kids",
+    "teaser": "Czy wiesz, jakie tajemnice kryje Brama Floriańska? Odkryj je z nami!",
+    "generatedAt": "2025-12-27T11:05:28.215Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "cult_1_krolewska",
+    "style": "kids",
+    "teaser": "Czy wiesz, co działo się na Drodze Królewskiej? Sprawdź to!",
+    "generatedAt": "2025-12-27T11:05:29.546Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "cult_2_rzemioslo",
+    "style": "kids",
+    "teaser": "Czy wiesz, jakie skarby handlowe kryła Brama Floriańska? Sprawdź to!",
+    "generatedAt": "2025-12-27T11:05:30.927Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "legend_1_florian",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak św. Florian zasłonił miasto przed pożarami? Sprawdź!",
+    "generatedAt": "2025-12-27T11:05:32.362Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "curio_1_wysokosc",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak wysoka jest Brama Floriańska? Sprawdź koniecznie!",
+    "generatedAt": "2025-12-27T11:05:33.589Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "curio_2_matejko",
+    "style": "kids",
+    "teaser": "Czy wiesz, jak Jan Matejko zmienił Bramę Floriańską? Dowiedz się więcej!",
+    "generatedAt": "2025-12-27T11:05:35.228Z"
+  }
+]

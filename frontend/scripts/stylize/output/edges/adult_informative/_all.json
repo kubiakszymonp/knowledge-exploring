@@ -1,0 +1,135 @@
+[
+  {
+    "from": "root_brama",
+    "to": "sec_historia",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak zmieniała się historia Bramy Floriańskiej na przestrzeni wieków.",
+    "generatedAt": "2025-12-27T11:05:08.455Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_1_powstanie",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak Brama Floriańska służyła obronie Krakowa w średniowieczu.",
+    "generatedAt": "2025-12-27T11:05:09.936Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_2_gotycka",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak gotycka przebudowa wpłynęła na reprezentacyjny charakter Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T11:05:11.572Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_3_renesans",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak renesans wpłynął na wygląd Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T11:05:13.621Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_4_upadek",
+    "style": "informative",
+    "teaser": "Poznaj, jak zmieniała się rola murów wokół Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T11:05:14.872Z"
+  },
+  {
+    "from": "sec_historia",
+    "to": "hist_5_ocalenie",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak Feliks Radwański uratował Bramę Floriańską w XIX wieku.",
+    "generatedAt": "2025-12-27T11:05:16.347Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_architektura",
+    "style": "informative",
+    "teaser": "Poznaj szczegóły architektoniczne Bramy Floriańskiej w naszym następnym artykule.",
+    "generatedAt": "2025-12-27T11:05:17.765Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_1_material",
+    "style": "informative",
+    "teaser": "Odkryj, jak materiały wpływają na konstrukcję Bramy Floriańskiej!",
+    "generatedAt": "2025-12-27T11:05:18.973Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_2_uklad",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak przestrzenny układ Bramy Floriańskiej wspierał jej funkcje obronne.",
+    "generatedAt": "2025-12-27T11:05:21.000Z"
+  },
+  {
+    "from": "sec_architektura",
+    "to": "arch_3_dekoracje",
+    "style": "informative",
+    "teaser": "Odkryj, jak dekoracje Bramy Floriańskiej wpływają na jej historyczny wymiar.",
+    "generatedAt": "2025-12-27T11:05:22.838Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_militaria",
+    "style": "informative",
+    "teaser": "Odkryj militarne aspekty Bramy Floriańskiej w naszym kolejnym artykule.",
+    "generatedAt": "2025-12-27T11:05:24.434Z"
+  },
+  {
+    "from": "sec_militaria",
+    "to": "mil_1_straz",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak strażnicy chronili Bramę Floriańską przed atakami.",
+    "generatedAt": "2025-12-27T11:05:26.013Z"
+  },
+  {
+    "from": "sec_militaria",
+    "to": "mil_2_barbakan",
+    "style": "informative",
+    "teaser": "Odkryj, jak Barbakan współpracował z Bramą Floriańską w obronie Krakowa.",
+    "generatedAt": "2025-12-27T11:05:27.448Z"
+  },
+  {
+    "from": "root_brama",
+    "to": "sec_kultura",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak Brama Floriańska wpływa na kulturę Krakowa.",
+    "generatedAt": "2025-12-27T11:05:28.690Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "cult_1_krolewska",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak Brama Floriańska prowadziła na prestiżową Drogę Królewską.",
+    "generatedAt": "2025-12-27T11:05:30.032Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "cult_2_rzemioslo",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak handel kształtował życie wokół Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T11:05:31.747Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "legend_1_florian",
+    "style": "informative",
+    "teaser": "Odkryj, jak legenda o św. Florianie spleciona jest z Bramą Floriańską.",
+    "generatedAt": "2025-12-27T11:05:33.488Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "curio_1_wysokosc",
+    "style": "informative",
+    "teaser": "Dowiedz się, jak wygląda Brama Floriańska i jakie ma wymiary.",
+    "generatedAt": "2025-12-27T11:05:34.732Z"
+  },
+  {
+    "from": "sec_kultura",
+    "to": "curio_2_matejko",
+    "style": "informative",
+    "teaser": "Odkryj, jak Jan Matejko wpłynął na symbolikę Bramy Floriańskiej.",
+    "generatedAt": "2025-12-27T11:05:36.787Z"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "stylize-articles",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "stylize": "npx tsx stylize.ts",
+    "stylize:all": "npx tsx stylize.ts ../../data/brama_florianska.json all",
+    "stylize-edges": "npx tsx stylize-edges.ts",
+    "stylize-edges:all": "npx tsx stylize-edges.ts ../../data/brama_florianska.json all adult"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+

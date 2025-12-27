@@ -1,0 +1,15 @@
+{
+  "adult": {
+    "name": "Dorosły",
+    "description": "Przeredaguj tekst w stylu poważnym, merytorycznym i analitycznym, odpowiednim dla dorosłego czytelnika. Używaj precyzyjnego języka, unikaj kolokwializmów i skup się na faktach oraz ich interpretacji."
+  },
+  "kids": {
+    "name": "Dla dzieci",
+    "description": "Przeredaguj tekst w stylu prostym, przystępnym i angażującym dla dzieci w wieku 8-12 lat. Używaj krótkich zdań, prostego słownictwa i unikaj skomplikowanych pojęć. Wyjaśniaj skomplikowane pojęcia. Mów jak do dzieci żeby je zaciekawić"
+  },
+  "vulgar": {
+    "name": "Wulgarny",
+    "description": "Przeredaguj tekst w stylu wulgarnym, ulicznym i bezpośrednim. Używaj potocznego języka i dosadnych wyrażeń. Czasami użyj jakiegoś wulgaryzmu jak: kurwa, cholera, kurde, chuj. staraj się co 3 zdanie użyć takiego wulgaryzmu"
+  }
+}
+

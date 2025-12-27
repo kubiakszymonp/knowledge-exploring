@@ -5,8 +5,7 @@ import cytoscape, { Core, ElementDefinition } from "cytoscape";
 import { KnowledgeGraph } from "../model/KnowledgeGraph";
 import { KnowledgeNode } from "../model/KnowledgeNode";
 import { Edge } from "../model/Edge";
-import NodeEditor from "./NodeEditor";
-import EdgeEditor from "./EdgeEditor";
+import EditorDrawer from "./EditorDrawer";
 
 interface GraphVisualizationCytoscapeProps {
   graph: KnowledgeGraph;
@@ -214,14 +213,6 @@ export default function GraphVisualizationCytoscape({
     };
   }, [graph]);
 
-  const handleNodeChange = (updatedNode: KnowledgeNode) => {
-    setSelected({ type: "node", data: updatedNode });
-  };
-
-  const handleEdgeChange = (updatedEdge: Edge) => {
-    setSelected({ type: "edge", data: updatedEdge });
-  };
-
   return (
     <div className="flex flex-col h-screen bg-white">
       <header className="bg-gray-50 border-b border-gray-200 px-6 py-4">
@@ -246,23 +237,13 @@ export default function GraphVisualizationCytoscape({
             backgroundSize: "24px 24px",
           }}
         />
-
-        {selected?.type === "node" && (
-          <NodeEditor
-            node={selected.data}
-            onClose={() => setSelected(null)}
-            onChange={handleNodeChange}
-          />
-        )}
-
-        {selected?.type === "edge" && (
-          <EdgeEditor
-            edge={selected.data}
-            onClose={() => setSelected(null)}
-            onChange={handleEdgeChange}
-          />
-        )}
       </main>
+
+      <EditorDrawer
+        selected={selected}
+        onClose={() => setSelected(null)}
+        graph={graph}
+      />
     </div>
   );
 }
