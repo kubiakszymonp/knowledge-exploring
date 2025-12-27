@@ -18,144 +18,35 @@
       {
         "id": "sec_historia",
         "title": "Historia",
-        "text": "Historia Bramy Floriańskiej obejmuje jej powstanie w XIII wieku, gotycką przebudowę, rozwój w epoce renesansu, stopniową utratę militarnego znaczenia oraz ocalenie w XIX wieku. Każdy z tych okresów pozostawił na niej widoczny ślad.",
-        "tags": ["historia"]
-      },
-      {
-        "id": "hist_1_powstanie",
-        "title": "Powstanie i funkcja średniowieczna",
-        "text": "Brama powstała w końcu XIII wieku jako część odbudowy Krakowa po najazdach tatarskich. Razem z murami i ponad 40 basztami tworzyła jeden z najnowocześniejszych systemów obronnych regionu. Jej rola była dwojaka: militarna i administracyjna. Kontrolowano tu ruch kupców, pobierano cła i rejestrowano przyjezdnych. W pierwszym okresie brama była niższa, surowsza i w pełni podporządkowana funkcji obrony północnego odcinka miasta.",
-        "tags": ["historia"]
-      },
-      {
-        "id": "hist_2_gotycka",
-        "title": "Gotycka przebudowa i reprezentacyjność",
-        "text": "W XIV–XV wieku bramę znacznie podwyższono i nadano jej gotycki charakter: ostrołukowy przejazd, wąskie strzelnice, masywne mury i wyraźny podział kondygnacji. Z tego okresu pochodzi jej monumentalna forma, widoczna z daleka jako symbol potęgi miasta. Powiększenie bramy wiązało się także z prestiżem — w tym czasie Kraków był centrum politycznym i gospodarczym, a przez bramę wjeżdżali królowie i ważne delegacje.",
-        "tags": ["historia"]
-      },
-      {
-        "id": "hist_3_renesans",
-        "title": "Przekształcenia renesansowe",
-        "text": "W epoce renesansu bramę modernizowano: dodano bardziej eleganckie obramienia, poprawiono dachy, wzmocniono ganek obronny i usprawniono system odprowadzania wody. Straż otrzymała wygodniejsze pomieszczenia, a brama coraz bardziej łączyła funkcję obronną z reprezentacyjną. Stała się nie tylko punktem strategicznym, ale także integralną częścią miejskiego krajobrazu.",
-        "tags": ["historia"]
-      },
-      {
-        "id": "hist_4_upadek",
-        "title": "Utrata znaczenia i degradacja murów",
-        "text": "Od XVII wieku klasyczne wysokie mury przestały odpowiadać nowym realiom wojennym. Artyleria czyniła je mniej skutecznymi, a utrzymanie kosztowało coraz więcej. Wraz z zaniedbaniem murów brama zaczęła tracić znaczenie militarne. Fosy zasypywano, baszty wykorzystywano jako magazyny, a cała linia murów uznawana była za przeszkodę w rozwoju urbanistycznym.",
-        "tags": ["historia"]
-      },
-      {
-        "id": "hist_5_ocalenie",
-        "title": "Ocalenie w XIX wieku",
-        "text": "W latach 1817–1830 planowano zburzyć całą linię murów i Bramę Floriańską. Ocalono ją dzięki interwencji Feliksa Radwańskiego, który argumentował, że jej zniszczenie byłoby utratą tożsamości miasta. W tym czasie rozpoczęto restaurację i nadano bramie symboliczny charakter — stała się świadectwem historii i polskiej kultury w okresie zaborów.",
+        "text": "Historia Bramy Floriańskiej obejmuje jej powstanie w XIII wieku, gotycką przebudowę, rozwój w epoce renesansu, stopniową utratę militarnego znaczenia oraz ocalenie w XIX wieku. Każdy z tych okresów pozostawił na niej widoczny ślad.\n\nPowstanie i funkcja średniowieczna: Brama powstała w końcu XIII wieku jako część odbudowy Krakowa po najazdach tatarskich. Razem z murami i ponad 40 basztami tworzyła jeden z najnowocześniejszych systemów obronnych regionu. Jej rola była dwojaka: militarna i administracyjna. Kontrolowano tu ruch kupców, pobierano cła i rejestrowano przyjezdnych. W pierwszym okresie brama była niższa, surowsza i w pełni podporządkowana funkcji obrony północnego odcinka miasta.\n\nGotycka przebudowa i reprezentacyjność: W XIV–XV wieku bramę znacznie podwyższono i nadano jej gotycki charakter: ostrołukowy przejazd, wąskie strzelnice, masywne mury i wyraźny podział kondygnacji. Z tego okresu pochodzi jej monumentalna forma, widoczna z daleka jako symbol potęgi miasta. Powiększenie bramy wiązało się także z prestiżem — w tym czasie Kraków był centrum politycznym i gospodarczym, a przez bramę wjeżdżali królowie i ważne delegacje.\n\nPrzekształcenia renesansowe: W epoce renesansu bramę modernizowano: dodano bardziej eleganckie obramienia, poprawiono dachy, wzmocniono ganek obronny i usprawniono system odprowadzania wody. Straż otrzymała wygodniejsze pomieszczenia, a brama coraz bardziej łączyła funkcję obronną z reprezentacyjną. Stała się nie tylko punktem strategicznym, ale także integralną częścią miejskiego krajobrazu.\n\nUtrata znaczenia i degradacja murów: Od XVII wieku klasyczne wysokie mury przestały odpowiadać nowym realiom wojennym. Artyleria czyniła je mniej skutecznymi, a utrzymanie kosztowało coraz więcej. Wraz z zaniedbaniem murów brama zaczęła tracić znaczenie militarne. Fosy zasypywano, baszty wykorzystywano jako magazyny, a cała linia murów uznawana była za przeszkodę w rozwoju urbanistycznym.\n\nOcalenie w XIX wieku: W latach 1817–1830 planowano zburzyć całą linię murów i Bramę Floriańską. Ocalono ją dzięki interwencji Feliksa Radwańskiego, który argumentował, że jej zniszczenie byłoby utratą tożsamości miasta. W tym czasie rozpoczęto restaurację i nadano bramie symboliczny charakter — stała się świadectwem historii i polskiej kultury w okresie zaborów.",
         "tags": ["historia"]
       },
   
       {
         "id": "sec_architektura",
         "title": "Architektura",
-        "text": "Architektura bramy obejmuje materiały budowlane, układ przestrzenny, funkcje obronne, rozwiązania techniczne oraz dekoracje dodane przez kolejne epoki.",
-        "tags": ["architektura"]
-      },
-      {
-        "id": "arch_1_material",
-        "title": "Materiały i konstrukcja",
-        "text": "Dolne partie wykonano z lokalnego wapienia, trwałego i podatnego na obróbkę. Wyższe kondygnacje zbudowano z cegły, co zmniejszało ciężar konstrukcji. Grubość murów w przyziemiu przekraczała 2 metry. Wewnątrz znajdowały się drewniane stropy, później wzmacniane podczas restauracji. Łączone materiały tworzą hybrydową, stabilną konstrukcję typową dla krakowskich budowli obronnych.",
-        "tags": ["architektura"]
-      },
-      {
-        "id": "arch_2_uklad",
-        "title": "Układ przestrzenny",
-        "text": "Brama miała masywny przejazd zamykany wrotami i żelazną kratą. Nad przejazdem znajdowały się pomieszczenia straży. Spiralne schody w grubości murów łączyły kondygnacje, a strzelnice rozmieszczono tak, aby bronić podejścia do bramy. Układ podporządkowano maksymalnemu spowolnieniu napastnika i ułatwieniu obrony.",
-        "tags": ["architektura"]
-      },
-      {
-        "id": "arch_3_dekoracje",
-        "title": "Dekoracje fasad",
-        "text": "W XIX wieku dodano barokowy kartusz z orłem białym z inicjatywy Jana Matejki. Od północy umieszczono płaskorzeźbę św. Floriana. Te dekoracje nadały bramie wymiar symboliczny i narodowy, przekształcając ją z obiektu stricte militarnego w ikonę kultury i historii.",
+        "text": "Architektura bramy obejmuje materiały budowlane, układ przestrzenny, funkcje obronne, rozwiązania techniczne oraz dekoracje dodane przez kolejne epoki.\n\nMateriały i konstrukcja: Dolne partie wykonano z lokalnego wapienia, trwałego i podatnego na obróbkę. Wyższe kondygnacje zbudowano z cegły, co zmniejszało ciężar konstrukcji. Grubość murów w przyziemiu przekraczała 2 metry. Wewnątrz znajdowały się drewniane stropy, później wzmacniane podczas restauracji. Łączone materiały tworzą hybrydową, stabilną konstrukcję typową dla krakowskich budowli obronnych.\n\nUkład przestrzenny: Brama miała masywny przejazd zamykany wrotami i żelazną kratą. Nad przejazdem znajdowały się pomieszczenia straży. Spiralne schody w grubości murów łączyły kondygnacje, a strzelnice rozmieszczono tak, aby bronić podejścia do bramy. Układ podporządkowano maksymalnemu spowolnieniu napastnika i ułatwieniu obrony.\n\nDekoracje fasad: W XIX wieku dodano barokowy kartusz z orłem białym z inicjatywy Jana Matejki. Od północy umieszczono płaskorzeźbę św. Floriana. Te dekoracje nadały bramie wymiar symboliczny i narodowy, przekształcając ją z obiektu stricte militarnego w ikonę kultury i historii.",
         "tags": ["architektura", "symbolika"]
       },
   
       {
         "id": "sec_militaria",
         "title": "Funkcje militarne",
-        "text": "Brama była kluczowym punktem obronnym miasta: stacjonowała tu straż, kontrolowano wjazdy i współpracowano z Barbakanem. Jej konstrukcja była projektowana tak, aby umożliwić skuteczną obronę w czasie oblężeń.",
-        "tags": ["militaria"]
-      },
-      {
-        "id": "mil_1_straz",
-        "title": "Straż i obrona",
-        "text": "Strażnicy kontrolowali wjazdy, pobierali cła i w razie ataku bronili dostępu do miasta. W górnych kondygnacjach znajdowały się stanowiska dla łuczników, kuszników i później strzelców. Brama była zarówno punktem codziennej pracy, jak i miejscem narażonym na ataki.",
-        "tags": ["militaria"]
-      },
-      {
-        "id": "mil_2_barbakan",
-        "title": "Związek z Barbakanem",
-        "text": "W XV wieku dobudowano Barbakan jako wysunięte przedbramie, połączone z Bramą Floriańską krytym przejściem. Barbakan przejmował pierwszy impet ataku, a napastnicy musieli pokonać długi, ciasny korytarz zanim dotarli do bramy. Ten system czynił krakowskie fortyfikacje wyjątkowo skutecznymi.",
+        "text": "Brama była kluczowym punktem obronnym miasta: stacjonowała tu straż, kontrolowano wjazdy i współpracowano z Barbakanem. Jej konstrukcja była projektowana tak, aby umożliwić skuteczną obronę w czasie oblężeń.\n\nStraż i obrona: Strażnicy kontrolowali wjazdy, pobierali cła i w razie ataku bronili dostępu do miasta. W górnych kondygnacjach znajdowały się stanowiska dla łuczników, kuszników i później strzelców. Brama była zarówno punktem codziennej pracy, jak i miejscem narażonym na ataki.\n\nZwiązek z Barbakanem: W XV wieku dobudowano Barbakan jako wysunięte przedbramie, połączone z Bramą Floriańską krytym przejściem. Barbakan przejmował pierwszy impet ataku, a napastnicy musieli pokonać długi, ciasny korytarz zanim dotarli do bramy. Ten system czynił krakowskie fortyfikacje wyjątkowo skutecznymi.",
         "tags": ["militaria"]
       },
   
       {
         "id": "sec_kultura",
         "title": "Znaczenie kulturowe",
-        "text": "Brama Floriańska była początkiem Drogi Królewskiej, miejscem ceremonii, ruchem handlowym oraz nośnikiem symboliki i legend związanych z miastem.",
-        "tags": ["kultura"]
-      },
-      {
-        "id": "cult_1_krolewska",
-        "title": "Początek Drogi Królewskiej",
-        "text": "Przez Bramę Floriańską wjeżdżali królowie, posłowie i uczestnicy uroczystości państwowych. Podczas ceremonii dekorowano ją chorągwiami i zielenią. Była symbolicznym przejściem ze strefy zewnętrznej do reprezentacyjnego wnętrza miasta.",
-        "tags": ["kultura"]
-      },
-      {
-        "id": "cult_2_rzemioslo",
-        "title": "Handle i rzemiosło wokół bramy",
-        "text": "Przez bramę wjeżdżali kupcy i wozacy z Kleparza i Małopolski. W pobliżu kwitł handel, działały warsztaty, a cechy rzemieślnicze miały obowiązki związane z utrzymaniem fragmentów murów. Brama była ekonomicznym filtrem i ważnym węzłem ruchu towarowego.",
-        "tags": ["kultura", "gospodarka"]
-      },
-      {
-        "id": "legend_1_florian",
-        "title": "Legenda o św. Florianie",
-        "text": "Według lokalnej tradycji św. Florian chronił północny odcinek miasta i samą bramę przed pożarami. Jego wizerunek umieszczono na fasadzie jako symbol ochrony i opieki nad strażnikami. Legenda ta nie jest związana z samą budową bramy, ale została z nią kulturowo spleciona.",
-        "tags": ["kultura", "legendy"]
-      },
-      {
-        "id": "curio_1_wysokosc",
-        "title": "Wysokość i unikalne cechy konstrukcji",
-        "text": "Brama ma około 33 metrów wysokości, co czyni ją jedną z najwyższych bram obronnych w tej części Europy. Wysokość zapewniała pole obserwacji i budowała wrażenie potęgi miasta. Konstrukcja łączy masywne kamienne przyziemie z lżejszą ceglaną nadbudową oraz spiralnymi schodami i licznymi otworami strzelniczymi.",
-        "tags": ["ciekawostki"]
-      },
-      {
-        "id": "curio_2_matejko",
-        "title": "Działania Jana Matejki",
-        "text": "Jan Matejko uważał Bramę Floriańską za ważny symbol polskiej historii. To dzięki niemu na fasadzie od strony miasta umieszczono barokowego orła białego, który miał przypominać o tradycji narodowej w okresie zaborów. Jego interwencje nadały bramie dodatkową warstwę znaczeń kulturowych.",
-        "tags": ["kultura", "postacie"]
+        "text": "Brama Floriańska była początkiem Drogi Królewskiej, miejscem ceremonii, ruchem handlowym oraz nośnikiem symboliki i legend związanych z miastem.\n\nPoczątek Drogi Królewskiej: Przez Bramę Floriańską wjeżdżali królowie, posłowie i uczestnicy uroczystości państwowych. Podczas ceremonii dekorowano ją chorągwiami i zielenią. Była symbolicznym przejściem ze strefy zewnętrznej do reprezentacyjnego wnętrza miasta.\n\nHandel i rzemiosło wokół bramy: Przez bramę wjeżdżali kupcy i wozacy z Kleparza i Małopolski. W pobliżu kwitł handel, działały warsztaty, a cechy rzemieślnicze miały obowiązki związane z utrzymaniem fragmentów murów. Brama była ekonomicznym filtrem i ważnym węzłem ruchu towarowego.\n\nLegenda o św. Florianie: Według lokalnej tradycji św. Florian chronił północny odcinek miasta i samą bramę przed pożarami. Jego wizerunek umieszczono na fasadzie jako symbol ochrony i opieki nad strażnikami. Legenda ta nie jest związana z samą budową bramy, ale została z nią kulturowo spleciona.\n\nWysokość i unikalne cechy konstrukcji: Brama ma około 33 metrów wysokości, co czyni ją jedną z najwyższych bram obronnych w tej części Europy. Wysokość zapewniała pole obserwacji i budowała wrażenie potęgi miasta. Konstrukcja łączy masywne kamienne przyziemie z lżejszą ceglaną nadbudową oraz spiralnymi schodami i licznymi otworami strzelniczymi.\n\nDziałania Jana Matejki: Jan Matejko uważał Bramę Floriańską za ważny symbol polskiej historii. To dzięki niemu na fasadzie od strony miasta umieszczono barokowego orła białego, który miał przypominać o tradycji narodowej w okresie zaborów. Jego interwencje nadały bramie dodatkową warstwę znaczeń kulturowych.",
+        "tags": ["kultura", "gospodarka", "legendy", "ciekawostki", "postacie"]
       }
     ],
     "edges": [
       { "from": "root_brama", "to": "sec_historia" },
-      { "from": "sec_historia", "to": "hist_1_powstanie" },
-      { "from": "sec_historia", "to": "hist_2_gotycka" },
-      { "from": "sec_historia", "to": "hist_3_renesans" },
-      { "from": "sec_historia", "to": "hist_4_upadek" },
-      { "from": "sec_historia", "to": "hist_5_ocalenie" },
-  
       { "from": "root_brama", "to": "sec_architektura" },
-      { "from": "sec_architektura", "to": "arch_1_material" },
-      { "from": "sec_architektura", "to": "arch_2_uklad" },
-      { "from": "sec_architektura", "to": "arch_3_dekoracje" },
-  
       { "from": "root_brama", "to": "sec_militaria" },
-      { "from": "sec_militaria", "to": "mil_1_straz" },
-      { "from": "sec_militaria", "to": "mil_2_barbakan" },
-  
-      { "from": "root_brama", "to": "sec_kultura" },
-      { "from": "sec_kultura", "to": "cult_1_krolewska" },
-      { "from": "sec_kultura", "to": "cult_2_rzemioslo" },
-      { "from": "sec_kultura", "to": "legend_1_florian" },
-      { "from": "sec_kultura", "to": "curio_1_wysokosc" },
-      { "from": "sec_kultura", "to": "curio_2_matejko" }
+      { "from": "root_brama", "to": "sec_kultura" }
     ]
   }
-  
