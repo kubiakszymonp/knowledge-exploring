@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { StyleSettings } from "@/components/StyleSettings";
-import { ArticleHero } from "@/components/ArticleHero";
 import { ArticleSection } from "@/components/ArticleSection";
 import { ExplorationQuestions } from "@/components/ExplorationQuestions";
 import { Button } from "@/components/ui/button";
@@ -233,18 +233,32 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/30 to-stone-100 flex flex-col">
       {/* Główna treść - ciągły artykuł */}
-      <main className="container mx-auto px-4 py-8 max-w-3xl flex-1">
+      <main className="flex-1">
         {isLoading ? (
-          <div className="flex items-center justify-center py-20">
+          <div className="container mx-auto px-4 py-8 max-w-3xl flex items-center justify-center py-20">
             <div className="animate-pulse text-stone-400">Ładowanie...</div>
           </div>
         ) : (
           <article className="space-y-0">
-            {/* Hero with image and title */}
-            <ArticleHero
-              imageUrl={imageUrl}
-              title={discoveredSections[0]?.article?.title || rootNode?.title || ""}
-            />
+            {/* Hero with image - full width on mobile */}
+            {imageUrl && (
+              <div className="relative w-full aspect-[21/9] overflow-hidden mb-6 sm:container sm:mx-auto sm:px-4 sm:max-w-3xl sm:rounded-xl sm:mt-8">
+                <Image
+                  src={imageUrl}
+                  alt={discoveredSections[0]?.article?.title || rootNode?.title || ""}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-50 to-transparent" />
+              </div>
+            )}
+            
+            <div className="container mx-auto px-4 py-8 max-w-3xl">
+              {/* Title */}
+              <h1 className="text-2xl sm:text-3xl font-serif font-bold text-stone-800 leading-tight mb-8">
+                {discoveredSections[0]?.article?.title || rootNode?.title || ""}
+              </h1>
 
             {/* Odkryte sekcje - ciągły artykuł */}
             <div className="prose prose-stone prose-lg max-w-none">
@@ -294,6 +308,7 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
                   Zobacz graf wiedzy
                 </Link>
               </Button>
+            </div>
             </div>
           </article>
         )}

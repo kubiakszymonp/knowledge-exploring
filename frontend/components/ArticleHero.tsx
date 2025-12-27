@@ -8,9 +8,9 @@ interface ArticleHeroProps {
 export function ArticleHero({ imageUrl, title }: ArticleHeroProps) {
   return (
     <header className="mb-8">
-      {/* Image with subtle bottom fade */}
+      {/* Image with subtle bottom fade - full width on mobile */}
       {imageUrl && (
-        <div className="relative w-full aspect-[21/9] overflow-hidden mb-6">
+        <div className="relative w-full aspect-[21/9] overflow-hidden mb-6 sm:rounded-xl">
           <Image
             src={imageUrl}
             alt={title}
