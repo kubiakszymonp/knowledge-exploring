@@ -175,7 +175,7 @@ export default function GraphVisualizationCytoscape({
         name: "breadthfirst",
         directed: true,
         circle: false,
-        roots: rootNode ? `#${rootNode.id}` : undefined,
+        roots: rootNode ? [`#${rootNode.id}`] : undefined,
         spacingFactor: 1.5,
         padding: 40,
         avoidOverlap: true,
