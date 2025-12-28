@@ -117,17 +117,19 @@ export default function Home() {
           <p className="text-stone-500 mb-6">{trail.description}</p>
           
           <div className="relative">
-            {/* Line connecting stops */}
+            {/* Vertical line connecting stops - mobile */}
+            <div className="absolute top-8 bottom-8 left-8 w-0.5 bg-amber-200 sm:hidden" />
+            {/* Horizontal line connecting stops - desktop */}
             <div className="absolute top-8 left-8 right-8 h-0.5 bg-amber-200 hidden sm:block" />
             
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
               {trail.stops.map((stop, i) => (
                 <Link
                   key={stop.id}
                   href={`/${stop.id}/explore`}
-                  className="group relative flex flex-col items-center text-center"
+                  className="group relative flex flex-row sm:flex-col items-center gap-4 sm:gap-0 text-left sm:text-center"
                 >
-                  <div className="relative z-10 w-16 h-16 rounded-full overflow-hidden ring-4 ring-amber-100 group-hover:ring-amber-400 transition-all shadow-md">
+                  <div className="relative z-10 w-16 h-16 flex-shrink-0 rounded-full overflow-hidden ring-4 ring-amber-100 group-hover:ring-amber-400 transition-all shadow-md">
                     <Image
                       src={stop.image}
                       alt={stop.name}
@@ -135,7 +137,7 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <span className="mt-3 text-sm font-medium text-stone-700 group-hover:text-amber-700 transition-colors">
+                  <span className="text-sm font-medium text-stone-700 group-hover:text-amber-700 transition-colors sm:mt-3">
                     {i + 1}. {stop.name}
                   </span>
                 </Link>
