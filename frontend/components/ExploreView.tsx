@@ -241,17 +241,52 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
           </div>
         ) : (
           <article className="space-y-0">
-            {/* Hero with image - full width on mobile */}
+            {/* Hero with image - larger on mobile with ornaments */}
             {imageUrl && (
-              <div className="relative w-full aspect-[21/9] overflow-hidden mb-6 sm:container sm:mx-auto sm:px-4 sm:max-w-3xl sm:rounded-xl sm:mt-8">
-                <Image
-                  src={imageUrl}
-                  alt={discoveredSections[0]?.article?.title || rootNode?.title || ""}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-50 to-transparent" />
+              <div className="mb-8 sm:mb-6">
+                {/* Mobile: larger image with ornaments */}
+                <div className="sm:hidden relative w-full h-[50vh] overflow-hidden mb-4">
+                  {/* Decorative top border */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 z-10" />
+                  
+                  {/* Image container */}
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={imageUrl}
+                      alt={discoveredSections[0]?.article?.title || rootNode?.title || ""}
+                      fill
+                      className="object-cover object-center"
+                      priority
+                      sizes="100vw"
+                    />
+                    {/* Gradient overlay at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-stone-50 via-stone-50/80 to-transparent" />
+                  </div>
+                  
+                  {/* Decorative bottom border with ornament */}
+                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center z-10">
+                    <div className="flex items-center gap-2 w-full px-4">
+                      <div className="flex-1 h-px bg-amber-400" />
+                      <div className="w-2 h-2 rounded-full bg-amber-400" />
+                      <div className="flex-1 h-px bg-amber-400" />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop: original styling */}
+                <div className="hidden sm:block container mx-auto px-4 max-w-3xl">
+                  <div className="relative w-full aspect-[21/9] overflow-hidden rounded-xl mt-8">
+                    <Image
+                      src={imageUrl}
+                      alt={discoveredSections[0]?.article?.title || rootNode?.title || ""}
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 768px"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-50 to-transparent" />
+                  </div>
+                </div>
               </div>
             )}
             

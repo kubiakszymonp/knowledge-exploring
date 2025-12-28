@@ -1,8 +1,11 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { loadPreferences } from "@/lib/userPreferences";
+import { Button } from "@/components/ui/button";
 
 const MapPreview = dynamic(() => import("@/components/MapPreview").then(mod => mod.MapPreview), {
   ssr: false,
@@ -44,12 +47,26 @@ const trail = {
 };
 
 export default function Home() {
+  const [hasPreferences, setHasPreferences] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const preferences = loadPreferences();
+    // Uznajemy że ankieta jest wypełniona jeśli są zapisane zainteresowania
+    setHasPreferences(preferences !== null && preferences.interests.length > 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <h1 className="text-xl font-semibold text-stone-800">Knowledge Explorer</h1>
+          <Link
+            href="/settings"
+            className="text-sm text-stone-600 hover:text-amber-600 transition-colors"
+          >
+            Ustawienia
+          </Link>
         </div>
       </header>
 
@@ -59,11 +76,20 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
             Odkrywaj wiedzę inaczej
           </h2>
-          <p className="text-stone-600 leading-relaxed">
+          <p className="text-stone-600 leading-relaxed mb-6">
             Eksploruj zabytki Krakowa przez interaktywne artykuły. 
             Wybierz temat, klikaj w pytania i buduj własną ścieżkę odkrywania. 
             Dostosuj styl tekstu do swoich preferencji — dla dzieci, dorosłych lub z humorem.
           </p>
+          {hasPreferences !== null && (
+            <Link href="/settings">
+              <Button
+                className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+              >
+                {hasPreferences ? "✏️ Edytuj ankietę" : "📝 Wypełnij ankietę"}
+              </Button>
+            </Link>
+          )}
         </section>
 
         {/* Map Section */}
