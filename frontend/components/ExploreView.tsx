@@ -6,6 +6,7 @@ import Image from "next/image";
 import { StyleSettings } from "@/components/StyleSettings";
 import { ArticleSection } from "@/components/ArticleSection";
 import { ExplorationQuestions } from "@/components/ExplorationQuestions";
+import { FloatingAudioPlayer } from "@/components/FloatingAudioPlayer";
 import { Button } from "@/components/ui/button";
 import {
   getNodeStylization,
@@ -325,6 +326,9 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
           />
         </div>
       </footer>
+
+      {/* Pływający odtwarzacz audio */}
+      <FloatingAudioPlayer />
     </div>
   );
 }
