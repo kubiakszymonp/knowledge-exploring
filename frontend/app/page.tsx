@@ -76,6 +76,10 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
             Odkrywaj wiedzę inaczej
           </h2>
+          <p className="text-stone-700 leading-relaxed mb-3">
+            Jedna wiedza, nieskończenie wiele stylizacji i języków — wybierz formę,
+            która najlepiej do Ciebie pasuje.
+          </p>
           <p className="text-stone-600 leading-relaxed mb-6">
             Eksploruj zabytki Krakowa przez interaktywne artykuły. 
             Wybierz temat, klikaj w pytania i buduj własną ścieżkę odkrywania. 
