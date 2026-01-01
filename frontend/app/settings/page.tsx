@@ -76,7 +76,7 @@ export default function SettingsPage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-semibold text-stone-800 hover:text-amber-600 transition-colors">
+            <Link href="/" className="text-md font-semibold text-stone-600">
               ← Knowledge Explorer
             </Link>
             <h1 className="text-xl font-semibold text-stone-800">Ustawienia</h1>

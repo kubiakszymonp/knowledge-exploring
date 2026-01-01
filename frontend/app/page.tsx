@@ -66,7 +66,7 @@ export default function Home() {
           <h1 className="text-xl font-semibold text-stone-800">Knowledge Explorer</h1>
           <Link
             href="/settings"
-            className="text-sm text-stone-600 hover:text-amber-600 transition-colors"
+            className="text-md font-semibold text-stone-600"
           >
             Ustawienia
           </Link>
