@@ -46,8 +46,11 @@ const trail = {
   ],
 };
 
+type Perspective = "turysta" | "zarzadca";
+
 export default function Home() {
   const [hasPreferences, setHasPreferences] = useState<boolean | null>(null);
+  const [activePerspective, setActivePerspective] = useState<Perspective>("turysta");
 
   useEffect(() => {
     const preferences = loadPreferences();
@@ -72,23 +75,108 @@ export default function Home() {
 
       <main className="container mx-auto px-6 py-12 space-y-16">
         {/* Hero Section */}
-        <section className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
+        <section className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-8">
             Odkrywaj wiedzę inaczej
           </h2>
-          <p className="text-stone-600 leading-relaxed mb-6">
-            Eksploruj zabytki Krakowa przez interaktywne artykuły. 
-            Wybierz temat, klikaj w pytania i buduj własną ścieżkę odkrywania. 
-            Dostosuj styl tekstu do swoich preferencji — dla dzieci, dorosłych lub z humorem.
-          </p>
+          
+          {/* Perspective Cards */}
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            {/* Turysta Card */}
+            <button
+              onClick={() => setActivePerspective("turysta")}
+              className={`group relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl ${
+                activePerspective === "turysta" ? "scale-[1.03] shadow-xl" : ""
+              }`}
+            >
+              <div className="relative w-full h-[300px] sm:h-[400px]">
+                <Image
+                  src="/turysta.png"
+                  alt="Turysta"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  unoptimized
+                />
+                {/* Overlay dla aktywnej karty i hover */}
+                <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${
+                  activePerspective === "turysta" 
+                    ? "opacity-100" 
+                    : "opacity-0 group-hover:opacity-100"
+                }`} />
+                {/* Gradient z dołu */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                {/* Tekst na dole */}
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+                  <h3 className="text-lg sm:text-2xl font-bold text-white">Dla turystów</h3>
+                </div>
+              </div>
+            </button>
+
+            {/* Zarządca Card */}
+            <button
+              onClick={() => setActivePerspective("zarzadca")}
+              className={`group relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl ${
+                activePerspective === "zarzadca" ? "scale-[1.03] shadow-xl" : ""
+              }`}
+            >
+              <div className="relative w-full h-[300px] sm:h-[400px]">
+                <Image
+                  src="/zarzadca.png"
+                  alt="Zarządca"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  unoptimized
+                />
+                {/* Overlay dla aktywnej karty i hover */}
+                <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${
+                  activePerspective === "zarzadca" 
+                    ? "opacity-100" 
+                    : "opacity-0 group-hover:opacity-100"
+                }`} />
+                {/* Gradient z dołu */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                {/* Tekst na dole */}
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+                  <h3 className="text-lg sm:text-2xl font-bold text-white">Dla twórców</h3>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          {/* Description Section */}
+          <div className="bg-white rounded-xl shadow-md p-6 sm:p-8">
+            <div className="space-y-4">
+              {activePerspective === "turysta" ? (
+                <div className="animate-fadeIn">
+                  <h3 className="text-xl font-semibold text-stone-800 mb-3">Dla turystów</h3>
+                  <p className="text-stone-600 leading-relaxed">
+                    Eksploruj zabytki Krakowa przez interaktywne artykuły. 
+                    Wybierz temat, klikaj w pytania i buduj własną ścieżkę odkrywania. 
+                    Dostosuj styl tekstu do swoich preferencji — dla dzieci, dorosłych lub z humorem.
+                  </p>
+                </div>
+              ) : (
+                <div className="animate-fadeIn">
+                  <h3 className="text-xl font-semibold text-stone-800 mb-3">Dla twórców</h3>
+                  <p className="text-stone-600 leading-relaxed">
+                    Zarządzaj treścią i informacjami o zabytkach. Dodawaj nowe miejsca, 
+                    edytuj opisy i tworz interaktywne ścieżki zwiedzania dla turystów.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
           {hasPreferences !== null && (
-            <Link href="/settings">
-              <Button
-                className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-3 rounded-lg transition-colors"
-              >
-                {hasPreferences ? "✏️ Edytuj ankietę" : "📝 Wypełnij ankietę"}
-              </Button>
-            </Link>
+            <div className="mt-6">
+              <Link href="/settings">
+                <Button
+                  className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+                >
+                  {hasPreferences ? "✏️ Edytuj ankietę" : "📝 Wypełnij ankietę"}
+                </Button>
+              </Link>
+            </div>
           )}
         </section>
 

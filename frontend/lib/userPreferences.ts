@@ -37,3 +37,5 @@ export function getPreferences(): UserPreferences {
   return loadPreferences() || getDefaultPreferences();
 }
 
+
+

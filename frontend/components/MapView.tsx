@@ -63,3 +63,5 @@ export function MapView({ markers, center = [50.0647, 19.9450], zoom = 15 }: Map
 }
 
 
+
+
