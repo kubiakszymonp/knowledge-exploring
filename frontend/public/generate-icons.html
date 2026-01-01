@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate PWA Icons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background: #f59e0b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #d97706;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generate PWA Icons</h1>
+  <p>This page will generate icon-192x192.png and icon-512x512.png from the SVG.</p>
+  
+  <div>
+    <canvas id="canvas192" width="192" height="192"></canvas>
+    <canvas id="canvas512" width="512" height="512"></canvas>
+  </div>
+  
+  <div>
+    <button onclick="generateIcon(192)">Generate 192x192</button>
+    <button onclick="generateIcon(512)">Generate 512x512</button>
+    <button onclick="generateBoth()">Generate Both</button>
+  </div>
+
+  <div id="downloads"></div>
+
+  <script>
+    function drawIcon(canvas, size) {
+      const ctx = canvas.getContext('2d');
+      
+      // Background
+      ctx.fillStyle = '#f59e0b';
+      ctx.roundRect(0, 0, size, size, size * 0.15);
+      ctx.fill();
+      
+      // Icon design - simple explorer/compass style
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = size * 0.02;
+      
+      // Circle in center
+      const centerX = size / 2;
+      const centerY = size / 2;
+      const radius = size * 0.15;
+      
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Compass/explorer lines
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY - radius * 1.5);
+      ctx.lineTo(centerX, centerY + radius * 1.5);
+      ctx.moveTo(centerX - radius * 1.5, centerY);
+      ctx.lineTo(centerX + radius * 1.5, centerY);
+      ctx.stroke();
+      
+      // Small circles at ends
+      const smallRadius = radius * 0.3;
+      const positions = [
+        [centerX, centerY - radius * 1.5],
+        [centerX, centerY + radius * 1.5],
+        [centerX - radius * 1.5, centerY],
+        [centerX + radius * 1.5, centerY]
+      ];
+      
+      positions.forEach(([x, y]) => {
+        ctx.beginPath();
+        ctx.arc(x, y, smallRadius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+    
+    function generateIcon(size) {
+      const canvas = document.getElementById(`canvas${size}`);
+      drawIcon(canvas, size);
+      
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `icon-${size}x${size}.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+    
+    function generateBoth() {
+      generateIcon(192);
+      setTimeout(() => generateIcon(512), 500);
+    }
+    
+    // Draw initial icons
+    window.onload = () => {
+      drawIcon(document.getElementById('canvas192'), 192);
+      drawIcon(document.getElementById('canvas512'), 512);
+    };
+  </script>
+</body>
+</html>
+
