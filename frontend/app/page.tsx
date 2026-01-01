@@ -289,7 +289,7 @@ export default function Home() {
             <div className="mt-6 w-full">
               <Link href="/preferences" className="block w-full">
                 <Button
-                  className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-4 rounded-lg transition-colors"
+                  className="w-full bg-amber-500 hover:bg-amber-600 text-white text-xl font-bold px-6 py-8 rounded-lg transition-colors"
                 >
                   {hasPreferences ? "✏️ Edytuj preferencje" : "📝 Ustaw preferencje"}
                 </Button>
