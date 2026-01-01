@@ -73,7 +73,7 @@ export default function SettingsPage() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-white sticky top-0 z-[1000]">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-md font-semibold text-stone-600">

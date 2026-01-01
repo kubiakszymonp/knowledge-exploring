@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-white sticky top-0 z-[1000]">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <h1 className="text-xl font-semibold text-stone-800">Knowledge Explorer</h1>
           <Link
@@ -168,12 +168,12 @@ export default function Home() {
           </div>
 
           {hasPreferences !== null && (
-            <div className="mt-6">
-              <Link href="/settings">
+            <div className="mt-6 w-full">
+              <Link href="/preferences" className="block w-full">
                 <Button
-                  className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+                  className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-4 rounded-lg transition-colors"
                 >
-                  {hasPreferences ? "✏️ Edytuj ankietę" : "📝 Wypełnij ankietę"}
+                  {hasPreferences ? "✏️ Edytuj preferencje" : "📝 Ustaw preferencje"}
                 </Button>
               </Link>
             </div>
