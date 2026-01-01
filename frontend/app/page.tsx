@@ -75,19 +75,35 @@ export default function Home() {
 
       <main className="container mx-auto px-6 py-12 space-y-16">
         {/* Hero Section */}
-        <section className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-8">
+        <section className="max-w-4xl">
+          <h2 className="text-center text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
             Odkrywaj wiedzę inaczej
           </h2>
           
+          {/* Animated scroll indicator */}
+          <div className="flex justify-center mb-8">
+            <div className="animate-bounce">
+              <svg
+                className="w-6 h-6 text-amber-500"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
+ 
           {/* Perspective Cards */}
           <div className="grid grid-cols-2 gap-4 mb-8">
             {/* Turysta Card */}
             <button
               onClick={() => setActivePerspective("turysta")}
-              className={`group relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl ${
-                activePerspective === "turysta" ? "scale-[1.03] shadow-xl" : ""
-              }`}
+              className={`group relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl ${activePerspective === "turysta" ? "scale-[1.03] shadow-xl" : ""
+                }`}
             >
               <div className="relative w-full h-[300px] sm:h-[400px]">
                 <Image
@@ -98,11 +114,10 @@ export default function Home() {
                   unoptimized
                 />
                 {/* Overlay dla aktywnej karty i hover */}
-                <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${
-                  activePerspective === "turysta" 
-                    ? "opacity-100" 
+                <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${activePerspective === "turysta"
+                    ? "opacity-100"
                     : "opacity-0 group-hover:opacity-100"
-                }`} />
+                  }`} />
                 {/* Gradient z dołu */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 {/* Tekst na dole */}
@@ -115,9 +130,8 @@ export default function Home() {
             {/* Zarządca Card */}
             <button
               onClick={() => setActivePerspective("zarzadca")}
-              className={`group relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl ${
-                activePerspective === "zarzadca" ? "scale-[1.03] shadow-xl" : ""
-              }`}
+              className={`group relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl ${activePerspective === "zarzadca" ? "scale-[1.03] shadow-xl" : ""
+                }`}
             >
               <div className="relative w-full h-[300px] sm:h-[400px]">
                 <Image
@@ -128,11 +142,10 @@ export default function Home() {
                   unoptimized
                 />
                 {/* Overlay dla aktywnej karty i hover */}
-                <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${
-                  activePerspective === "zarzadca" 
-                    ? "opacity-100" 
+                <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${activePerspective === "zarzadca"
+                    ? "opacity-100"
                     : "opacity-0 group-hover:opacity-100"
-                }`} />
+                  }`} />
                 {/* Gradient z dołu */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 {/* Tekst na dole */}
@@ -144,26 +157,131 @@ export default function Home() {
           </div>
 
           {/* Description Section */}
-          <div className="bg-white rounded-xl shadow-md p-6 sm:p-8">
-            <div className="space-y-4">
-              {activePerspective === "turysta" ? (
-                <div className="animate-fadeIn">
-                  <h3 className="text-xl font-semibold text-stone-800 mb-3">Dla turystów</h3>
-                  <p className="text-stone-600 leading-relaxed">
-                    Eksploruj zabytki Krakowa przez interaktywne artykuły. 
-                    Wybierz temat, klikaj w pytania i buduj własną ścieżkę odkrywania. 
-                    Dostosuj styl tekstu do swoich preferencji — dla dzieci, dorosłych lub z humorem.
+          <div className="space-y-10">
+            {activePerspective === "turysta" ? (
+              <div className="animate-fadeIn">
+                <h3 className="text-3xl font-semibold text-stone-800 mb-6">Dla turysty</h3>
+                <h4 className="text-xl font-semibold text-stone-800 mb-3">Zwiedzaj tak, jak lubisz</h4>
+
+                <div className="space-y-10 text-stone-600 leading-relaxed">
+                  <p className="text-stone-600 text-lg">
+                    Odkrywaj ciekawe miejsca w swoim tempie — bez presji, bez pośpiechu. Każdy obiekt ma zwięzłe, przystępne treści, które prowadzą Cię krok po kroku.
                   </p>
+
+                  {/* Ornament separator */}
+                  <div className="flex items-center justify-center py-4">
+                    <div className="flex items-center gap-2 w-full max-w-xs">
+                      <div className="flex-1 h-px bg-amber-400" />
+                      <div className="w-2 h-2 rounded-full bg-amber-400" />
+                      <div className="flex-1 h-px bg-amber-400" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Treści dopasowane do Twoich zainteresowań</h4>
+                    <p className="text-stone-500 text-lg">
+                      Interesuje Cię historia? Architektura? Ciekawostki?
+                    </p>
+                    <p className="text-stone-500 text-lg">
+                      Aplikacja sama układa opis tak, by pasował do Twojego stylu zwiedzania.
+                    </p>
+                  </div>
+
+                  {/* Ornament separator */}
+                  <div className="flex items-center justify-center py-4">
+                    <div className="flex items-center gap-2 w-full max-w-xs">
+                      <div className="flex-1 h-px bg-amber-400" />
+                      <div className="w-2 h-2 rounded-full bg-amber-400" />
+                      <div className="flex-1 h-px bg-amber-400" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Zwiedzanie na własnych zasadach</h4>
+                    <p className="text-stone-500 text-lg">
+                      Możesz kliknąć, posłuchać, przejrzeć skrót — albo zanurzyć się w szczegóły.
+                    </p>
+                    <p className="text-stone-500 text-lg">
+                      Działa również offline, więc sprawdzi się w górkach, starych miastach i podziemiach.
+                    </p>
+                  </div>
+
                 </div>
-              ) : (
-                <div className="animate-fadeIn">
-                  <h3 className="text-xl font-semibold text-stone-800 mb-3">Dla twórców</h3>
-                  <p className="text-stone-600 leading-relaxed">
-                    Zarządzaj treścią i informacjami o zabytkach. Dodawaj nowe miejsca, 
-                    edytuj opisy i tworz interaktywne ścieżki zwiedzania dla turystów.
-                  </p>
+              </div>
+            ) : (
+              <div className="animate-fadeIn">
+                <h3 className="text-3xl font-semibold text-stone-800 mb-6">Dla twórców, muzeów i miast</h3>
+
+                <div className="space-y-10 text-stone-600 leading-relaxed">
+                  <div>
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Jedno miejsce na całą wiedzę</h4>
+                    <p className="text-stone-500 text-lg">
+                      Prosty edytor pozwala tworzyć i aktualizować opisy w formie grafu wiedzy — brak chaosu, brak duplikatów, pełna kontrola nad strukturą treści.
+                    </p>
+                  </div>
+
+                  {/* Ornament separator */}
+                  <div className="flex items-center justify-center py-4">
+                    <div className="flex items-center gap-2 w-full max-w-xs">
+                      <div className="flex-1 h-px bg-amber-400" />
+                      <div className="w-2 h-2 rounded-full bg-amber-400" />
+                      <div className="flex-1 h-px bg-amber-400" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Oficjalne ścieżki i rekomendacje</h4>
+                    <p className="text-stone-500 text-lg">
+                      Możesz wyróżniać obiekty, ustawiać własne trasy zwiedzania i promować lokalne atrakcje — wszystko w jednym ekosystemie.
+                    </p>
+                  </div>
+
+                  {/* Ornament separator */}
+                  <div className="flex items-center justify-center py-4">
+                    <div className="flex items-center gap-2 w-full max-w-xs">
+                      <div className="flex-1 h-px bg-amber-400" />
+                      <div className="w-2 h-2 rounded-full bg-amber-400" />
+                      <div className="flex-1 h-px bg-amber-400" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Zasięg bez dodatkowych kosztów</h4>
+                    <p className="text-stone-500 text-lg">
+                      Twoje treści są widoczne w aplikacji, bez druku tablic, folderów i nagrań. Odbiorcy dostają nowoczesny sposób zwiedzania — a Ty oszczędzasz czas i zasoby.
+                    </p>
+                  </div>
                 </div>
-              )}
+              </div>
+            )}
+          </div>
+
+          <div className="flex items-center justify-center py-4 my-8">
+            <div className="flex items-center gap-2 w-full max-w-xs">
+              <div className="flex-1 h-px bg-amber-400" />
+              <div className="w-2 h-2 rounded-full bg-amber-400" />
+              <div className="flex-1 h-px bg-amber-400" />
+            </div>
+          </div>
+
+          <h2 className="text-center text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
+            Wypróbuj aplikację
+          </h2>
+          
+          {/* Animated scroll indicator */}
+          <div className="flex justify-center mb-8">
+            <div className="animate-bounce">
+              <svg
+                className="w-6 h-6 text-amber-500"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </div>
           </div>
 
@@ -198,7 +316,7 @@ export default function Home() {
 
         {/* Places Section */}
         <section>
-          <h2 className="text-2xl font-serif font-bold text-stone-800 mb-6">Miejsca</h2>
+          <h2 className="text-center text-2xl font-serif font-bold text-stone-800 mb-6">Miejsca</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {places.map((place) => (
               <Link
@@ -229,13 +347,13 @@ export default function Home() {
         <section>
           <h2 className="text-2xl font-serif font-bold text-stone-800 mb-2">{trail.name}</h2>
           <p className="text-stone-500 mb-6">{trail.description}</p>
-          
+
           <div className="relative">
             {/* Vertical line connecting stops - mobile */}
             <div className="absolute top-8 bottom-8 left-8 w-0.5 bg-amber-200 sm:hidden" />
             {/* Horizontal line connecting stops - desktop */}
             <div className="absolute top-8 left-8 right-8 h-0.5 bg-amber-200 hidden sm:block" />
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
               {trail.stops.map((stop, i) => (
                 <Link
