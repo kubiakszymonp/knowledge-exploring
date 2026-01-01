@@ -133,12 +133,6 @@ export default function GraphVisualizationCytoscape({
       // ⭐⭐⭐ DAGRE LAYOUT — piękne drzewo pionowe
       layout: {
         name: "dagre",
-        rankDir: "TB",    // top → bottom
-        rankSep: 80,      // pionowe odstępy
-        nodeSep: 60,      // poziome odstępy
-        edgeSep: 20,
-        padding: 50,
-        animate: false,
       },
 
       minZoom: 0.3,
