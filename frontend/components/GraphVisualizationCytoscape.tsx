@@ -2,10 +2,13 @@
 
 import { useRef, useEffect, useState } from "react";
 import cytoscape, { Core, ElementDefinition } from "cytoscape";
+import cytoscapeDagre from "cytoscape-dagre";
 import { KnowledgeGraph } from "../model/KnowledgeGraph";
 import { KnowledgeNode } from "../model/KnowledgeNode";
 import { Edge } from "../model/Edge";
 import EditorDrawer from "./EditorDrawer";
+
+cytoscape.use(cytoscapeDagre);
 
 interface GraphVisualizationCytoscapeProps {
   graph: KnowledgeGraph;
@@ -59,30 +62,6 @@ export default function GraphVisualizationCytoscape({
 
     const elements = graphToCytoscape(graph);
 
-    // Oblicz głębokość każdego węzła
-    const depths = new Map<string, number>();
-    const rootNode = graph.getRootNode();
-    
-    if (rootNode) {
-      const queue: Array<{ id: string; depth: number }> = [
-        { id: rootNode.id, depth: 0 },
-      ];
-      depths.set(rootNode.id, 0);
-
-      while (queue.length > 0) {
-        const current = queue.shift()!;
-        const outgoing = graph.getOutgoingEdges(current.id);
-
-        outgoing.forEach((edge) => {
-          if (!depths.has(edge.to)) {
-            const newDepth = current.depth + 1;
-            depths.set(edge.to, newDepth);
-            queue.push({ id: edge.to, depth: newDepth });
-          }
-        });
-      }
-    }
-
     cyRef.current = cytoscape({
       container: containerRef.current,
       elements,
@@ -99,14 +78,12 @@ export default function GraphVisualizationCytoscape({
             "font-weight": 600,
             "text-wrap": "wrap",
             "text-max-width": "90px",
-            "text-overflow-wrap": "whitespace",
-            width: 100,
+            width: 110,
             height: 45,
             shape: "roundrectangle",
             "border-width": 1,
             "border-color": "#cbd5e1",
             "overlay-opacity": 0,
-            "padding": "2px",
           },
         },
         {
@@ -114,7 +91,7 @@ export default function GraphVisualizationCytoscape({
           style: {
             "background-color": "#e0e7ff",
             "border-color": "#818cf8",
-            "border-width": 1,
+            "border-width": 2,
           },
         },
         {
@@ -126,93 +103,66 @@ export default function GraphVisualizationCytoscape({
           },
         },
         {
-          selector: "node[?isRoot]:selected",
-          style: {
-            "background-color": "#fef3c7",
-            "border-color": "#f59e0b",
-          },
-        },
-        {
-          selector: "node:active",
-          style: {
-            "overlay-opacity": 0,
-          },
-        },
-        {
-          selector: "node:grabbed",
-          style: {
-            "overlay-opacity": 0,
-          },
-        },
-        {
           selector: "edge",
           style: {
-            width: 1.5,
+            width: 2,
             "line-color": "#cbd5e1",
             "target-arrow-color": "#cbd5e1",
             "target-arrow-shape": "triangle",
-            "arrow-scale": 0.8,
+            "arrow-scale": 1,
             "curve-style": "bezier",
             label: "data(label)",
             "font-size": "10px",
             color: "#64748b",
             "text-background-color": "#ffffff",
             "text-background-opacity": 1,
-            "text-background-padding": "3px",
+            "text-background-padding": "2px",
             "text-margin-y": -10,
           },
         },
         {
           selector: "edge:selected",
           style: {
-            width: 2.5,
+            width: 3,
             "line-color": "#fbbf24",
             "target-arrow-color": "#fbbf24",
           },
         },
       ],
+
+      // ⭐⭐⭐ DAGRE LAYOUT — piękne drzewo pionowe
       layout: {
-        name: "breadthfirst",
-        directed: true,
-        circle: false,
-        roots: rootNode ? [`#${rootNode.id}`] : undefined,
-        spacingFactor: 1.5,
-        padding: 40,
-        avoidOverlap: true,
-        nodeDimensionsIncludeLabels: true,
+        name: "dagre",
+        rankDir: "TB",    // top → bottom
+        rankSep: 80,      // pionowe odstępy
+        nodeSep: 60,      // poziome odstępy
+        edgeSep: 20,
+        padding: 50,
+        animate: false,
       },
-      userZoomingEnabled: true,
-      userPanningEnabled: true,
-      boxSelectionEnabled: false,
-      minZoom: 0.5,
+
+      minZoom: 0.3,
       maxZoom: 2,
     });
 
+    // --- Kliknięcia ---
     cyRef.current.on("tap", "node", (evt) => {
       const nodeId = evt.target.id();
       const node = graph.getNode(nodeId);
-      if (node) {
-        setSelected({ type: "node", data: node });
-      }
+      if (node) setSelected({ type: "node", data: node });
     });
 
     cyRef.current.on("tap", "edge", (evt) => {
-      const edgeIndex = evt.target.data("edgeIndex");
-      const edge = graph.getAllEdges()[edgeIndex];
-      if (edge) {
-        setSelected({ type: "edge", data: edge });
-      }
+      const index = evt.target.data("edgeIndex");
+      const edge = graph.getAllEdges()[index];
+      if (edge) setSelected({ type: "edge", data: edge });
     });
 
     cyRef.current.on("tap", (evt) => {
-      if (evt.target === cyRef.current) {
-        setSelected(null);
-      }
+      if (evt.target === cyRef.current) setSelected(null);
     });
 
-    return () => {
-      cyRef.current?.destroy();
-    };
+    return () => cyRef.current?.destroy();
   }, [graph]);
 
   return (
@@ -222,8 +172,9 @@ export default function GraphVisualizationCytoscape({
           Graf Wiedzy:{" "}
           <span className="text-indigo-600">{rootNode?.title || "Nieznany"}</span>
         </h1>
+
         <p className="text-sm text-gray-600 mt-1">
-          Wizualizacja struktury wiedzy • {graph.getAllNodes().length} węzłów •{" "}
+          Wizualizacja struktury • {graph.getAllNodes().length} węzłów •{" "}
           {graph.getAllEdges().length} połączeń
         </p>
       </header>

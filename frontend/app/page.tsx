@@ -73,13 +73,13 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 py-12 space-y-16">
+      <main className="w-full flex flex-col items-center px-6 py-12 space-y-16">
         {/* Hero Section */}
-        <section className="max-w-4xl">
+        <section className="max-w-5xl w-full">
           <h2 className="text-center text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
             Odkrywaj wiedzę inaczej
           </h2>
-          
+
           {/* Animated scroll indicator */}
           <div className="flex justify-center mb-8">
             <div className="animate-bounce">
@@ -96,7 +96,7 @@ export default function Home() {
               </svg>
             </div>
           </div>
- 
+
           {/* Perspective Cards */}
           <div className="grid grid-cols-2 gap-4 mb-8">
             {/* Turysta Card */}
@@ -115,8 +115,8 @@ export default function Home() {
                 />
                 {/* Overlay dla aktywnej karty i hover */}
                 <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${activePerspective === "turysta"
-                    ? "opacity-100"
-                    : "opacity-0 group-hover:opacity-100"
+                  ? "opacity-100"
+                  : "opacity-0 group-hover:opacity-100"
                   }`} />
                 {/* Gradient z dołu */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -143,8 +143,8 @@ export default function Home() {
                 />
                 {/* Overlay dla aktywnej karty i hover */}
                 <div className={`absolute inset-0 bg-amber-500/40 transition-all duration-300 ${activePerspective === "zarzadca"
-                    ? "opacity-100"
-                    : "opacity-0 group-hover:opacity-100"
+                  ? "opacity-100"
+                  : "opacity-0 group-hover:opacity-100"
                   }`} />
                 {/* Gradient z dołu */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -160,11 +160,11 @@ export default function Home() {
           <div className="space-y-10">
             {activePerspective === "turysta" ? (
               <div className="animate-fadeIn">
-                <h3 className="text-3xl font-semibold text-stone-800 mb-6">Dla turysty</h3>
-                <h4 className="text-xl font-semibold text-stone-800 mb-3">Zwiedzaj tak, jak lubisz</h4>
+                <h3 className="text-3xl font-semibold text-stone-800 mb-6 text-center">Dla turysty</h3>
+                <h4 className="text-xl font-semibold text-stone-800 mb-3 text-center">Zwiedzaj tak, jak lubisz</h4>
 
                 <div className="space-y-10 text-stone-600 leading-relaxed">
-                  <p className="text-stone-600 text-lg">
+                  <p className="text-stone-600 text-lg text-center">
                     Odkrywaj ciekawe miejsca w swoim tempie — bez presji, bez pośpiechu. Każdy obiekt ma zwięzłe, przystępne treści, które prowadzą Cię krok po kroku.
                   </p>
 
@@ -178,11 +178,11 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Treści dopasowane do Twoich zainteresowań</h4>
-                    <p className="text-stone-500 text-lg">
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3 text-center">Treści dopasowane do Twoich zainteresowań</h4>
+                    <p className="text-stone-500 text-lg text-center">
                       Interesuje Cię historia? Architektura? Ciekawostki?
                     </p>
-                    <p className="text-stone-500 text-lg">
+                    <p className="text-stone-500 text-lg text-center">
                       Aplikacja sama układa opis tak, by pasował do Twojego stylu zwiedzania.
                     </p>
                   </div>
@@ -197,11 +197,11 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Zwiedzanie na własnych zasadach</h4>
-                    <p className="text-stone-500 text-lg">
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3 text-center">Zwiedzanie na własnych zasadach</h4>
+                    <p className="text-stone-500 text-lg text-center">
                       Możesz kliknąć, posłuchać, przejrzeć skrót — albo zanurzyć się w szczegóły.
                     </p>
-                    <p className="text-stone-500 text-lg">
+                    <p className="text-stone-500 text-lg text-center">
                       Działa również offline, więc sprawdzi się w górkach, starych miastach i podziemiach.
                     </p>
                   </div>
@@ -210,12 +210,12 @@ export default function Home() {
               </div>
             ) : (
               <div className="animate-fadeIn">
-                <h3 className="text-3xl font-semibold text-stone-800 mb-6">Dla twórców, muzeów i miast</h3>
+                <h3 className="text-3xl font-semibold text-stone-800 mb-6 text-center">Dla twórców, muzeów i miast</h3>
 
                 <div className="space-y-10 text-stone-600 leading-relaxed">
                   <div>
-                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Jedno miejsce na całą wiedzę</h4>
-                    <p className="text-stone-500 text-lg">
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3 text-center">Jedno miejsce na całą wiedzę</h4>
+                    <p className="text-stone-500 text-lg text-center">
                       Prosty edytor pozwala tworzyć i aktualizować opisy w formie grafu wiedzy — brak chaosu, brak duplikatów, pełna kontrola nad strukturą treści.
                     </p>
                   </div>
@@ -230,8 +230,8 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Oficjalne ścieżki i rekomendacje</h4>
-                    <p className="text-stone-500 text-lg">
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3 text-center">Oficjalne ścieżki i rekomendacje</h4>
+                    <p className="text-stone-500 text-lg text-center">
                       Możesz wyróżniać obiekty, ustawiać własne trasy zwiedzania i promować lokalne atrakcje — wszystko w jednym ekosystemie.
                     </p>
                   </div>
@@ -246,8 +246,8 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-semibold text-stone-800 mb-3">Zasięg bez dodatkowych kosztów</h4>
-                    <p className="text-stone-500 text-lg">
+                    <h4 className="text-xl font-semibold text-stone-800 mb-3 text-center">Zasięg bez dodatkowych kosztów</h4>
+                    <p className="text-stone-500 text-lg text-center">
                       Twoje treści są widoczne w aplikacji, bez druku tablic, folderów i nagrań. Odbiorcy dostają nowoczesny sposób zwiedzania — a Ty oszczędzasz czas i zasoby.
                     </p>
                   </div>
@@ -267,7 +267,7 @@ export default function Home() {
           <h2 className="text-center text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4">
             Wypróbuj aplikację
           </h2>
-          
+
           {/* Animated scroll indicator */}
           <div className="flex justify-center mb-8">
             <div className="animate-bounce">
@@ -299,7 +299,7 @@ export default function Home() {
         </section>
 
         {/* Map Section */}
-        <section>
+        <section className="max-w-5xl w-full">
           <div className="rounded-xl overflow-hidden shadow-lg">
             <div className="h-64 sm:h-80">
               <MapPreview />
@@ -315,7 +315,7 @@ export default function Home() {
         </section>
 
         {/* Places Section */}
-        <section>
+        <section className="max-w-6xl w-full">
           <h2 className="text-center text-2xl font-serif font-bold text-stone-800 mb-6">Miejsca</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {places.map((place) => (
@@ -344,7 +344,7 @@ export default function Home() {
         </section>
 
         {/* Trail Section */}
-        <section>
+        <section className="max-w-5xl w-full">
           <h2 className="text-2xl font-serif font-bold text-stone-800 mb-2">{trail.name}</h2>
           <p className="text-stone-500 mb-6">{trail.description}</p>
 
