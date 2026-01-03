@@ -49,6 +49,58 @@ interface QuestionOption {
   targetNode: KnowledgeNode;
 }
 
+interface RelatedPlace {
+  id: string;
+  name: string;
+  image: string;
+  description: string;
+}
+
+// Funkcja zwracająca powiązane miejsca (wykluczając aktualne miejsce)
+function getRelatedPlaces(currentObjectId: string): RelatedPlace[] {
+  const allPlaces: RelatedPlace[] = [
+    {
+      id: "brama_florianska",
+      name: "Brama Floriańska",
+      image: "https://picsum.photos/seed/brama-tile/600/400",
+      description: "Gotycka brama miejska z XIV wieku",
+    },
+    {
+      id: "sukiennice",
+      name: "Sukiennice",
+      image: "https://picsum.photos/seed/sukiennice/600/400",
+      description: "Renesansowe centrum handlu",
+    },
+    {
+      id: "wawel",
+      name: "Zamek Królewski na Wawelu",
+      image: "https://picsum.photos/seed/wawel-castle/600/400",
+      description: "Siedziba polskich królów",
+    },
+    {
+      id: "kosciol_mariacki",
+      name: "Kościół Mariacki",
+      image: "https://picsum.photos/seed/mariacki/600/400",
+      description: "Gotycka bazylika z ołtarzem Wita Stwosza",
+    },
+    {
+      id: "barbakan",
+      name: "Barbakan",
+      image: "https://picsum.photos/seed/barbakan/600/400",
+      description: "Średniowieczna budowla obronna",
+    },
+    {
+      id: "rynek_glowny",
+      name: "Rynek Główny",
+      image: "https://picsum.photos/seed/rynek/600/400",
+      description: "Największy średniowieczny plac w Europie",
+    },
+  ];
+
+  // Zwróć miejsca, wykluczając aktualne
+  return allPlaces.filter(place => place.id !== currentObjectId).slice(0, 3);
+}
+
 export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewProps) {
   // Ładowanie stylów z localStorage (tylko przy mount)
   const [articleStyle, setArticleStyle] = useState<ArticleStyle>(() => {
@@ -336,6 +388,35 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
                 </p>
               </div>
             )}
+
+            {/* Zobacz również - inne miejsca */}
+            <div className="mt-12 pt-8 border-t border-stone-200">
+              <h2 className="text-2xl font-serif font-bold text-stone-800 mb-6">Zobacz również</h2>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {getRelatedPlaces(objectId).map((place) => (
+                  <Link
+                    key={place.id}
+                    href={`/${place.id}/explore`}
+                    className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
+                  >
+                    <div className="relative aspect-[3/2]">
+                      <Image
+                        src={place.image}
+                        alt={place.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+                        {place.name}
+                      </h3>
+                      <p className="text-sm text-stone-500 mt-1">{place.description}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             {/* Button to view graph */}
             <div className="mt-12 pt-8 border-t border-stone-200 flex justify-center">

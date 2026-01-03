@@ -35,6 +35,41 @@ const places = [
   },
 ];
 
+const events = [
+  {
+    id: "event-1",
+    title: "Wystawa średniowiecznych fortyfikacji",
+    description: "Odkryj historię obronnych struktur miejskich w Krakowie",
+    date: "15 marca 2024",
+    location: "Muzeum Historyczne, Kraków",
+    image: "https://picsum.photos/seed/defensive-structure/400/300",
+  },
+  {
+    id: "event-2",
+    title: "Spacer po murach obronnych",
+    description: "Zwiedzanie z przewodnikiem po zachowanych fragmentach murów",
+    date: "22 marca 2024",
+    location: "Brama Floriańska, Kraków",
+    image: "https://picsum.photos/seed/defensive-structure/400/300",
+  },
+  {
+    id: "event-3",
+    title: "Warsztaty architektury obronnej",
+    description: "Poznaj tajniki budowy średniowiecznych systemów obronnych",
+    date: "28 marca 2024",
+    location: "Centrum Edukacji, Kraków",
+    image: "https://picsum.photos/seed/defensive-structure/400/300",
+  },
+  {
+    id: "event-4",
+    title: "Nocne zwiedzanie Barbakanu",
+    description: "Wyjątkowa okazja zobaczenia Barbakanu w nocnej iluminacji",
+    date: "5 kwietnia 2024",
+    location: "Barbakan, Kraków",
+    image: "https://picsum.photos/seed/defensive-structure/400/300",
+  },
+];
+
 const trail = {
   name: "Droga Królewska",
   description: "Historyczny trakt koronacyjny królów polskich",
@@ -337,6 +372,38 @@ export default function Home() {
                     {place.name}
                   </h3>
                   <p className="text-sm text-stone-500 mt-1">{place.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Events Section */}
+        <section className="max-w-6xl w-full">
+          <h2 className="text-center text-2xl font-serif font-bold text-stone-800 mb-2">Wydarzenia niedaleko Ciebie</h2>
+          <p className="text-center text-stone-500 mb-6">Odkryj ciekawe wydarzenia związane z historią i kulturą Krakowa</p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {events.map((event) => (
+              <Link
+                key={event.id}
+                href={`/events/${event.id}`}
+                className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="text-xs text-amber-600 font-medium mb-1">{event.date}</div>
+                  <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors mb-2">
+                    {event.title}
+                  </h3>
+                  <p className="text-sm text-stone-500 mb-2">{event.description}</p>
+                  <p className="text-xs text-stone-400">{event.location}</p>
                 </div>
               </Link>
             ))}
