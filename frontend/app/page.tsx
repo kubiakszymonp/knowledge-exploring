@@ -6,6 +6,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { loadPreferences } from "@/lib/userPreferences";
 import { Button } from "@/components/ui/button";
+import { InfoIcon } from "lucide-react";
 
 const MapPreview = dynamic(() => import("@/components/MapPreview").then(mod => mod.MapPreview), {
   ssr: false,
@@ -101,7 +102,7 @@ export default function Home() {
           <h1 className="text-xl font-semibold text-stone-800">Knowledge Explorer</h1>
           <Link
             href="/settings"
-            className="text-md font-semibold text-stone-600"
+            className="text-md font-semibold text-stone-600 hover:text-amber-600 transition-colors"
           >
             Ustawienia
           </Link>
@@ -131,7 +132,6 @@ export default function Home() {
               </svg>
             </div>
           </div>
-
           {/* Perspective Cards */}
           <div className="grid grid-cols-2 gap-4 mb-8">
             {/* Turysta Card */}
@@ -191,6 +191,15 @@ export default function Home() {
             </button>
           </div>
 
+          <Link href="/about" className="block w-full mb-8">
+            <Button
+              variant="outline"
+              className="w-full border-2 border-stone-300 hover:border-amber-500 hover:bg-amber-50 text-stone-700 hover:text-amber-700 text-lg font-semibold px-6 py-6 rounded-lg transition-colors"
+            >
+              <InfoIcon className="w-6 h-6" />
+              O aplikacji
+            </Button>
+          </Link>
           {/* Description Section */}
           <div className="space-y-10">
             {activePerspective === "turysta" ? (
@@ -320,8 +329,8 @@ export default function Home() {
             </div>
           </div>
 
-          {hasPreferences !== null && (
-            <div className="mt-6 w-full">
+          <div className="mt-6 w-full space-y-4">
+            {hasPreferences !== null && (
               <Link href="/preferences" className="block w-full">
                 <Button
                   className="w-full bg-amber-500 hover:bg-amber-600 text-white text-xl font-bold px-6 py-8 rounded-lg transition-colors"
@@ -329,8 +338,8 @@ export default function Home() {
                   {hasPreferences ? "✏️ Edytuj preferencje" : "📝 Ustaw preferencje"}
                 </Button>
               </Link>
-            </div>
-          )}
+            )}
+          </div>
         </section>
 
         {/* Map Section */}

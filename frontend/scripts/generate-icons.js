@@ -45,3 +45,4 @@ if (!fs.existsSync(path.join(__dirname, '../public/icon-512x512.png'))) {
   console.log('⚠️  icon-512x512.png not found');
 }
 
+
