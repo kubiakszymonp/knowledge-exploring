@@ -5,6 +5,5 @@ export function getDefaultPreferences(): UserPreferences {
     style: "neutral",
     interests: [],
     depth: "normal",
-    mode: "hybrid",
   };
 }

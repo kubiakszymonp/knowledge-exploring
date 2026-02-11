@@ -1,19 +1,7 @@
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { AppHeader } from "@/components/AppHeader";
+import { MapViewClient } from "@/components/MapViewClient";
 import { getEntities } from "@/lib/api/pilot";
-
-const MapView = dynamic(
-  () => import("@/components/MapView").then((mod) => mod.MapView),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="w-full h-full flex items-center justify-center bg-stone-100">
-        <div className="animate-pulse text-stone-400">Ładowanie mapy...</div>
-      </div>
-    ),
-  }
-);
 
 export default async function MapPage() {
   const entities = await getEntities();
@@ -34,7 +22,7 @@ export default async function MapPage() {
       <AppHeader backHref="/" backBehavior="history" title="Mapa zabytków" />
 
       <main className="flex-1 relative">
-        <MapView markers={markers} center={center} zoom={zoom} />
+        <MapViewClient markers={markers} center={center} zoom={zoom} />
 
         <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 z-[1000]">
           <h3 className="text-sm font-semibold text-stone-700 mb-3">

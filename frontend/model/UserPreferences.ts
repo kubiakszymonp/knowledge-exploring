@@ -1,6 +1,6 @@
 // Typy preferencji użytkownika z ankiety
 
-export type NarrativeStyle = "kids" | "humorous" | "neutral" | "serious" | "adult" | "fairy";
+export type NarrativeStyle = "kids" | "humorous" | "neutral" | "vulgar";
 
 export type InterestTag = 
   | "architecture" 
@@ -15,13 +15,10 @@ export type InterestTag =
 
 export type DepthPreference = "short" | "normal" | "deep";
 
-export type ContentMode = "audio" | "text" | "hybrid";
-
 export interface UserPreferences {
   style: NarrativeStyle;
   interests: InterestTag[];
   depth: DepthPreference;
-  mode: ContentMode;
 }
 
 // Mapowanie stylów narracji na style artykułów
@@ -29,12 +26,10 @@ export function mapNarrativeStyleToArticleStyle(style: NarrativeStyle): "adult" 
   switch (style) {
     case "kids":
       return "kids";
-    case "adult":
+    case "vulgar":
       return "vulgar";
     case "humorous":
     case "neutral":
-    case "serious":
-    case "fairy":
     default:
       return "adult";
   }
