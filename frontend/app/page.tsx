@@ -18,7 +18,7 @@ const btnOutline = "w-full sm:w-auto border-2 border-stone-300 hover:border-ambe
 export default function Home() {
   return (
     <div className="min-h-screen bg-stone-50">
-      <AppHeader variant="home" />
+      <AppHeader />
 
       <main className="w-full flex flex-col items-center px-6 py-12 space-y-16">
         <section className="max-w-3xl w-full text-center">
@@ -30,8 +30,7 @@ export default function Home() {
             z mapą, polecanymi punktami i treściami dopasowanymi do Ciebie.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/about"><Button className={btnPrimary}>O aplikacji</Button></Link>
-            <Link href="/settings"><Button variant="outline" className={btnOutline}>Ustaw preferencje</Button></Link>
+            <Link href="/settings"><Button className={btnPrimary}>Ustaw preferencje</Button></Link>
           </div>
         </section>
 
@@ -51,7 +50,7 @@ export default function Home() {
         </section>
 
         <section className="max-w-6xl w-full">
-          <h2 className="text-center text-2xl font-serif font-bold text-stone-800 mb-6">Miejsca</h2>
+          <h2 className="text-center text-2xl font-serif font-bold text-stone-800 mb-6">Polecane</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {places.slice(0, 3).map((place) => (
               <Link
@@ -70,7 +69,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-6 flex justify-center">
-            <Link href="/places"><Button variant="outline" className={btnOutline}>Zobacz więcej miejsc</Button></Link>
+            <Link href="/places"><Button variant="outline" className={btnOutline}>Zobacz więcej</Button></Link>
           </div>
         </section>
       </main>

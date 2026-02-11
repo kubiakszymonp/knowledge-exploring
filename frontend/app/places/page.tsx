@@ -21,7 +21,7 @@ export default function PlacesPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <AppHeader variant="subpage" title="Miejsca" backHref="/" />
+      <AppHeader backHref="/" title="Miejsca" />
 
       <main className="container mx-auto px-6 py-6">
         <input

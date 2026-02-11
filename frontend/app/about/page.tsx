@@ -80,7 +80,7 @@ const potentialFeatures = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-stone-50">
-      <AppHeader variant="subpage" title="O apce" backHref="/" />
+      <AppHeader backHref="/" title="O apce" />
 
       <main className="container mx-auto px-6 py-12 max-w-4xl">
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4 text-center">

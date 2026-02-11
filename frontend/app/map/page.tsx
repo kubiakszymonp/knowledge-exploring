@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { AppHeader } from "@/components/AppHeader";
 
 // Dynamic import to avoid SSR issues with Leaflet
@@ -23,7 +24,7 @@ const markers = [
 export default function MapPage() {
   return (
     <div className="h-screen flex flex-col">
-      <AppHeader variant="subpage" title="Mapa zabytków" backHref="/" />
+      <AppHeader backHref="/" title="Mapa zabytków" />
 
       {/* Map */}
       <main className="flex-1 relative">

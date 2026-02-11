@@ -3,11 +3,10 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { StyleSettings } from "@/components/StyleSettings";
 import { ArticleSection } from "@/components/ArticleSection";
 import { ExplorationQuestions } from "@/components/ExplorationQuestions";
 import { FloatingAudioPlayer } from "@/components/FloatingAudioPlayer";
-import { Button } from "@/components/ui/button";
+import { AppHeader } from "@/components/AppHeader";
 import {
   getNodeStylization,
   getEdgeStylization,
@@ -15,6 +14,7 @@ import {
   StylizedEdge,
 } from "@/lib/loadStylizations";
 import { useUserConfig } from "@/contexts/UserConfigContext";
+import { ArticleReaderProvider } from "@/contexts/ArticleReaderContext";
 
 interface KnowledgeNode {
   id: string;
@@ -101,7 +101,7 @@ function getRelatedPlaces(currentObjectId: string): RelatedPlace[] {
 }
 
 export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewProps) {
-  const { config, updateConfig } = useUserConfig();
+  const { config } = useUserConfig();
   const articleStyle = config.articleStyle;
   const edgeStyle = config.edgeStyle;
 
@@ -254,29 +254,44 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
   const allDiscovered = discoveredSections.length === nodes.length;
 
   // Prepare questions for ExplorationQuestions component
-  const preparedQuestions = currentQuestions.map(q => ({
+  const preparedQuestions = currentQuestions.map((q) => ({
     id: q.edge.to,
     teaser: q.stylizedEdge.teaser,
   }));
 
+  const readerSections = useMemo(
+    () =>
+      discoveredSections.map((s) => ({
+        nodeId: s.nodeId,
+        text: s.article?.text ?? s.node.text,
+      })),
+    [discoveredSections]
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/30 to-stone-100 flex flex-col">
-      {/* Główna treść - ciągły artykuł */}
-      <main className="flex-1">
+      <AppHeader
+        backHref="/"
+        title={
+          discoveredSections[0]?.article?.title ??
+          rootNode?.title
+        }
+      />
+
+      <ArticleReaderProvider sections={readerSections}>
+        {/* Główna treść - ciągły artykuł */}
+        <main className="flex-1 pt-4 sm:pt-6">
         {isLoading ? (
           <div className="container mx-auto px-4 py-8 max-w-3xl flex items-center justify-center py-20">
             <div className="animate-pulse text-stone-400">Ładowanie...</div>
           </div>
         ) : (
           <article className="space-y-0">
-            {/* Hero with image - larger on mobile with ornaments */}
+            {/* Hero with image - larger on mobile */}
             {imageUrl && (
               <div className="mb-8 sm:mb-6">
-                {/* Mobile: larger image with ornaments */}
+                {/* Mobile: larger image */}
                 <div className="sm:hidden relative w-full h-[50vh] overflow-hidden mb-4">
-                  {/* Decorative top border */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 z-10" />
-                  
                   {/* Image container */}
                   <div className="relative w-full h-full">
                     <Image
@@ -393,34 +408,28 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
                 ))}
               </div>
             </div>
-
-            {/* Button to view graph */}
-            <div className="mt-12 pt-8 border-t border-stone-200 flex justify-center">
-              <Button asChild variant="outline" size="lg">
-                <Link href={`/${objectId}/graph`}>
-                  Zobacz graf wiedzy
-                </Link>
-              </Button>
-            </div>
             </div>
           </article>
         )}
-      </main>
+        </main>
 
-      {/* Stopka z ustawieniami stylu */}
-      <footer className="border-t border-stone-200 bg-stone-50/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 max-w-3xl">
-          <StyleSettings
-            articleStyle={articleStyle}
-            edgeStyle={edgeStyle}
-            onArticleStyleChange={(style) => updateConfig({ articleStyle: style })}
-            onEdgeStyleChange={(style) => updateConfig({ edgeStyle: style })}
-          />
-        </div>
-      </footer>
+        {/* Stopka z dyskretnym linkiem do grafu obiektu */}
+        <footer className="border-t border-stone-200 bg-stone-50/80 backdrop-blur-sm">
+          <div className="container mx-auto px-4 py-4 max-w-3xl">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <Link
+                href={`/${objectId}/graph`}
+                className="text-[11px] sm:text-xs text-stone-300 hover:text-amber-500 hover:underline underline-offset-4 transition-colors text-right"
+              >
+                pokaż graf obiektu
+              </Link>
+            </div>
+          </div>
+        </footer>
 
-      {/* Pływający odtwarzacz audio */}
-      <FloatingAudioPlayer />
+        {/* Pływający odtwarzacz audio */}
+        <FloatingAudioPlayer />
+      </ArticleReaderProvider>
     </div>
   );
 }

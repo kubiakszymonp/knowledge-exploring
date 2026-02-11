@@ -35,7 +35,7 @@ export default function SettingsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <AppHeader variant="subpage" title="Ustawienia" backHref="/" />
+      <AppHeader title="Ustawienia" backHref="/" />
 
       <main className="container mx-auto px-6 py-12 max-w-4xl">
         <div className="text-center mb-8">
