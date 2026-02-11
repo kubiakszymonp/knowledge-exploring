@@ -9,11 +9,19 @@ import { ArticleReaderProvider } from "@/contexts/ArticleReaderContext";
 import { FloatingAudioPlayer } from "@/components/FloatingAudioPlayer";
 import type { Entity, Section, Media } from "@/model/pilot/types";
 
+export interface RouteContext {
+  routeId: string;
+  routeName: string;
+  prevEntity?: Entity;
+  nextEntity?: Entity;
+}
+
 interface ExploreViewProps {
   entity: Entity;
   sections: Section[];
   mediaMap: Record<string, Media>;
   relatedPlaces: Entity[];
+  routeContext?: RouteContext;
 }
 
 export function ExploreView({
@@ -21,6 +29,7 @@ export function ExploreView({
   sections,
   mediaMap,
   relatedPlaces,
+  routeContext,
 }: ExploreViewProps) {
   const readerSections = useMemo(
     () => sections.map((s) => ({ nodeId: s.id, text: s.content })),
@@ -36,10 +45,12 @@ export function ExploreView({
 
   const displayTitle = sections[0]?.title ?? entity.name;
   const relatedToShow = relatedPlaces.slice(0, 6);
+  const showRouteNav = routeContext && (routeContext.prevEntity || routeContext.nextEntity);
+  const showRelated = !routeContext && relatedToShow.length > 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/30 to-stone-100 flex flex-col">
-      <AppHeader backHref="/" title={displayTitle} />
+      <AppHeader backHref="/" backBehavior="history" title={displayTitle} />
 
       <ArticleReaderProvider sections={readerSections}>
         <main className="flex-1 pt-4 sm:pt-6">
@@ -111,7 +122,39 @@ export function ExploreView({
                 })}
               </div>
 
-              {relatedToShow.length > 0 && (
+              {showRouteNav && routeContext && (
+                <div className="mt-12 pt-8 border-t border-stone-200">
+                  <h2 className="text-2xl font-serif font-bold text-stone-800 mb-6">
+                    Na ścieżce: {routeContext.routeName}
+                  </h2>
+                  <div className="flex flex-wrap gap-4">
+                    {routeContext.prevEntity && (
+                      <Link
+                        href={`/route/${routeContext.routeId}/entity/${routeContext.prevEntity.id}`}
+                        className="inline-flex items-center gap-2 rounded-xl bg-white shadow-sm hover:shadow-lg transition-shadow px-5 py-4 border border-stone-100"
+                      >
+                        <span className="text-stone-400">←</span>
+                        <span className="font-semibold text-stone-800 group-hover:text-amber-700">
+                          Poprzedni: {routeContext.prevEntity.name}
+                        </span>
+                      </Link>
+                    )}
+                    {routeContext.nextEntity && (
+                      <Link
+                        href={`/route/${routeContext.routeId}/entity/${routeContext.nextEntity.id}`}
+                        className="inline-flex items-center gap-2 rounded-xl bg-white shadow-sm hover:shadow-lg transition-shadow px-5 py-4 border border-stone-100"
+                      >
+                        <span className="font-semibold text-stone-800 group-hover:text-amber-700">
+                          Następny: {routeContext.nextEntity.name}
+                        </span>
+                        <span className="text-stone-400">→</span>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {showRelated && (
                 <div className="mt-12 pt-8 border-t border-stone-200">
                   <h2 className="text-2xl font-serif font-bold text-stone-800 mb-6">
                     Zobacz również
@@ -120,7 +163,7 @@ export function ExploreView({
                     {relatedToShow.map((place) => (
                       <Link
                         key={place.id}
-                        href={`/${place.id}/explore`}
+                        href={`/entity/${place.id}`}
                         className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
                       >
                         <div className="relative aspect-[3/2]">

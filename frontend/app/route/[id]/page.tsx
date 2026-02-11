@@ -33,7 +33,7 @@ export default async function RoutePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <AppHeader backHref="/" title="Ścieżka zwiedzania" />
+      <AppHeader backHref="/" backBehavior="history" title="Ścieżka zwiedzania" />
 
       <main className="container mx-auto px-6 py-8 max-w-4xl">
         <p className="text-sm text-stone-500 mb-1" aria-label="Identyfikator ścieżki">
@@ -51,21 +51,21 @@ export default async function RoutePage({ params }: PageProps) {
         <h2 className="text-xl font-semibold text-stone-800 mb-4">
           Punkty na ścieżce
         </h2>
-        <ul className="space-y-4">
+        <ul className="space-y-2">
           {points.map((entity, index) => (
             <li key={entity.id}>
               <Link
-                href={`/${entity.id}/explore`}
-                className="group block rounded-xl bg-white shadow-sm hover:shadow-lg transition-shadow p-4"
+                href={`/route/${id}/entity/${entity.id}`}
+                className="group block rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow p-3"
               >
-                <span className="text-stone-400 text-sm font-medium">
+                <span className="text-stone-400 text-xs font-medium">
                   {index + 1}.
                 </span>{" "}
-                <span className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+                <span className="font-semibold text-stone-800 text-sm group-hover:text-amber-700 transition-colors">
                   {entity.name}
                 </span>
                 {entity.shortDescription && (
-                  <p className="text-sm text-stone-500 mt-1 ml-5">
+                  <p className="text-xs text-stone-500 mt-0.5 ml-4 line-clamp-1">
                     {entity.shortDescription}
                   </p>
                 )}

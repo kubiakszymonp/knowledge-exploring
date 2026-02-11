@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { Route as RouteIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppHeader } from "@/components/AppHeader";
 import type { Entity, Route } from "@/model/pilot/types";
@@ -72,10 +73,10 @@ export function HomeClient({ places, recommendedRoutes }: HomeClientProps) {
             {recommended.map((place) => (
               <Link
                 key={place.id}
-                href={`/${place.id}/explore`}
+                href={`/entity/${place.id}`}
                 className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
               >
-                <div className="relative aspect-[3/2]">
+                <div className="relative aspect-[16/9]">
                   <Image
                     src={`https://picsum.photos/seed/${place.id}/600/400`}
                     alt={place.name}
@@ -83,11 +84,11 @@ export function HomeClient({ places, recommendedRoutes }: HomeClientProps) {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+                <div className="p-3">
+                  <h3 className="font-semibold text-stone-800 text-sm group-hover:text-amber-700 transition-colors">
                     {place.name}
                   </h3>
-                  <p className="text-sm text-stone-500 mt-1">
+                  <p className="text-xs text-stone-500 mt-0.5 line-clamp-1">
                     {place.shortDescription ?? ""}
                   </p>
                 </div>
@@ -111,26 +112,37 @@ export function HomeClient({ places, recommendedRoutes }: HomeClientProps) {
             {recommendedRoutes.map((route) => (
               <Link
                 key={route.id}
-                href={`/routes/${route.id}`}
-                className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
+                href={`/route/${route.id}`}
+                className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow border-l-4 border-amber-500"
               >
-                <div className="relative aspect-[3/2]">
+                <div className="relative aspect-[16/9]">
                   <Image
                     src={`https://picsum.photos/seed/${route.id}/600/400`}
                     alt={route.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                  <span className="absolute top-2 right-2 rounded-md bg-white/90 p-1.5 text-amber-600 shadow-sm" aria-hidden>
+                    <RouteIcon className="size-4" />
+                  </span>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+                <div className="p-3">
+                  <span className="inline-block text-xs font-medium text-amber-700 bg-amber-100 rounded px-2 py-0.5 mb-1">
+                    Ścieżka
+                  </span>
+                  <h3 className="font-semibold text-stone-800 text-sm group-hover:text-amber-700 transition-colors">
                     {route.name}
                   </h3>
                   {route.description && (
-                    <p className="text-sm text-stone-500 mt-1 line-clamp-2">
+                    <p className="text-xs text-stone-500 mt-0.5 line-clamp-1">
                       {route.description}
                     </p>
                   )}
+                  {route.entityIds?.length ? (
+                    <p className="text-xs text-stone-400 mt-1">
+                      {route.entityIds.length} przystanków
+                    </p>
+                  ) : null}
                 </div>
               </Link>
             ))}

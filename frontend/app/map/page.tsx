@@ -31,7 +31,7 @@ export default async function MapPage() {
 
   return (
     <div className="h-screen flex flex-col">
-      <AppHeader backHref="/" title="Mapa zabytków" />
+      <AppHeader backHref="/" backBehavior="history" title="Mapa zabytków" />
 
       <main className="flex-1 relative">
         <MapView markers={markers} center={center} zoom={zoom} />
@@ -44,7 +44,7 @@ export default async function MapPage() {
             {markers.map((marker) => (
               <li key={marker.id}>
                 <Link
-                  href={`/${marker.id}/explore`}
+                  href={`/entity/${marker.id}`}
                   className="flex items-center gap-2 text-sm text-stone-600 hover:text-amber-700 transition-colors"
                 >
                   <span className="w-2 h-2 bg-amber-500 rounded-full" />

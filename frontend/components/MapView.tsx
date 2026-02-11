@@ -49,7 +49,7 @@ export function MapView({ markers, center = [50.0647, 19.9450], zoom = 15 }: Map
             <div className="text-center">
               <h3 className="font-semibold text-stone-800 mb-2">{marker.name}</h3>
               <Link
-                href={`/${marker.id}/explore`}
+                href={`/entity/${marker.id}`}
                 className="inline-block px-3 py-1 bg-amber-500 text-white text-sm rounded-lg hover:bg-amber-600 transition-colors"
               >
                 Eksploruj

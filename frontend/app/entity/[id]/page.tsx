@@ -9,18 +9,18 @@ import {
 import type { Entity, Section, Media } from "@/model/pilot/types";
 
 interface PageProps {
-  params: Promise<{ objectId: string }>;
+  params: Promise<{ id: string }>;
 }
 
-export default async function ExplorePage({ params }: PageProps) {
-  const { objectId } = await params;
+export default async function EntityPage({ params }: PageProps) {
+  const { id } = await params;
 
   let entity: Entity;
   let sections: Section[];
   try {
     [entity, sections] = await Promise.all([
-      getEntity(objectId),
-      getEntitySections(objectId),
+      getEntity(id),
+      getEntitySections(id),
     ]);
   } catch {
     notFound();
@@ -33,7 +33,7 @@ export default async function ExplorePage({ params }: PageProps) {
 
   const allEntities = await getEntities();
   const relatedPlaces = allEntities.filter(
-    (e) => e.type === "place" && e.id !== objectId
+    (e) => e.type === "place" && e.id !== id
   );
 
   return (

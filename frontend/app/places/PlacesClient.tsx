@@ -25,7 +25,7 @@ export function PlacesClient({ places }: PlacesClientProps) {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <AppHeader backHref="/" title="Miejsca" />
+      <AppHeader backHref="/" backBehavior="history" title="Miejsca" />
 
       <main className="container mx-auto px-6 py-6">
         <input
@@ -40,10 +40,10 @@ export function PlacesClient({ places }: PlacesClientProps) {
           {filtered.map((place) => (
             <Link
               key={place.id}
-              href={`/${place.id}/explore`}
+              href={`/entity/${place.id}`}
               className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
             >
-              <div className="relative aspect-[3/2]">
+              <div className="relative aspect-[16/9]">
                 <Image
                   src={`https://picsum.photos/seed/${place.id}/600/400`}
                   alt={place.name}
@@ -51,11 +51,11 @@ export function PlacesClient({ places }: PlacesClientProps) {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+              <div className="p-3">
+                <h3 className="font-semibold text-stone-800 text-sm group-hover:text-amber-700 transition-colors">
                   {place.name}
                 </h3>
-                <p className="text-sm text-stone-500 mt-1">
+                <p className="text-xs text-stone-500 mt-0.5 line-clamp-1">
                   {place.shortDescription ?? ""}
                 </p>
               </div>
