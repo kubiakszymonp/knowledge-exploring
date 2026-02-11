@@ -1,11 +1,13 @@
-"use client";
+import { redirect } from "next/navigation";
 
-import { useMemo } from "react";
-import GraphVisualizationCytoscape from "../../../components/GraphVisualizationCytoscape";
-import { createMockGraph } from "../../../lib/mockData";
+interface PageProps {
+  params: Promise<{ objectId: string }>;
+}
 
-export default function GraphPage() {
-  const graph = useMemo(() => createMockGraph(), []);
-
-  return <GraphVisualizationCytoscape graph={graph} />;
+/**
+ * Strona grafu zastąpiona listą miejsc (bez pojęcia grafu w modelu pilota).
+ */
+export default async function GraphPage({ params }: PageProps) {
+  await params;
+  redirect("/places");
 }

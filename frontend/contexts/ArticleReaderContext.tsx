@@ -123,7 +123,6 @@ export function ArticleReaderProvider({ sections, children }: ArticleReaderProvi
       window.speechSynthesis.cancel();
     }
     setCurrentIndex(index);
-    setIsPlaying(true);
   }, []);
 
   useEffect(() => {

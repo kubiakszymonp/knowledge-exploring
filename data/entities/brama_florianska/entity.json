@@ -1,0 +1,9 @@
+{
+  "id": "brama_florianska",
+  "type": "place",
+  "name": "Brama Floriańska",
+  "shortDescription": "Gotycka brama miejska z XIV wieku, część średniowiecznych fortyfikacji Krakowa.",
+  "geo": { "lat": 50.0657, "lng": 19.9412 },
+  "tags": ["zabytek", "architektura", "historia"],
+  "createdAt": "2025-01-01T00:00:00.000Z"
+}

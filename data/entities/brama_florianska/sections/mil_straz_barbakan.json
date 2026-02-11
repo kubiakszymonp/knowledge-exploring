@@ -1,0 +1,11 @@
+{
+  "id": "mil_straz_barbakan",
+  "subjectEntityId": "brama_florianska",
+  "title": "Straż i współpraca z Barbakanem",
+  "content": "Strażnicy kontrolowali wjazdy, pobierali cła i w razie ataku bronili dostępu do miasta. W górnych kondygnacjach znajdowały się stanowiska dla łuczników, kuszników i później strzelców. Brama była zarówno punktem codziennej pracy, jak i miejscem narażonym na ataki. W XV wieku dobudowano Barbakan jako wysunięte przedbramie, połączone z Bramą Floriańską krytym przejściem. Barbakan przejmował pierwszy impet ataku, a napastnicy musieli pokonać długi, ciasny korytarz zanim dotarli do bramy. Ten system czynił krakowskie fortyfikacje wyjątkowo skutecznymi.",
+  "mediaIds": ["img_mil_barbakan"],
+  "importance": 84,
+  "thematicScores": { "military": 95 },
+  "order": 6,
+  "createdAt": "2025-01-01T00:00:00.000Z"
+}

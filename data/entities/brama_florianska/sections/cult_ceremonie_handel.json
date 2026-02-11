@@ -1,0 +1,11 @@
+{
+  "id": "cult_ceremonie_handel",
+  "subjectEntityId": "brama_florianska",
+  "title": "Droga Królewska i handel",
+  "content": "Przez Bramę Floriańską wjeżdżali królowie, posłowie i uczestnicy uroczystości państwowych. Podczas ceremonii dekorowano ją chorągwiami i zielenią. Była symbolicznym przejściem ze strefy zewnętrzej do reprezentacyjnego wnętrza miasta. Przez bramę wjeżdżali kupcy i wozacy z Kleparza i Małopolski. W pobliżu kwitł handel, działały warsztaty, a cechy rzemieślnicze miały obowiązki związane z utrzymaniem fragmentów murów. Brama była ekonomicznym filtrem i ważnym węzłem ruchu towarowego.",
+  "mediaIds": ["img_cult_handel"],
+  "importance": 86,
+  "thematicScores": { "culture": 90 },
+  "order": 7,
+  "createdAt": "2025-01-01T00:00:00.000Z"
+}

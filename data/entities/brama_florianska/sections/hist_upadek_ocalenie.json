@@ -1,0 +1,11 @@
+{
+  "id": "hist_upadek_ocalenie",
+  "subjectEntityId": "brama_florianska",
+  "title": "Utrata znaczenia i ocalenie w XIX wieku",
+  "content": "Od XVII wieku klasyczne wysokie mury przestały odpowiadać nowym realiom wojennym. Artyleria czyniła je mniej skutecznymi, a utrzymanie kosztowało coraz więcej. Wraz z zaniedbaniem murów brama zaczęła tracić znaczenie militarne. Fosy zasypywano, baszty wykorzystywano jako magazyny, a cała linia murów uznawana była za przeszkodę w rozwoju urbanistycznym. W latach 1817–1830 planowano zburzyć całą linię murów i Bramę Floriańską. Ocalono ją dzięki interwencji Feliksa Radwańskiego, który argumentował, że jej zniszczenie byłoby utratą tożsamości miasta. W tym czasie rozpoczęto restaurację i nadano bramie symboliczny charakter — stała się świadectwem historii i polskiej kultury w okresie zaborów.",
+  "mediaIds": ["img_hist_upadek"],
+  "importance": 87,
+  "thematicScores": { "history": 95 },
+  "order": 3,
+  "createdAt": "2025-01-01T00:00:00.000Z"
+}
