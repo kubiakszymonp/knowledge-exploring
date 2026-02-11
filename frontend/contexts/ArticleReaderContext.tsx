@@ -142,7 +142,7 @@ export function ArticleReaderProvider({ sections, children }: ArticleReaderProvi
     return () => {
       window.speechSynthesis.cancel();
     };
-  }, [isPlaying, currentIndex]);
+  }, [isPlaying, currentIndex, sentences]);
 
   const value = useMemo(
     () => ({
