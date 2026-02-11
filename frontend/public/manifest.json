@@ -44,10 +44,10 @@
       "icons": [{ "src": "/icon.png", "sizes": "192x192" }]
     },
     {
-      "name": "Preferencje",
-      "short_name": "Preferencje",
-      "description": "Ustaw preferencje",
-      "url": "/preferences",
+      "name": "Ustawienia",
+      "short_name": "Ustawienia",
+      "description": "Ustawienia aplikacji",
+      "url": "/settings",
       "icons": [{ "src": "/icon.png", "sizes": "192x192" }]
     }
   ]

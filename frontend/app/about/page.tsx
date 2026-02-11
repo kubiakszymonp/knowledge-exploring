@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { AppHeader } from "@/components/AppHeader";
 
 const features = [
   {
@@ -79,17 +80,7 @@ const potentialFeatures = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Header */}
-      <header className="border-b bg-white sticky top-0 z-[1000]">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-semibold text-stone-800 hover:text-amber-600 transition-colors">
-              ← Knowledge Explorer
-            </Link>
-            <h1 className="text-xl font-semibold text-stone-800">O apce</h1>
-          </div>
-        </div>
-      </header>
+      <AppHeader variant="subpage" title="O apce" backHref="/" />
 
       <main className="container mx-auto px-6 py-12 max-w-4xl">
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-800 mb-4 text-center">

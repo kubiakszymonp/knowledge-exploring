@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import { AppHeader } from "@/components/AppHeader";
 
 // Dynamic import to avoid SSR issues with Leaflet
 const MapView = dynamic(() => import("@/components/MapView").then(mod => mod.MapView), {
@@ -23,15 +23,7 @@ const markers = [
 export default function MapPage() {
   return (
     <div className="h-screen flex flex-col">
-      {/* Header */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-[1000]">
-        <div className="container mx-auto px-6 py-4 flex items-center gap-4">
-          <Link href="/" className="text-stone-500 hover:text-stone-800 transition-colors">
-            ← Powrót
-          </Link>
-          <h1 className="text-xl font-semibold text-stone-800">Mapa zabytków</h1>
-        </div>
-      </header>
+      <AppHeader variant="subpage" title="Mapa zabytków" backHref="/" />
 
       {/* Map */}
       <main className="flex-1 relative">

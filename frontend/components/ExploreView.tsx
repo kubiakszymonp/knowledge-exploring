@@ -13,9 +13,8 @@ import {
   getEdgeStylization,
   StylizedArticle,
   StylizedEdge,
-  ArticleStyle,
-  EdgeStyle,
 } from "@/lib/loadStylizations";
+import { useUserConfig } from "@/contexts/UserConfigContext";
 
 interface KnowledgeNode {
   id: string;
@@ -102,24 +101,10 @@ function getRelatedPlaces(currentObjectId: string): RelatedPlace[] {
 }
 
 export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewProps) {
-  // Ładowanie stylów z localStorage (tylko przy mount)
-  const [articleStyle, setArticleStyle] = useState<ArticleStyle>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("articleStyle");
-      return (saved as ArticleStyle) || "adult";
-    }
-    return "adult";
-  });
-  
-  const [edgeStyle, setEdgeStyle] = useState<EdgeStyle>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("edgeStyle");
-      return (saved as EdgeStyle) || "informative";
-    }
-    return "informative";
-  });
-  
-  // Odkryte sekcje - budujemy artykuł stopniowo (lokalny stan - resetuje się przy refresh)
+  const { config, updateConfig } = useUserConfig();
+  const articleStyle = config.articleStyle;
+  const edgeStyle = config.edgeStyle;
+
   const [discoveredSections, setDiscoveredSections] = useState<DiscoveredSection[]>([]);
   const [currentQuestions, setCurrentQuestions] = useState<QuestionOption[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -127,15 +112,6 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
 
   const nodeMap = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
   const rootNode = nodeMap.get(rootNodeId);
-
-  // Zapisz style do localStorage przy zmianie
-  useEffect(() => {
-    localStorage.setItem("articleStyle", articleStyle);
-  }, [articleStyle]);
-
-  useEffect(() => {
-    localStorage.setItem("edgeStyle", edgeStyle);
-  }, [edgeStyle]);
 
   // Pobierz WSZYSTKIE krawędzie prowadzące do nieodkrytych węzłów
   const getAllAvailableEdges = useCallback(
@@ -437,8 +413,8 @@ export function ExploreView({ nodes, edges, rootNodeId, objectId }: ExploreViewP
           <StyleSettings
             articleStyle={articleStyle}
             edgeStyle={edgeStyle}
-            onArticleStyleChange={setArticleStyle}
-            onEdgeStyleChange={setEdgeStyle}
+            onArticleStyleChange={(style) => updateConfig({ articleStyle: style })}
+            onEdgeStyleChange={(style) => updateConfig({ edgeStyle: style })}
           />
         </div>
       </footer>

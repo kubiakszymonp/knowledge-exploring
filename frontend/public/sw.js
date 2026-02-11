@@ -2,7 +2,6 @@ const CACHE_NAME = 'knowledge-explorer-v1';
 const urlsToCache = [
   '/',
   '/map',
-  '/preferences',
   '/settings',
   '/manifest.json',
   '/icon-192x192.png',
