@@ -1,0 +1,7 @@
+{
+  "id": "szlak-stare-miasto",
+  "name": "Szlak Stare Miasto",
+  "description": "Krótki spacer po najważniejszych punktach Starego Miasta: Rynek, Sukiennice, Brama Floriańska i Barbakan.",
+  "entityIds": ["rynek_glowny", "sukiennice", "brama_florianska", "barbakan"],
+  "startEntityId": "rynek_glowny"
+}

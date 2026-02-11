@@ -1,0 +1,9 @@
+{
+  "id": "rynek_glowny",
+  "type": "place",
+  "name": "Rynek Główny",
+  "shortDescription": "Centralny plac Starego Miasta w Krakowie, od 1257 roku.",
+  "geo": { "lat": 50.0614, "lng": 19.9372 },
+  "tags": ["rynek", "historia"],
+  "createdAt": "2025-01-01T00:00:00.000Z"
+}

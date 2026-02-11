@@ -1,0 +1,9 @@
+{
+  "id": "barbakan",
+  "type": "place",
+  "name": "Barbakan",
+  "shortDescription": "Późnogotycka budowla obronna, przedbramie Bramy Floriańskiej.",
+  "geo": { "lat": 50.0670, "lng": 19.9412 },
+  "tags": ["zabytek", "fortyfikacje"],
+  "createdAt": "2025-01-01T00:00:00.000Z"
+}

@@ -5,7 +5,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { AppHeader } from "@/components/AppHeader";
-import type { Entity } from "@/model/pilot/types";
+import type { Entity, Route } from "@/model/pilot/types";
 
 const MapPreview = dynamic(
   () => import("@/components/MapPreview").then((mod) => mod.MapPreview),
@@ -24,9 +24,10 @@ const btnOutline =
 
 interface HomeClientProps {
   places: Entity[];
+  recommendedRoutes: Route[];
 }
 
-export function HomeClient({ places }: HomeClientProps) {
+export function HomeClient({ places, recommendedRoutes }: HomeClientProps) {
   const recommended = places.slice(0, 3);
 
   return (
@@ -100,6 +101,45 @@ export function HomeClient({ places }: HomeClientProps) {
               </Button>
             </Link>
           </div>
+        </section>
+
+        <section className="max-w-6xl w-full">
+          <h2 className="text-center text-2xl font-serif font-bold text-stone-800 mb-6">
+            Polecane ścieżki zwiedzania
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {recommendedRoutes.map((route) => (
+              <Link
+                key={route.id}
+                href={`/routes/${route.id}`}
+                className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="relative aspect-[3/2]">
+                  <Image
+                    src={`https://picsum.photos/seed/${route.id}/600/400`}
+                    alt={route.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-stone-800 group-hover:text-amber-700 transition-colors">
+                    {route.name}
+                  </h3>
+                  {route.description && (
+                    <p className="text-sm text-stone-500 mt-1 line-clamp-2">
+                      {route.description}
+                    </p>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
+          {recommendedRoutes.length === 0 && (
+            <p className="text-center text-stone-500 py-6">
+              Brak polecanych ścieżek.
+            </p>
+          )}
         </section>
       </main>
 

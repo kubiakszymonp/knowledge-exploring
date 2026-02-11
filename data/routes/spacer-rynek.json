@@ -1,0 +1,7 @@
+{
+  "id": "spacer-rynek",
+  "name": "Spacer wokół Rynku",
+  "description": "Rynek Główny i Sukiennice — dwa symbole Krakowa w jednej ścieżce.",
+  "entityIds": ["rynek_glowny", "sukiennice"],
+  "startEntityId": "rynek_glowny"
+}

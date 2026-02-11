@@ -1,7 +1,6 @@
 "use client";
 
 import { AppHeader } from "@/components/AppHeader";
-import { StyleSettings } from "@/components/StyleSettings";
 import { useUserConfig } from "@/contexts/UserConfigContext";
 import { getDefaultUserConfig } from "@/model/UserConfig";
 import type { NarrativeStyle, InterestTag, DepthPreference, ContentMode } from "@/model/UserPreferences";
@@ -17,14 +16,6 @@ import { cn } from "@/lib/utils";
 
 export default function SettingsPage() {
   const { config, updateConfig } = useUserConfig();
-
-  const handleArticleStyleChange = (style: typeof config.articleStyle) => {
-    updateConfig({ articleStyle: style });
-  };
-
-  const handleEdgeStyleChange = (style: typeof config.edgeStyle) => {
-    updateConfig({ edgeStyle: style });
-  };
 
   const handleInterestToggle = (interest: InterestTag) => {
     const next = config.interests.includes(interest)
@@ -48,18 +39,6 @@ export default function SettingsPage() {
         </div>
 
         <div className="space-y-6">
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-stone-800 mb-4">
-              Styl prezentacji treści
-            </h3>
-            <StyleSettings
-              articleStyle={config.articleStyle}
-              edgeStyle={config.edgeStyle}
-              onArticleStyleChange={handleArticleStyleChange}
-              onEdgeStyleChange={handleEdgeStyleChange}
-            />
-          </Card>
-
           <Card className="p-6">
             <h3 className="text-lg font-semibold text-stone-800 mb-4">
               Styl narracji

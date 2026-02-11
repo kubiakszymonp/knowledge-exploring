@@ -1,0 +1,7 @@
+{
+  "id": "mury-i-bramy",
+  "name": "Mury i bramy",
+  "description": "Fortyfikacje północne: Barbakan i Brama Floriańska.",
+  "entityIds": ["barbakan", "brama_florianska"],
+  "startEntityId": "barbakan"
+}
