@@ -3,6 +3,7 @@
   "subjectEntityId": "sukiennice",
   "title": "Galeria Sztuki Polskiej XIX wieku",
   "content": "Na piętrze Sukiennic mieści się Galeria Sztuki Polskiej XIX wieku, która zmienia sposób odbioru tego miejsca. Budynek, kojarzony z handlem i miejskim ruchem, staje się jednocześnie przestrzenią spotkania ze sztuką. Ta dwuznaczność jest charakterystyczna dla Sukiennic: parter przypomina o roli gospodarczej Rynku, a wyższa kondygnacja o ambicjach kulturowych miasta. Dzięki temu obiekt łączy dwie opowieści — o codzienności i o kulturze — w jednym, rozpoznawalnym punkcie Krakowa.",
+  "mediaIds": ["img_sukiennice_galeria"],
   "importance": 86,
   "thematicScores": {
     "culture": 95,

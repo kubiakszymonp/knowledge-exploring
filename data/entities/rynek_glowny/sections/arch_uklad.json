@@ -3,6 +3,7 @@
   "subjectEntityId": "rynek_glowny",
   "title": "Układ placu i przestrzeń publiczna",
   "content": "Rynek jest zaprojektowany jako duża, czytelna przestrzeń w centrum miasta, która porządkuje ruch pieszy i widokowy. Regularny układ ułatwiał handel i organizację wydarzeń, a otaczające kamienice tworzyły „ramę” dla życia miejskiego. W takim miejscu spotykały się różne grupy: mieszkańcy, kupcy, rzemieślnicy i przyjezdni. Do dziś układ placu działa podobnie: rynek jest naturalnym punktem spotkań, orientacji w mieście i miejscem, gdzie najłatwiej poczuć rytm Krakowa.",
+  "mediaIds": ["img_rynek_arch"],
   "importance": 88,
   "thematicScores": {
     "architecture": 88,

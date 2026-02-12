@@ -3,6 +3,7 @@
   "subjectEntityId": "barbakan",
   "title": "Od fortyfikacji do kultury",
   "content": "Zmiana sposobu prowadzenia wojen sprawiła, że dawne umocnienia przestały pełnić pierwotną funkcję. Barbakan nie jest dziś elementem realnej obrony miasta, ale pozostał ważnym znakiem historii i pamięci o średniowiecznych murach Krakowa. Współcześnie działa jako oddział Muzeum Historycznego, a jego przestrzeń bywa wykorzystywana jako scena wydarzeń kulturalnych. Dzięki temu obiekt zachował ciągłość znaczenia: z militarnego narzędzia stał się miejscem opowiadania o przeszłości i przeżywania kultury.",
+  "mediaIds": ["img_barbakan_cult"],
   "importance": 80,
   "thematicScores": {
     "culture": 92,

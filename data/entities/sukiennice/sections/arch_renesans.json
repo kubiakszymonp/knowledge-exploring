@@ -3,6 +3,7 @@
   "subjectEntityId": "sukiennice",
   "title": "Renesansowy wygląd i architektura",
   "content": "Sukiennice kojarzą się z renesansowym charakterem: uporządkowaną bryłą, detalem architektonicznym i reprezentacyjnym wyglądem w samym centrum miasta. Hala handlowa musiała być funkcjonalna, ale jednocześnie miała podkreślać rangę miejsca, w którym koncentrowało się życie gospodarcze Krakowa. Dzięki temu budynek jest jednocześnie „narzędziem” handlu i elementem miejskiej scenografii: porządkuje przestrzeń Rynku i tworzy jego rozpoznawalny obraz.",
+  "mediaIds": ["img_sukiennice_arch"],
   "importance": 88,
   "thematicScores": {
     "architecture": 92,

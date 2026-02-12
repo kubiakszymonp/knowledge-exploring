@@ -3,6 +3,7 @@
   "subjectEntityId": "barbakan",
   "title": "Powstanie i rola obronna",
   "content": "Barbakan zbudowano pod koniec XV wieku jako element wzmocnienia krakowskich fortyfikacji. Jego zadaniem było osłanianie podejścia do Bramy Floriańskiej i tworzenie dodatkowej, wysuniętej linii obrony. W praktyce nie zastępował bramy, lecz ją „odciążał”: zanim napastnik mógł zbliżyć się do właściwego wjazdu, musiał zmierzyć się z kolejną przeszkodą. Dzięki temu obrona zyskiwała czas, a atakujący tracił tempo i swobodę manewru.",
+  "mediaIds": ["img_barbakan_hist"],
   "importance": 90,
   "thematicScores": {
     "history": 88,
