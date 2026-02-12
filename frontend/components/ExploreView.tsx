@@ -9,7 +9,6 @@ import { ExplorationQuestions } from "@/components/ExplorationQuestions";
 import { ExploreHeroImage } from "@/components/ExploreHeroImage";
 import { RouteNavigation } from "@/components/RouteNavigation";
 import { RelatedPlaces } from "@/components/RelatedPlaces";
-import { ExploreFooter } from "@/components/ExploreFooter";
 import type { Entity, Section, Media } from "@/model/pilot/types";
 import type { RouteContext } from "@/model/pilot/types";
 import type { ContentStyle } from "@/lib/sectionDisplay";
@@ -153,8 +152,6 @@ export function ExploreView({
             </div>
           </article>
         </main>
-
-        <ExploreFooter />
 
         <FloatingAudioPlayer />
       </ArticleReaderProvider>
