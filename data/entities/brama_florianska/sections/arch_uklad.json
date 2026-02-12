@@ -3,9 +3,13 @@
   "subjectEntityId": "brama_florianska",
   "title": "Układ przestrzenny i system obronny",
   "content": "Brama miała masywny przejazd zamykany wrotami i żelazną kratą. Nad przejazdem znajdowały się pomieszczenia straży. Spiralne schody w grubości murów łączyły kondygnacje, a strzelnice rozmieszczono tak, aby bronić podejścia do bramy. Układ podporządkowano maksymalnemu spowolnieniu napastnika i ułatwieniu obrony. W XIX wieku dodano barokowy kartusz z orłem białym z inicjatywy Jana Matejki. Od północy umieszczono płaskorzeźbę św. Floriana.",
-  "mediaIds": ["img_arch_uklad"],
+  "mediaIds": [
+    "img_arch_uklad"
+  ],
   "importance": 85,
-  "thematicScores": { "architecture": 90, "military": 75 },
-  "order": 5,
+  "thematicScores": {
+    "architecture": 90,
+    "military": 75
+  },
   "createdAt": "2025-01-01T00:00:00.000Z"
 }

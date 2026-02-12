@@ -8,6 +8,8 @@ export interface Entity {
   shortDescription?: string;
   geo?: { lat: number; lng: number };
   tags?: string[];
+  mediaIds?: string[];
+  relatedEntityIds?: string[];
   createdAt: string; // ISO
 }
 
@@ -21,6 +23,12 @@ export interface ThematicScores {
   military?: number;
 }
 
+/** Styled variant of section content (same info, different language/level) */
+export interface SectionVariant {
+  title?: string;
+  content: string;
+}
+
 /** Section = narrative atom for one entity */
 export interface Section {
   id: string;
@@ -28,11 +36,12 @@ export interface Section {
   relatedEntityIds?: string[];
   title: string;
   content: string;
+  teaser?: string;
   mediaIds?: string[];
   importance: number; // 0–100
   thematicScores?: ThematicScores;
   readingTimeSec?: number;
-  order?: number;
+  variants?: Record<string, SectionVariant>;
   createdAt: string; // ISO
 }
 

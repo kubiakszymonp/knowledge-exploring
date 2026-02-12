@@ -8,9 +8,13 @@ import {
   getEntities,
 } from "@/lib/api/pilot";
 import type { Entity, Section, Media } from "@/model/pilot/types";
+import type { ContentStyle } from "@/lib/sectionDisplay";
+
+const VALID_STYLES: ContentStyle[] = ["default", "children", "casual"];
 
 interface PageProps {
   params: Promise<{ id: string; entityId: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
@@ -23,8 +27,13 @@ function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
   return result;
 }
 
-export default async function RouteEntityPage({ params }: PageProps) {
+export default async function RouteEntityPage({ params, searchParams }: PageProps) {
   const { id: routeId, entityId } = await params;
+  const sp = await searchParams;
+  const styleParam = typeof sp?.style === "string" ? sp.style : undefined;
+  const contentStyle: ContentStyle = VALID_STYLES.includes(styleParam as ContentStyle)
+    ? (styleParam as ContentStyle)
+    : "default";
 
   let route;
   let entity: Entity;
@@ -53,12 +62,20 @@ export default async function RouteEntityPage({ params }: PageProps) {
     allMedia.map((m) => [m.id, m])
   );
 
+  const relatedPlaces =
+    entity.relatedEntityIds?.length > 0
+      ? entity.relatedEntityIds
+          .map((eid) => entities.find((e) => e.id === eid))
+          .filter((e): e is Entity => e != null && e.type === "place")
+      : [];
+
   return (
     <ExploreView
       entity={entity}
       sections={sections}
       mediaMap={mediaMap}
-      relatedPlaces={[]}
+      relatedPlaces={relatedPlaces}
+      contentStyle={contentStyle}
       routeContext={{
         routeId,
         routeName: route.name,

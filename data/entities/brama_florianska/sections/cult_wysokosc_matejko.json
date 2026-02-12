@@ -3,9 +3,13 @@
   "subjectEntityId": "brama_florianska",
   "title": "Wysokość bramy i rola Jana Matejki",
   "content": "Brama ma około 33 metrów wysokości, co czyni ją jedną z najwyższych bram obronnych w tej części Europy. Wysokość zapewniała pole obserwacji i budowała wrażenie potęgi miasta. Konstrukcja łączy masywne kamienne przyziemie z lżejszą ceglaną nadbudową oraz spiralnymi schodami i licznymi otworami strzelniczymi. Jan Matejko uważał Bramę Floriańską za ważny symbol polskiej historii. To dzięki niemu na fasadzie od strony miasta umieszczono barokowego orła białego, który miał przypominać o tradycji narodowej w okresie zaborów. Jego interwencje nadały bramie dodatkową warstwę znaczeń kulturowych.",
-  "mediaIds": ["img_cult_matejko"],
+  "mediaIds": [
+    "img_cult_matejko"
+  ],
   "importance": 85,
-  "thematicScores": { "culture": 90, "curiosity": 85 },
-  "order": 9,
+  "thematicScores": {
+    "culture": 90,
+    "curiosity": 85
+  },
   "createdAt": "2025-01-01T00:00:00.000Z"
 }

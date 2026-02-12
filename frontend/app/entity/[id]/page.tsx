@@ -7,13 +7,22 @@ import {
   getEntities,
 } from "@/lib/api/pilot";
 import type { Entity, Section, Media } from "@/model/pilot/types";
+import type { ContentStyle } from "@/lib/sectionDisplay";
+
+const VALID_STYLES: ContentStyle[] = ["default", "children", "casual"];
 
 interface PageProps {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default async function EntityPage({ params }: PageProps) {
+export default async function EntityPage({ params, searchParams }: PageProps) {
   const { id } = await params;
+  const sp = await searchParams;
+  const styleParam = typeof sp?.style === "string" ? sp.style : undefined;
+  const contentStyle: ContentStyle = VALID_STYLES.includes(styleParam as ContentStyle)
+    ? (styleParam as ContentStyle)
+    : "default";
 
   let entity: Entity;
   let sections: Section[];
@@ -32,9 +41,14 @@ export default async function EntityPage({ params }: PageProps) {
   );
 
   const allEntities = await getEntities();
-  const relatedPlaces = allEntities.filter(
-    (e) => e.type === "place" && e.id !== id
-  );
+  const relatedPlaces =
+    entity.relatedEntityIds?.length > 0
+      ? entity.relatedEntityIds
+          .map((eid) => allEntities.find((e) => e.id === eid))
+          .filter((e): e is Entity => e != null && e.type === "place")
+      : allEntities.filter(
+          (e) => e.type === "place" && e.id !== id
+        );
 
   return (
     <ExploreView
@@ -42,6 +56,7 @@ export default async function EntityPage({ params }: PageProps) {
       sections={sections}
       mediaMap={mediaMap}
       relatedPlaces={relatedPlaces}
+      contentStyle={contentStyle}
     />
   );
 }

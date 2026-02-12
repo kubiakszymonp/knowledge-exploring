@@ -8,6 +8,8 @@ import { AppHeader } from "@/components/AppHeader";
 import { ArticleReaderProvider } from "@/contexts/ArticleReaderContext";
 import { FloatingAudioPlayer } from "@/components/FloatingAudioPlayer";
 import type { Entity, Section, Media } from "@/model/pilot/types";
+import { getSectionDisplay } from "@/lib/sectionDisplay";
+import type { ContentStyle } from "@/lib/sectionDisplay";
 
 export interface RouteContext {
   routeId: string;
@@ -22,6 +24,7 @@ interface ExploreViewProps {
   mediaMap: Record<string, Media>;
   relatedPlaces: Entity[];
   routeContext?: RouteContext;
+  contentStyle?: ContentStyle;
 }
 
 export function ExploreView({
@@ -30,20 +33,41 @@ export function ExploreView({
   mediaMap,
   relatedPlaces,
   routeContext,
+  contentStyle = "default",
 }: ExploreViewProps) {
+  const resolvedSections = useMemo(
+    () =>
+      sections.map((s) => ({
+        section: s,
+        ...getSectionDisplay(s, contentStyle),
+      })),
+    [sections, contentStyle]
+  );
+
   const readerSections = useMemo(
-    () => sections.map((s) => ({ nodeId: s.id, text: s.content })),
-    [sections]
+    () =>
+      resolvedSections.map(({ section, content }) => ({
+        nodeId: section.id,
+        text: content,
+      })),
+    [resolvedSections]
   );
 
   const heroImageUrl = useMemo(() => {
+    const mainMediaId = entity.mediaIds?.[0];
+    if (mainMediaId) {
+      const media = mediaMap[mainMediaId];
+      if (media?.storageUrl) return media.storageUrl;
+    }
     const firstSection = sections[0];
-    if (!firstSection?.mediaIds?.length) return null;
-    const media = mediaMap[firstSection.mediaIds[0]];
-    return media?.storageUrl ?? null;
-  }, [sections, mediaMap]);
+    if (firstSection?.mediaIds?.length) {
+      const media = mediaMap[firstSection.mediaIds[0]];
+      return media?.storageUrl ?? null;
+    }
+    return null;
+  }, [entity.mediaIds, sections, mediaMap]);
 
-  const displayTitle = sections[0]?.title ?? entity.name;
+  const displayTitle = resolvedSections[0]?.title ?? entity.name;
   const relatedToShow = relatedPlaces.slice(0, 6);
   const showRouteNav = routeContext && (routeContext.prevEntity || routeContext.nextEntity);
   const showRelated = !routeContext && relatedToShow.length > 0;
@@ -99,7 +123,7 @@ export function ExploreView({
               </h1>
 
               <div className="prose prose-stone prose-lg max-w-none">
-                {sections.map((section, index) => {
+                {resolvedSections.map(({ section, title, content }, index) => {
                   const firstMediaId = section.mediaIds?.[0];
                   const media = firstMediaId
                     ? mediaMap[firstMediaId]
@@ -111,8 +135,9 @@ export function ExploreView({
                     <ArticleSection
                       key={section.id}
                       nodeId={section.id}
-                      title={section.title}
-                      text={section.content}
+                      title={title}
+                      teaser={section.teaser}
+                      text={content}
                       imageUrl={sectionImageUrl}
                       imageDescription={media?.description}
                       isFirst={isFirst}
@@ -160,7 +185,12 @@ export function ExploreView({
                     Zobacz również
                   </h2>
                   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {relatedToShow.map((place) => (
+                    {relatedToShow.map((place) => {
+                      const placeImageUrl =
+                        place.mediaIds?.[0]
+                          ? mediaMap[place.mediaIds[0]]?.storageUrl
+                          : null;
+                      return (
                       <Link
                         key={place.id}
                         href={`/entity/${place.id}`}
@@ -168,7 +198,7 @@ export function ExploreView({
                       >
                         <div className="relative aspect-[3/2]">
                           <Image
-                            src={`https://picsum.photos/seed/${place.id}/600/400`}
+                            src={placeImageUrl ?? `https://picsum.photos/seed/${place.id}/600/400`}
                             alt={place.name}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -183,7 +213,7 @@ export function ExploreView({
                           </p>
                         </div>
                       </Link>
-                    ))}
+                    ); })}
                   </div>
                 </div>
               )}

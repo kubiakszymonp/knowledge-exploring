@@ -34,9 +34,9 @@ export async function GET(
     }
 
     sections.sort((a, b) => {
-      const orderA = a.order ?? 999;
-      const orderB = b.order ?? 999;
-      if (orderA !== orderB) return orderA - orderB;
+      const impA = a.importance ?? 0;
+      const impB = b.importance ?? 0;
+      if (impA !== impB) return impB - impA;
       return (a.id ?? "").localeCompare(b.id ?? "");
     });
 

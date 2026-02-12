@@ -3,9 +3,19 @@
   "subjectEntityId": "brama_florianska",
   "title": "Materiały i konstrukcja",
   "content": "Dolne partie bramy wykonano z lokalnego wapienia, trwałego i podatnego na obróbkę. Wyższe kondygnacje zbudowano z cegły, co zmniejszało ciężar konstrukcji. Grubość murów w przyziemiu przekraczała 2 metry. Wewnątrz znajdowały się drewniane stropy, później wzmacniane podczas restauracji. Łączone materiały tworzą hybrydową, stabilną konstrukcję typową dla krakowskich budowli obronnych.",
-  "mediaIds": ["img_arch_materialy"],
+  "mediaIds": [
+    "img_arch_materialy"
+  ],
   "importance": 82,
-  "thematicScores": { "architecture": 95 },
-  "order": 4,
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "thematicScores": {
+    "architecture": 95
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Z czego została zbudowana?",
+  "variants": {
+    "children": {
+      "title": "Z czego zrobiono Bramę?",
+      "content": "Dół bramy zbudowano z kamienia — z wapienia, który wydobywano niedaleko. Wyżej jest cegła, żeby było lżej. Ściany na dole mają ponad 2 metry grubości! W środku były drewniane stropy. Tak budowano w średniowieczu — kamień i cegła razem dają mocną, stabilną budowlę."
+    }
+  }
 }

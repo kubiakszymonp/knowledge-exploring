@@ -3,8 +3,14 @@
   "subjectEntityId": "brama_florianska",
   "title": "Brama Floriańska — wprowadzenie",
   "content": "Brama Floriańska to najważniejsza zachowana brama miejska Krakowa, będąca częścią średniowiecznego systemu fortyfikacji. Przez ponad 700 lat pełniła funkcję militarnego wejścia do miasta, punktu kontroli handlu oraz ceremonialnego początku Drogi Królewskiej. Jej architektura, symbolika i historia tworzą wielowarstwową opowieść o obronności, prestiżu i ciągłości miejskiej tradycji.",
-  "mediaIds": ["img_root"],
+  "mediaIds": [
+    "img_root"
+  ],
   "importance": 100,
-  "order": 0,
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "variants": {
+    "casual": {
+      "content": "Brama Floriańska to po prostu najważniejsza zachowana brama w Krakowie — część dawnych murów. Przez 700 lat wjeżdżali tędy żołnierze, kupcy i królowie. Dziś to symbol miasta i początek Drogi Królewskiej. Warto zobaczyć ją na żywo."
+    }
+  }
 }

@@ -6,6 +6,7 @@ import { useArticleReader } from "@/contexts/ArticleReaderContext";
 interface ArticleSectionProps {
   nodeId: string;
   title?: string;
+  teaser?: string;
   text: string;
   imageUrl?: string;
   imageDescription?: string;
@@ -16,6 +17,7 @@ interface ArticleSectionProps {
 export function ArticleSection({
   nodeId,
   title,
+  teaser,
   text,
   imageUrl,
   imageDescription,
@@ -31,6 +33,10 @@ export function ArticleSection({
       id={`section-${nodeId}`}
       className={`${!isFirst ? "pt-6" : ""} animate-in fade-in slide-in-from-bottom-4 duration-500`}
     >
+      {/* Teaser (hook) above title for non-first sections */}
+      {!isFirst && teaser && (
+        <p className="text-sm text-stone-500 mb-2">{teaser}</p>
+      )}
       {/* Subtitle for sections (not for root) */}
       {!isFirst && title && (
         <h2 className="text-2xl font-serif font-semibold text-stone-700 mb-4 flex items-center gap-2">

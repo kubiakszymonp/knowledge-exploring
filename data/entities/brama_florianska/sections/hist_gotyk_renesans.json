@@ -3,9 +3,13 @@
   "subjectEntityId": "brama_florianska",
   "title": "Gotycka przebudowa i rozwój renesansowy",
   "content": "W XIV–XV wieku bramę znacznie podwyższono i nadano jej gotycki charakter: ostrołukowy przejazd, wąskie strzelnice, masywne mury i wyraźny podział kondygnacji. Z tego okresu pochodzi jej monumentalna forma, widoczna z daleka jako symbol potęgi miasta. Powiększenie bramy wiązało się także z prestiżem — w tym czasie Kraków był centrum politycznym i gospodarczym, a przez bramę wjeżdżali królowie i ważne delegacje. W epoce renesansu bramę modernizowano: dodano bardziej eleganckie obramienia, poprawiono dachy, wzmocniono ganek obronny i usprawniono system odprowadzania wody. Straż otrzymała wygodniejsze pomieszczenia, a brama coraz bardziej łączyła funkcję obronną z reprezentacyjną.",
-  "mediaIds": ["img_hist_gotyk"],
+  "mediaIds": [
+    "img_hist_gotyk"
+  ],
   "importance": 88,
-  "thematicScores": { "history": 90, "architecture": 85 },
-  "order": 2,
+  "thematicScores": {
+    "history": 90,
+    "architecture": 85
+  },
   "createdAt": "2025-01-01T00:00:00.000Z"
 }

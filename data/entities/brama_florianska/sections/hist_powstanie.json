@@ -3,9 +3,12 @@
   "subjectEntityId": "brama_florianska",
   "title": "Powstanie i funkcja średniowieczna",
   "content": "Brama powstała w końcu XIII wieku jako część odbudowy Krakowa po najazdach tatarskich. Razem z murami i ponad 40 basztami tworzyła jeden z najnowocześniejszych systemów obronnych regionu. Jej rola była dwojaka: militarna i administracyjna. Kontrolowano tu ruch kupców, pobierano cła i rejestrowano przyjezdnych. W pierwszym okresie brama była niższa, surowsza i w pełni podporządkowana funkcji obrony północnego odcinka miasta.",
-  "mediaIds": ["img_hist_powstanie"],
+  "mediaIds": [
+    "img_hist_powstanie"
+  ],
   "importance": 90,
-  "thematicScores": { "history": 95 },
-  "order": 1,
+  "thematicScores": {
+    "history": 95
+  },
   "createdAt": "2025-01-01T00:00:00.000Z"
 }
