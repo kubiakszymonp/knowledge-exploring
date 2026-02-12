@@ -1,8 +1,15 @@
 import type { Entity, Section, Media, Route } from "@/model/pilot/types";
 
 function getBaseUrl(): string {
-  if (typeof window !== "undefined") return "";
-  return process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+  if (typeof window !== "undefined") {
+    // In the browser, use relative URLs so requests go to the current origin.
+    return "";
+  }
+
+  // On the server, prefer an explicit base URL when provided (e.g. for scripts),
+  // otherwise use a relative URL so Next.js can handle internal routing during
+  // build/SSR without depending on an external HTTP listener.
+  return process.env.NEXT_PUBLIC_APP_URL ?? "";
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
