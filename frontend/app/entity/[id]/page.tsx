@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { ExploreView } from "@/components/ExploreView";
+import { BreadcrumbProvider, entityBreadcrumb } from "@/contexts/BreadcrumbContext";
 import {
   getEntity,
   getEntitySections,
@@ -135,12 +136,14 @@ export default function EntityPage() {
   }
 
   return (
-    <ExploreView
-      entity={entity}
-      sections={sections}
-      mediaMap={mediaMap}
-      relatedPlaces={relatedPlaces}
-      contentStyle={contentStyle}
-    />
+    <BreadcrumbProvider value={entityBreadcrumb(entity)}>
+      <ExploreView
+        entity={entity}
+        sections={sections}
+        mediaMap={mediaMap}
+        relatedPlaces={relatedPlaces}
+        contentStyle={contentStyle}
+      />
+    </BreadcrumbProvider>
   );
 }

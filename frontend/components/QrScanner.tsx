@@ -65,7 +65,7 @@ export function QrScanner({ open, onOpenChange }: QrScannerProps) {
       const scanner = new Html5Qrcode(QR_SCANNER_ELEMENT_ID, { verbose: false });
       scannerRef.current = scanner;
 
-      const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+      const config = { fps: 10};
       const constraints: MediaTrackConstraints = { facingMode: "environment" };
 
       scanner

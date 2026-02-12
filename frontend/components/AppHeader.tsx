@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, ArrowLeft, Home, Info, Settings, QrCode } from "lucide-react";
+import { Menu, ArrowLeft, Home, Settings, QrCode } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
@@ -14,6 +14,7 @@ import {
   SheetFooter,
 } from "@/components/ui/sheet";
 import { QrScanner } from "@/components/QrScanner";
+import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 
 type AppHeaderProps = {
   title?: string;
@@ -29,11 +30,16 @@ export function AppHeader({
 }: AppHeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const breadcrumb = useBreadcrumb();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scannerOpen, setScannerOpen] = useState(false);
+
+  const useContextNav = breadcrumb.items.length > 0 && breadcrumb.backHref != null;
+  const effectiveBackHref = useContextNav ? breadcrumb.backHref! : backHref;
+  const showBack = Boolean(effectiveBackHref);
+  const useHistoryBack = !useContextNav && showBack && backBehavior === "history";
+
   const displayTitle = title ?? "Knowledge Explorer";
-  const showBack = Boolean(backHref);
-  const useHistoryBack = showBack && backBehavior === "history";
 
   const navLinkClass = (href: string) =>
     cn(
@@ -58,25 +64,54 @@ export function AppHeader({
               </button>
             ) : (
               <Link
-                href={backHref!}
+                href={effectiveBackHref!}
                 className="flex items-center shrink-0 py-1 -my-1 text-stone-600 hover:text-stone-800 transition-colors"
                 aria-label="Wróć"
               >
                 <ArrowLeft className="w-6 h-6" strokeWidth={2} />
               </Link>
             ))}
-          <h1 className="text-xl font-semibold text-stone-800 truncate">
-            {backHref ? (
-              displayTitle
-            ) : (
-              <Link
-                href="/"
-                className="hover:text-amber-600 transition-colors"
-              >
-                {displayTitle}
-              </Link>
-            )}
-          </h1>
+          {useContextNav ? (
+            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 min-w-0 text-sm">
+              {breadcrumb.items.map((item, i) => {
+                const isLast = i === breadcrumb.items.length - 1;
+                return (
+                  <span key={i} className="flex items-center gap-1.5 min-w-0">
+                    {i > 0 && (
+                      <span className="text-stone-400 shrink-0" aria-hidden>
+                        /
+                      </span>
+                    )}
+                    {isLast || !item.href ? (
+                      <span className="font-semibold text-stone-800 truncate">
+                        {item.label}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-stone-500 hover:text-amber-600 transition-colors truncate"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </span>
+                );
+              })}
+            </nav>
+          ) : (
+            <h1 className="text-xl font-semibold text-stone-800 truncate">
+              {backHref ? (
+                displayTitle
+              ) : (
+                <Link
+                  href="/"
+                  className="hover:text-amber-600 transition-colors"
+                >
+                  {displayTitle}
+                </Link>
+              )}
+            </h1>
+          )}
         </div>
         <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>
@@ -111,10 +146,10 @@ export function AppHeader({
                 <QrCode className="w-5 h-5 shrink-0" />
                 <span>Skanuj kod QR</span>
               </button>
-              <Link href="/about" className={navLinkClass("/about")} onClick={() => setMenuOpen(false)}>
+              {/* <Link href="/about" className={navLinkClass("/about")} onClick={() => setMenuOpen(false)}>
                 <Info className="w-5 h-5 shrink-0" />
                 <span>O aplikacji</span>
-              </Link>
+              </Link> */}
               <Link href="/settings" className={navLinkClass("/settings")} onClick={() => setMenuOpen(false)}>
                 <Settings className="w-5 h-5 shrink-0" />
                 <span>Preferencje</span>

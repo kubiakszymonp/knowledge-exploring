@@ -1,5 +1,9 @@
 import type { Section } from "@/model/pilot/types";
 import type { DepthPreference } from "@/model/UserPreferences";
+import {
+  estimateMinutesForText,
+  DEFAULT_WORDS_PER_MINUTE,
+} from "@/lib/readingTime";
 
 export interface SectionWithVisibility {
   section: Section;
@@ -12,8 +16,6 @@ interface ApplyReadingLimitOptions {
   wordsPerMinute?: number;
 }
 
-const DEFAULT_WORDS_PER_MINUTE = 200;
-
 function estimateReadingTimeMinutes(
   section: Section,
   getContent: (section: Section) => string,
@@ -22,23 +24,19 @@ function estimateReadingTimeMinutes(
   if (typeof section.readingTimeSec === "number" && section.readingTimeSec > 0) {
     return section.readingTimeSec / 60;
   }
-
-  const text = getContent(section);
-  if (!text.trim()) return 0;
-
-  const words = text.trim().split(/\s+/).length;
-  return words / wordsPerMinute;
+  return estimateMinutesForText(getContent(section), wordsPerMinute);
 }
 
-function getMaxMinutesForDepth(depth: DepthPreference): number | null {
+function getMaxMinutesForDepth(depth: DepthPreference): number {
   switch (depth) {
     case "short":
-      return 2;
+      return 1;
     case "normal":
-      return 5;
+      return 3;
     case "deep":
+      return 5;
     default:
-      return null;
+      return 5;
   }
 }
 
@@ -53,26 +51,20 @@ export function applyReadingLimit(
   }
 
   const maxMinutes = getMaxMinutesForDepth(depth);
-  // For deep reading we always show everything
-  if (maxMinutes == null) {
-    return sections.map((section) => ({ section, hidden: false }));
-  }
+  const sectionMinutes = sections.map((section) =>
+    estimateReadingTimeMinutes(section, getContent, wordsPerMinute)
+  );
 
   let totalMinutes = 0;
-  let visibleCount = 0;
 
-  return sections.map((section) => {
-    const minutes = estimateReadingTimeMinutes(section, getContent, wordsPerMinute);
-
-    const shouldShow =
-      visibleCount === 0 || totalMinutes + minutes <= maxMinutes;
+  return sections.map((section, i) => {
+    const minutes = sectionMinutes[i];
+    const shouldShow = totalMinutes === 0 || totalMinutes + minutes <= maxMinutes;
 
     if (shouldShow) {
-      visibleCount += 1;
       totalMinutes += minutes;
       return { section, hidden: false };
     }
-
     return { section, hidden: true };
   });
 }

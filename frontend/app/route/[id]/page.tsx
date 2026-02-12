@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { getRoute, getEntities } from "@/lib/api/pilot";
 import { AppHeader } from "@/components/AppHeader";
+import { BreadcrumbProvider, routeBreadcrumb } from "@/contexts/BreadcrumbContext";
 import type { Entity, Route } from "@/model/pilot/types";
 
 function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
@@ -107,10 +108,11 @@ export default function RoutePage() {
   if (!route) return null;
 
   return (
-    <div className="min-h-screen bg-stone-50">
-      <AppHeader backHref="/" backBehavior="history" title="Ścieżka zwiedzania" />
+    <BreadcrumbProvider value={routeBreadcrumb(route)}>
+      <div className="min-h-screen bg-stone-50">
+        <AppHeader backHref="/" title={route.name} />
 
-      <main className="container mx-auto px-6 py-8 max-w-4xl">
+        <main className="container mx-auto px-6 py-8 max-w-4xl">
         <p className="text-sm text-stone-500 mb-1" aria-label="Identyfikator ścieżki">
           {route.id}
         </p>
@@ -163,9 +165,10 @@ export default function RoutePage() {
         </div>
       </main>
 
-      <footer className="border-t py-6 text-center text-sm text-stone-400 mt-12">
-        Knowledge Explorer • Demo
-      </footer>
-    </div>
+        <footer className="border-t py-6 text-center text-sm text-stone-400 mt-12">
+          Knowledge Explorer • Demo
+        </footer>
+      </div>
+    </BreadcrumbProvider>
   );
 }

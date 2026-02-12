@@ -2,14 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useMemo, useState, useCallback } from "react";
 import { ArticleSection } from "@/components/ArticleSection";
 import { AppHeader } from "@/components/AppHeader";
 import { ArticleReaderProvider } from "@/contexts/ArticleReaderContext";
 import { FloatingAudioPlayer } from "@/components/FloatingAudioPlayer";
+import { ExplorationQuestions } from "@/components/ExplorationQuestions";
 import type { Entity, Section, Media } from "@/model/pilot/types";
 import type { ContentStyle } from "@/lib/sectionDisplay";
 import { useExploreSections } from "@/lib/explore/useExploreSections";
-import { useMemo } from "react";
+import type { ResolvedSectionWithVisibility } from "@/lib/explore/useExploreSections";
 
 export interface RouteContext {
   routeId: string;
@@ -27,6 +29,13 @@ interface ExploreViewProps {
   contentStyle?: ContentStyle;
 }
 
+function isDisplayed(
+  item: ResolvedSectionWithVisibility,
+  expandedSectionIds: string[]
+): boolean {
+  return !item.hidden || expandedSectionIds.includes(item.section.id);
+}
+
 export function ExploreView({
   entity,
   sections,
@@ -36,13 +45,34 @@ export function ExploreView({
   contentStyle = "default",
 }: ExploreViewProps) {
   const resolvedSections = useExploreSections(sections, contentStyle);
+  const [expandedSectionIds, setExpandedSectionIds] = useState<string[]>([]);
 
-  const readerSections = resolvedSections
-    .filter(({ hidden }) => !hidden)
-    .map(({ section, content }) => ({
-      nodeId: section.id,
-      text: content,
-    }));
+  const displayedSections = useMemo(
+    () => resolvedSections.filter((item) => isDisplayed(item, expandedSectionIds)),
+    [resolvedSections, expandedSectionIds]
+  );
+
+  const readerSections = useMemo(
+    () =>
+      resolvedSections
+        .filter((item) => isDisplayed(item, expandedSectionIds))
+        .map(({ section, content }) => ({ nodeId: section.id, text: content })),
+    [resolvedSections, expandedSectionIds]
+  );
+
+  const hiddenProposals = useMemo(
+    () =>
+      resolvedSections.filter(
+        (item) => item.hidden && !expandedSectionIds.includes(item.section.id)
+      ),
+    [resolvedSections, expandedSectionIds]
+  );
+
+  const handleExpandSection = useCallback((sectionId: string) => {
+    setExpandedSectionIds((prev) =>
+      prev.includes(sectionId) ? prev : [...prev, sectionId]
+    );
+  }, []);
 
   const heroImageUrl = useMemo(() => {
     const mainMediaId = entity.mediaIds?.[0];
@@ -114,9 +144,7 @@ export function ExploreView({
               </h1>
 
               <div className="prose prose-stone prose-lg max-w-none">
-                {resolvedSections
-                  .filter(({ hidden }) => !hidden)
-                  .map(({ section, title, content }, index) => {
+                {displayedSections.map(({ section, title, content }, index) => {
                   const firstMediaId = section.mediaIds?.[0];
                   const media = firstMediaId
                     ? mediaMap[firstMediaId]
@@ -139,6 +167,17 @@ export function ExploreView({
                   );
                 })}
               </div>
+
+              {hiddenProposals.length > 0 && (
+                <ExplorationQuestions
+                  questions={hiddenProposals.slice(0, 3).map(({ section, title }) => ({
+                    id: section.id,
+                    teaser: section.teaser ?? title,
+                  }))}
+                  onSelectQuestion={handleExpandSection}
+                  loadingQuestionId={null}
+                />
+              )}
 
               {showRouteNav && routeContext && (
                 <div className="mt-12 pt-8 border-t border-stone-200">
