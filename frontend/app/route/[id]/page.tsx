@@ -1,12 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 import { getRoute, getEntities } from "@/lib/api/pilot";
 import { AppHeader } from "@/components/AppHeader";
-import type { Entity } from "@/model/pilot/types";
-
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
+import type { Entity, Route } from "@/model/pilot/types";
 
 function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
   const byId = new Map(entities.map((e) => [e.id, e]));
@@ -18,18 +17,94 @@ function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
   return result;
 }
 
-export default async function RoutePage({ params }: PageProps) {
-  const { id } = await params;
+export default function RoutePage() {
+  const params = useParams<{ id: string }>();
+  const id = params.id;
 
-  let route;
-  try {
-    route = await getRoute(id);
-  } catch {
-    notFound();
+  const [route, setRoute] = useState<Route | null>(null);
+  const [points, setPoints] = useState<Entity[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    if (!id) return;
+    let cancelled = false;
+
+    async function load() {
+      setLoading(true);
+      setError(null);
+      setNotFound(false);
+
+      try {
+        const [routeRes, entities] = await Promise.all([
+          getRoute(id),
+          getEntities(),
+        ]);
+        if (cancelled) return;
+
+        const ordered = orderedPoints(routeRes.entityIds, entities);
+        setRoute(routeRes);
+        setPoints(ordered);
+      } catch (err) {
+        if (cancelled) return;
+        console.error("Failed to load route", err);
+
+        if (
+          err instanceof Error &&
+          err.message.toLowerCase().includes("not found")
+        ) {
+          setNotFound(true);
+        } else {
+          setError("Nie udało się załadować ścieżki.");
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
+    }
+
+    void load();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [id]);
+
+  if (!id) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-stone-500 text-sm">Brak identyfikatora ścieżki.</p>
+      </div>
+    );
   }
 
-  const entities = await getEntities();
-  const points = orderedPoints(route.entityIds, entities);
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-stone-500 text-sm">Ładowanie ścieżki...</p>
+      </div>
+    );
+  }
+
+  if (notFound) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-stone-500 text-sm">Nie znaleziono takiej ścieżki.</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-red-500 text-sm">{error}</p>
+      </div>
+    );
+  }
+
+  if (!route) return null;
 
   return (
     <div className="min-h-screen bg-stone-50">

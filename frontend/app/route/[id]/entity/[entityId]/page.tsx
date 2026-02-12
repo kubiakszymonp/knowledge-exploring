@@ -1,4 +1,7 @@
-import { notFound } from "next/navigation";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useParams, useSearchParams } from "next/navigation";
 import { ExploreView } from "@/components/ExploreView";
 import {
   getRoute,
@@ -12,11 +15,6 @@ import type { ContentStyle } from "@/lib/sectionDisplay";
 
 const VALID_STYLES: ContentStyle[] = ["default", "children", "casual"];
 
-interface PageProps {
-  params: Promise<{ id: string; entityId: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}
-
 function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
   const byId = new Map(entities.map((e) => [e.id, e]));
   const result: Entity[] = [];
@@ -27,41 +25,131 @@ function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
   return result;
 }
 
-export default async function RouteEntityPage({ params, searchParams }: PageProps) {
-  const { id: routeId, entityId } = await params;
-  const sp = await searchParams;
-  const styleParam = typeof sp?.style === "string" ? sp.style : undefined;
+export default function RouteEntityPage() {
+  const params = useParams<{ id: string; entityId: string }>();
+  const searchParams = useSearchParams();
+
+  const routeId = params.id;
+  const entityId = params.entityId;
+
+  const styleParam = searchParams.get("style") ?? undefined;
   const contentStyle: ContentStyle = VALID_STYLES.includes(styleParam as ContentStyle)
     ? (styleParam as ContentStyle)
     : "default";
 
-  let route;
-  let entity: Entity;
-  let sections: Section[];
-  try {
-    [route, entity, sections] = await Promise.all([
-      getRoute(routeId),
-      getEntity(entityId),
-      getEntitySections(entityId),
-    ]);
-  } catch {
-    notFound();
+  const [routeName, setRouteName] = useState<string>("");
+  const [entity, setEntity] = useState<Entity | null>(null);
+  const [sections, setSections] = useState<Section[]>([]);
+  const [mediaMap, setMediaMap] = useState<Record<string, Media>>({});
+  const [prevEntity, setPrevEntity] = useState<Entity | undefined>(undefined);
+  const [nextEntity, setNextEntity] = useState<Entity | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    if (!routeId || !entityId) return;
+    let cancelled = false;
+
+    async function load() {
+      setLoading(true);
+      setError(null);
+      setNotFound(false);
+
+      try {
+        const [route, entityRes, sectionsRes] = await Promise.all([
+          getRoute(routeId),
+          getEntity(entityId),
+          getEntitySections(entityId),
+        ]);
+        if (cancelled) return;
+
+        const [allEntities, allMedia] = await Promise.all([
+          getEntities(),
+          getMediaList(),
+        ]);
+        if (cancelled) return;
+
+        const points = orderedPoints(route.entityIds, allEntities);
+        const currentIndex = points.findIndex((e) => e.id === entityId);
+        if (currentIndex === -1) {
+          setNotFound(true);
+          return;
+        }
+
+        const prev = currentIndex > 0 ? points[currentIndex - 1] : undefined;
+        const next =
+          currentIndex < points.length - 1 ? points[currentIndex + 1] : undefined;
+
+        const mediaById: Record<string, Media> = Object.fromEntries(
+          allMedia.map((m) => [m.id, m])
+        );
+
+        setRouteName(route.name);
+        setEntity(entityRes);
+        setSections(sectionsRes);
+        setMediaMap(mediaById);
+        setPrevEntity(prev);
+        setNextEntity(next);
+      } catch (err) {
+        if (cancelled) return;
+        console.error("Failed to load route entity page", err);
+
+        if (
+          err instanceof Error &&
+          err.message.toLowerCase().includes("not found")
+        ) {
+          setNotFound(true);
+        } else {
+          setError("Nie udało się załadować punktu ścieżki.");
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
+    }
+
+    void load();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [routeId, entityId]);
+
+  if (!routeId || !entityId) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-stone-500 text-sm">Brak identyfikatorów ścieżki lub miejsca.</p>
+      </div>
+    );
   }
 
-  const entities = await getEntities();
-  const points = orderedPoints(route.entityIds, entities);
-  const currentIndex = points.findIndex((e) => e.id === entityId);
-  if (currentIndex === -1) notFound();
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-stone-500 text-sm">Ładowanie punktu ścieżki...</p>
+      </div>
+    );
+  }
 
-  const prevEntity = currentIndex > 0 ? points[currentIndex - 1] : undefined;
-  const nextEntity =
-    currentIndex < points.length - 1 ? points[currentIndex + 1] : undefined;
+  if (notFound) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-stone-500 text-sm">Nie znaleziono takiego punktu ścieżki.</p>
+      </div>
+    );
+  }
 
-  const allMedia = await getMediaList();
-  const mediaMap: Record<string, Media> = Object.fromEntries(
-    allMedia.map((m) => [m.id, m])
-  );
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+        <p className="text-red-500 text-sm">{error}</p>
+      </div>
+    );
+  }
 
+  if (!entity) return null;
 
   return (
     <ExploreView
@@ -72,7 +160,7 @@ export default async function RouteEntityPage({ params, searchParams }: PageProp
       contentStyle={contentStyle}
       routeContext={{
         routeId,
-        routeName: route.name,
+        routeName,
         prevEntity,
         nextEntity,
       }}
