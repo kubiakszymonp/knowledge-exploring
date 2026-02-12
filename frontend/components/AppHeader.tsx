@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, ArrowLeft, Home, Info, Settings } from "lucide-react";
+import { Menu, ArrowLeft, Home, Info, Settings, QrCode } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
@@ -12,6 +13,7 @@ import {
   SheetTitle,
   SheetFooter,
 } from "@/components/ui/sheet";
+import { QrScanner } from "@/components/QrScanner";
 
 type AppHeaderProps = {
   title?: string;
@@ -27,6 +29,8 @@ export function AppHeader({
 }: AppHeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scannerOpen, setScannerOpen] = useState(false);
   const displayTitle = title ?? "Knowledge Explorer";
   const showBack = Boolean(backHref);
   const useHistoryBack = showBack && backBehavior === "history";
@@ -74,7 +78,7 @@ export function AppHeader({
             )}
           </h1>
         </div>
-        <Sheet>
+        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>
             <button
               type="button"
@@ -89,15 +93,29 @@ export function AppHeader({
               <SheetTitle className="text-sidebar-foreground">Menu</SheetTitle>
             </SheetHeader>
             <nav className="px-4 py-4 space-y-1">
-              <Link href="/" className={navLinkClass("/")}>
+              <Link href="/" className={navLinkClass("/")} onClick={() => setMenuOpen(false)}>
                 <Home className="w-5 h-5 shrink-0" />
                 <span>Strona główna</span>
               </Link>
-              <Link href="/about" className={navLinkClass("/about")}>
+              <button
+                type="button"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setScannerOpen(true);
+                }}
+                className={cn(
+                  "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sidebar-foreground transition-colors",
+                  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                )}
+              >
+                <QrCode className="w-5 h-5 shrink-0" />
+                <span>Skanuj kod QR</span>
+              </button>
+              <Link href="/about" className={navLinkClass("/about")} onClick={() => setMenuOpen(false)}>
                 <Info className="w-5 h-5 shrink-0" />
                 <span>O aplikacji</span>
               </Link>
-              <Link href="/settings" className={navLinkClass("/settings")}>
+              <Link href="/settings" className={navLinkClass("/settings")} onClick={() => setMenuOpen(false)}>
                 <Settings className="w-5 h-5 shrink-0" />
                 <span>Preferencje</span>
               </Link>
@@ -105,6 +123,7 @@ export function AppHeader({
             <SheetFooter />
           </SheetContent>
         </Sheet>
+        <QrScanner open={scannerOpen} onOpenChange={setScannerOpen} />
       </div>
     </header>
   );
