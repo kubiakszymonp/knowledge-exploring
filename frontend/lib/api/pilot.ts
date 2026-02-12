@@ -6,10 +6,10 @@ function getBaseUrl(): string {
     return "";
   }
 
-  // On the server, prefer an explicit base URL when provided (e.g. for scripts),
-  // otherwise use a relative URL so Next.js can handle internal routing during
-  // build/SSR without depending on an external HTTP listener.
-  return process.env.NEXT_PUBLIC_APP_URL ?? "";
+  // On the server, prefer an explicit base URL if provided, otherwise fall back
+  // to localhost. This is primarily used at runtime; for static export we
+  // should avoid calling these helpers in server components.
+  return process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
