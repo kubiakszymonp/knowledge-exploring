@@ -62,19 +62,13 @@ export default async function RouteEntityPage({ params, searchParams }: PageProp
     allMedia.map((m) => [m.id, m])
   );
 
-  const relatedPlaces =
-    entity.relatedEntityIds?.length > 0
-      ? entity.relatedEntityIds
-          .map((eid) => entities.find((e) => e.id === eid))
-          .filter((e): e is Entity => e != null && e.type === "place")
-      : [];
 
   return (
     <ExploreView
       entity={entity}
       sections={sections}
       mediaMap={mediaMap}
-      relatedPlaces={relatedPlaces}
+      relatedPlaces={[]}
       contentStyle={contentStyle}
       routeContext={{
         routeId,

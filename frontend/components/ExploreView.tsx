@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo } from "react";
 import { ArticleSection } from "@/components/ArticleSection";
 import { AppHeader } from "@/components/AppHeader";
 import { ArticleReaderProvider } from "@/contexts/ArticleReaderContext";
 import { FloatingAudioPlayer } from "@/components/FloatingAudioPlayer";
 import type { Entity, Section, Media } from "@/model/pilot/types";
-import { getSectionDisplay } from "@/lib/sectionDisplay";
 import type { ContentStyle } from "@/lib/sectionDisplay";
+import { useExploreSections } from "@/lib/explore/useExploreSections";
+import { useMemo } from "react";
 
 export interface RouteContext {
   routeId: string;
@@ -35,23 +35,14 @@ export function ExploreView({
   routeContext,
   contentStyle = "default",
 }: ExploreViewProps) {
-  const resolvedSections = useMemo(
-    () =>
-      sections.map((s) => ({
-        section: s,
-        ...getSectionDisplay(s, contentStyle),
-      })),
-    [sections, contentStyle]
-  );
+  const resolvedSections = useExploreSections(sections, contentStyle);
 
-  const readerSections = useMemo(
-    () =>
-      resolvedSections.map(({ section, content }) => ({
-        nodeId: section.id,
-        text: content,
-      })),
-    [resolvedSections]
-  );
+  const readerSections = resolvedSections
+    .filter(({ hidden }) => !hidden)
+    .map(({ section, content }) => ({
+      nodeId: section.id,
+      text: content,
+    }));
 
   const heroImageUrl = useMemo(() => {
     const mainMediaId = entity.mediaIds?.[0];
@@ -123,7 +114,9 @@ export function ExploreView({
               </h1>
 
               <div className="prose prose-stone prose-lg max-w-none">
-                {resolvedSections.map(({ section, title, content }, index) => {
+                {resolvedSections
+                  .filter(({ hidden }) => !hidden)
+                  .map(({ section, title, content }, index) => {
                   const firstMediaId = section.mediaIds?.[0];
                   const media = firstMediaId
                     ? mediaMap[firstMediaId]
