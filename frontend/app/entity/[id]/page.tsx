@@ -41,9 +41,10 @@ export default async function EntityPage({ params, searchParams }: PageProps) {
   );
 
   const allEntities = await getEntities();
+  const relatedEntityIds = entity.relatedEntityIds ?? [];
   const relatedPlaces =
-    entity.relatedEntityIds?.length > 0
-      ? entity.relatedEntityIds
+    relatedEntityIds.length > 0
+      ? relatedEntityIds
           .map((eid) => allEntities.find((e) => e.id === eid))
           .filter((e): e is Entity => e != null && e.type === "place")
       : allEntities.filter(
