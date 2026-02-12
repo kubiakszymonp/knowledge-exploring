@@ -1,11 +1,18 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { MapMarker } from "@/components/MapView";
+import type { Map as LeafletMap } from "leaflet";
 
 export interface MapViewClientProps {
-  markers: { id: string; name: string; lat: number; lng: number }[];
+  markers: MapMarker[];
   center?: [number, number];
   zoom?: number;
+  onMapReady?: (map: LeafletMap) => void;
+  onMarkerClick?: (marker: MapMarker) => void;
+  flyToCenter?: [number, number] | null;
+  flyToZoom?: number;
+  userLocation?: [number, number] | null;
 }
 
 const MapView = dynamic(
