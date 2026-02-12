@@ -8,7 +8,18 @@ export async function GET() {
   try {
     const dataRoot = getDataRoot();
     const entitiesDir = path.join(dataRoot, "entities");
-    const entries = await fs.readdir(entitiesDir, { withFileTypes: true });
+    let entries: { name: string; isDirectory: () => boolean }[];
+    try {
+      entries = await fs.readdir(entitiesDir, { withFileTypes: true });
+    } catch (err: unknown) {
+      const isNotFound =
+        err &&
+        typeof err === "object" &&
+        "code" in err &&
+        (err as NodeJS.ErrnoException).code === "ENOENT";
+      if (isNotFound) return NextResponse.json([]);
+      throw err;
+    }
     const entities: Entity[] = [];
 
     for (const entry of entries) {
