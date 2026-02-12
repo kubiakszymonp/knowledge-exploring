@@ -5,5 +5,6 @@
   "shortDescription": "Renesansowa hala targowa w centrum Rynku — z galerią sztuki na piętrze i statusem symbolu Krakowa.",
   "geo": { "lat": 50.0616, "lng": 19.9374 },
   "tags": ["zabytek", "architektura"],
+  "mediaIds": ["img_sukiennice"],
   "createdAt": "2025-01-01T00:00:00.000Z"
 }

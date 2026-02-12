@@ -5,6 +5,7 @@
   "shortDescription": "Późnogotyckie przedbramie Bramy Floriańskiej — masywna budowla obronna dawnego Krakowa.",
   "geo": { "lat": 50.0670, "lng": 19.9412 },
   "tags": ["zabytek", "fortyfikacje"],
+  "mediaIds": ["img_barbakan"],
   "relatedEntityIds": ["brama_florianska"],
   "createdAt": "2025-01-01T00:00:00.000Z"
 }
