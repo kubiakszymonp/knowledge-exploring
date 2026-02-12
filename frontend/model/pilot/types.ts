@@ -64,3 +64,11 @@ export interface Route {
   entityIds: string[];
   startEntityId?: string;
 }
+
+/** Context when viewing an entity as part of a route (prev/next navigation) */
+export interface RouteContext {
+  routeId: string;
+  routeName: string;
+  prevEntity?: Entity;
+  nextEntity?: Entity;
+}
