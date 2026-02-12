@@ -69,29 +69,52 @@ export function QrScanner({ open, onOpenChange }: QrScannerProps) {
       const constraints: MediaTrackConstraints = { facingMode: "environment" };
 
       scanner
-        .start(constraints, config, (decodedText) => {
-          if (cancelled) return;
-          const path = getInternalPath(decodedText);
-          if (path) {
-            scanner.stop().then(() => {
-              if (cancelled) return;
-              scannerRef.current = null;
-              onOpenChange(false);
-              router.push(path);
-            });
-          } else {
-            setError("To nie jest link z naszej strony.");
+        .start(
+          constraints,
+          config,
+          (decodedText) => {
+            if (cancelled) return;
+            const path = getInternalPath(decodedText);
+            if (path) {
+              scanner.stop().then(() => {
+                if (cancelled) return;
+                scannerRef.current = null;
+                onOpenChange(false);
+                router.push(path);
+              });
+            } else {
+              setError("To nie jest link z naszej strony.");
+            }
+          },
+          () => {
+            // scan error (no QR in frame) – ignore
           }
-        }, () => {
-          // scan error (no QR in frame) – ignore
-        })
+        )
         .catch((err: Error) => {
           if (cancelled) return;
-          setCameraError(
-            err?.message?.includes("NotAllowedError") || err?.name === "NotAllowedError"
-              ? "Brak dostępu do kamery. Zezwól na użycie kamery w ustawieniach przeglądarki."
-              : "Nie udało się uruchomić kamery."
-          );
+
+          console.error("[QrScanner] Camera error", err.name, err.message);
+
+          const name = err.name;
+          let message: string;
+
+          if (name === "NotAllowedError" || name === "SecurityError") {
+            message =
+              "Brak dostępu do kamery. Zezwól na użycie kamery dla tej strony w ustawieniach przeglądarki lub systemu.";
+          } else if (name === "NotFoundError" || name === "OverconstrainedError") {
+            message =
+              "Nie znaleziono odpowiedniej kamery. Upewnij się, że urządzenie ma aparat i że nie jest on blokowany przez system.";
+          } else if (name === "NotReadableError" || name === "TrackStartError") {
+            message =
+              "Nie udało się uzyskać dostępu do kamery. Spróbuj ponownie uruchomić przeglądarkę lub urządzenie.";
+          } else {
+            message =
+              "Nie udało się uruchomić kamery (typ błędu: " +
+              (name || "nieznany") +
+              "). Sprawdź uprawnienia do kamery dla tej strony.";
+          }
+
+          setCameraError(message);
         });
     };
 
