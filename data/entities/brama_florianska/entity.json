@@ -2,7 +2,7 @@
   "id": "brama_florianska",
   "type": "place",
   "name": "Brama Floriańska",
-  "shortDescription": "Gotycka brama miejska z XIV wieku, część średniowiecznych fortyfikacji Krakowa.",
+  "shortDescription": "Najważniejsza zachowana brama miejska Krakowa — gotycka część średniowiecznych fortyfikacji i początek Drogi Królewskiej.",
   "geo": { "lat": 50.0657, "lng": 19.9412 },
   "tags": ["zabytek", "architektura", "historia"],
   "mediaIds": ["img_root"],

@@ -1,0 +1,22 @@
+{
+  "id": "cult_wspolczesnosc_rynek",
+  "subjectEntityId": "rynek_glowny",
+  "title": "Rynek dzisiaj: spotkania i wydarzenia",
+  "content": "Współczesny Rynek Główny zachował funkcję centralnej przestrzeni wspólnej. To miejsce spotkań, spacerów i obserwowania miejskiego życia, ale też punkt, w którym naturalnie gromadzą się wydarzenia kulturalne. Rynek łączy codzienną obecność mieszkańców z napływem gości i turystów, dzięki czemu nie jest „muzeum pod chmurką”, lecz żywą częścią miasta. Ta ciągłość — od średniowiecznego centrum handlu do dzisiejszej przestrzeni publicznej — sprawia, że rynek wciąż działa jak serce Krakowa.",
+  "importance": 78,
+  "thematicScores": {
+    "culture": 88,
+    "history": 70
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co sprawia, że rynek wciąż żyje?",
+  "variants": {
+    "children": {
+      "title": "Rynek w naszych czasach",
+      "content": "Dzisiaj Rynek Główny nadal jest centralnym miejscem w Krakowie. Ludzie tu spacerują, spotykają się i oglądają miejskie życie, a często odbywają się też wydarzenia kulturalne. Rynek łączy mieszkańców i gości z innych miejsc, więc nie jest tylko „zabytkiem”, ale żywą częścią miasta. Ta ciągłość — od średniowiecznego handlu do dzisiejszej przestrzeni publicznej — sprawia, że rynek wciąż jest sercem Krakowa."
+    },
+    "casual": {
+      "content": "Współczesny Rynek Główny dalej robi za centralną przestrzeń wspólną. Spotkania, spacery, patrzenie jak miasto żyje — wszystko tu jest, a do tego często wpadają wydarzenia kulturalne. Mieszkańcy mieszają się z gośćmi i turystami, więc to nie jest „muzeum pod chmurką”, tylko żywa część Krakowa. I ta ciągłość — od średniowiecznego handlu do dzisiejszej przestrzeni publicznej — sprawia, że rynek nadal działa jak serce miasta."
+    }
+  }
+}

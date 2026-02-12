@@ -15,7 +15,10 @@
   "variants": {
     "children": {
       "title": "Z czego zrobiono Bramę?",
-      "content": "Dół bramy zbudowano z kamienia — z wapienia, który wydobywano niedaleko. Wyżej jest cegła, żeby było lżej. Ściany na dole mają ponad 2 metry grubości! W środku były drewniane stropy. Tak budowano w średniowieczu — kamień i cegła razem dają mocną, stabilną budowlę."
+      "content": "Dół bramy zbudowano z kamienia — z lokalnego wapienia, który jest trwały i łatwy do obróbki. Wyżej użyto cegły, żeby cała konstrukcja była lżejsza. Ściany na dole mają ponad 2 metry grubości! W środku były drewniane stropy, które później wzmacniano podczas restauracji. Takie łączenie kamienia i cegły dawało mocną, stabilną budowlę — typową dla krakowskich budowli obronnych."
+    },
+    "casual": {
+      "content": "Na dole brama stoi na lokalnym wapieniu — trwałym i łatwym do obrobienia kamieniu. Wyżej poszła cegła, bo jest lżej, a i tak trzyma. W przyziemiu mury mają ponad 2 metry grubości, więc to nie jest żadna cienka ścianka. W środku były drewniane stropy, potem wzmacniane przy restauracjach. Ten miks materiałów robi hybrydę: stabilną, mocną konstrukcję typową dla krakowskich budowli obronnych."
     }
   }
 }

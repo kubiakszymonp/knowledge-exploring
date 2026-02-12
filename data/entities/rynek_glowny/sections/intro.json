@@ -3,6 +3,16 @@
   "subjectEntityId": "rynek_glowny",
   "title": "O Rynku Głównym",
   "content": "Rynek Główny w Krakowie to jeden z największych średniowiecznych placów Europy. Wytyczony w 1257 roku przy lokacji miasta, do dziś pozostaje sercem Krakowa. Otaczają go kamienice, Sukiennice i kościół Mariacki.",
-  "importance": 80,
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "importance": 100,
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Dlaczego to serce Krakowa od XIII wieku?",
+  "variants": {
+    "children": {
+      "title": "Rynek Główny — co tu jest?",
+      "content": "Rynek Główny w Krakowie to jeden z największych średniowiecznych placów Europy. Wytyczono go w 1257 roku przy lokacji miasta (czyli gdy Kraków dostał nowe prawa i plan). Do dziś jest sercem Krakowa. Wokół stoją kamienice, Sukiennice i kościół Mariacki."
+    },
+    "casual": {
+      "content": "Rynek Główny w Krakowie to jeden z największych średniowiecznych placów Europy. Wytyczony w 1257 roku przy lokacji miasta, do dziś jest sercem Krakowa. Wokół masz kamienice, Sukiennice i kościół Mariacki — klasyk, ziomuś. Kurde, to jest widok."
+    }
+  }
 }

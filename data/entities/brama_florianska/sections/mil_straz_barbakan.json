@@ -10,5 +10,15 @@
   "thematicScores": {
     "military": 95
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Jak działała straż i po co dobudowano Barbakan?",
+  "variants": {
+    "children": {
+      "title": "Strażnicy i Barbakan",
+      "content": "Strażnicy kontrolowali wjazdy, pobierali cła i w razie ataku bronili dostępu do miasta. Na górnych kondygnacjach były stanowiska dla łuczników, kuszników, a później strzelców. Brama była miejscem codziennej pracy, ale też punktem narażonym na ataki. W XV wieku dobudowano Barbakan jako wysunięte przedbramie, połączone z Bramą Floriańską krytym przejściem. Barbakan przyjmował pierwszy impet ataku, a napastnicy musieli przejść długi, ciasny korytarz, zanim dotarli do bramy. Dzięki temu krakowskie fortyfikacje były wyjątkowo skuteczne."
+    },
+    "casual": {
+      "content": "Strażnicy pilnowali wjazdów, pobierali cła i w razie ataku bronili dostępu do miasta. Na górnych kondygnacjach mieli stanowiska: najpierw łucznicy i kusznicy, później strzelcy. Na co dzień robota jak robota, ale w razie czego to był punkt narażony na ataki. W XV wieku dobudowano Barbakan jako wysunięte przedbramie, połączone z Bramą Floriańską krytym przejściem. Barbakan brał na klatę pierwszy impet, a napastnicy musieli przemęczyć długi, ciasny korytarz, zanim w ogóle dobrali się do bramy. Ten system robił z krakowskich fortyfikacji naprawdę skuteczną ochronę."
+    }
+  }
 }

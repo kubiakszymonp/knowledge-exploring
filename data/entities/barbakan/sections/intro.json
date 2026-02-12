@@ -3,6 +3,16 @@
   "subjectEntityId": "barbakan",
   "title": "O Barbakanie",
   "content": "Barbakan krakowski z końca XV wieku to unikalny przykład gotyckiej architektury obronnej. Połączony był z Bramą Floriańską mostem nad fosą. Dziś służy jako oddział Muzeum Historycznego i scena wydarzeń kulturalnych.",
-  "importance": 85,
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "importance": 100,
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Czym jest Barbakan i dlaczego był tak ważny?",
+  "variants": {
+    "children": {
+      "title": "Co to jest Barbakan?",
+      "content": "Barbakan krakowski z końca XV wieku to unikalny przykład gotyckiej architektury obronnej (czyli budowli do obrony). Był połączony z Bramą Floriańską mostem nad fosą (fosą nazywano rów, często z wodą, przy murach). Dziś Barbakan jest oddziałem Muzeum Historycznego i miejscem wydarzeń kulturalnych."
+    },
+    "casual": {
+      "content": "Barbakan krakowski z końca XV wieku to unikalny przykład gotyckiej architektury obronnej. Był połączony z Bramą Floriańską mostem nad fosą, więc działało to jak przedpole bramy. A dziś? Robi za oddział Muzeum Historycznego i scenę wydarzeń kulturalnych — taka obrona na pełnym chillku, ziomuś. Kurde, jak czasy się zmieniają."
+    }
+  }
 }

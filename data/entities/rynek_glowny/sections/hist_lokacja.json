@@ -1,0 +1,22 @@
+{
+  "id": "hist_lokacja_rynek",
+  "subjectEntityId": "rynek_glowny",
+  "title": "Lokacja 1257 i plan miasta",
+  "content": "Rynek Główny wytyczono w 1257 roku, kiedy Kraków lokowano na prawie miejskim i porządkowano jego układ przestrzenny. Plac stał się punktem odniesienia dla całej organizacji Starego Miasta: to tu krzyżowały się drogi, tu skupiał się handel, tu ogłaszano decyzje i organizowano uroczystości. W średniowieczu rynek był nie tylko miejscem zakupów, ale też „centrum informacyjnym” i sercem życia publicznego, które łączyło funkcje gospodarcze, administracyjne i reprezentacyjne.",
+  "importance": 92,
+  "thematicScores": {
+    "history": 95,
+    "culture": 70
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co oznacza lokacja i czemu rynek był kluczowy?",
+  "variants": {
+    "children": {
+      "title": "Dlaczego wytyczono rynek w 1257 roku?",
+      "content": "Rynek Główny wytyczono w 1257 roku, gdy Kraków lokowano na prawie miejskim (czyli ustalano nowe zasady miasta i jego plan). Plac stał się punktem odniesienia dla całego Starego Miasta: tu krzyżowały się drogi, tu skupiał się handel, tu ogłaszano ważne decyzje i robiono uroczystości. W średniowieczu rynek był nie tylko miejscem zakupów, ale też centrum życia publicznego, łącząc gospodarkę, administrację i reprezentację."
+    },
+    "casual": {
+      "content": "Rynek Główny wytyczono w 1257 roku, kiedy Kraków lokowano na prawie miejskim i układano miasto „na czysto”. Ten plac był potem punktem odniesienia dla całego Starego Miasta: drogi się tu schodziły, handel się tu kręcił, decyzje się tu ogłaszało, uroczystości też tu wpadały. W średniowieczu rynek to nie były tylko zakupy — to było centrum życia publicznego: gospodarka, administracja i reprezentacja w jednym miejscu."
+    }
+  }
+}

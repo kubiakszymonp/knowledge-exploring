@@ -1,0 +1,22 @@
+{
+  "id": "cur_ciekawostki_barbakan",
+  "subjectEntityId": "barbakan",
+  "title": "Ciekawostki i symbolika",
+  "content": "Barbakan jest dziś nie tylko zabytkiem architektury obronnej, ale też rozpoznawalnym symbolem dawnego Krakowa. Jego masywna forma i czytelna logika fortyfikacji sprawiają, że łatwo wyobrazić sobie, jak wyglądała obrona miasta „w praktyce”. To również przykład, jak obiekty stricte militarne mogą z czasem zmieniać funkcję i znaczenie: z narzędzia walki stać się miejscem pamięci, edukacji i miejskiej tożsamości.",
+  "importance": 74,
+  "thematicScores": {
+    "curiosity": 92,
+    "culture": 70
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Dlaczego Barbakan stał się symbolem miasta?",
+  "variants": {
+    "children": {
+      "title": "Co w nim jest ciekawego?",
+      "content": "Barbakan to nie tylko stara budowla, ale też symbol dawnego Krakowa. Jest tak masywny i „obronny” w wyglądzie, że łatwo wyobrazić sobie, jak mogła wyglądać obrona miasta. To także przykład, że budynki mogą zmieniać znaczenie: kiedyś były do walki, a dziś są miejscem pamięci, nauki o historii i ważnym elementem tożsamości miasta."
+    },
+    "casual": {
+      "content": "Barbakan to nie tylko zabytek, ale też mocny symbol dawnego Krakowa. Jest tak masywny i logicznie „obronny”, że od razu wchodzi w głowę, jak to działało w praktyce. I to jest też fajna historia o zmianie roli: coś, co było stricte militarne, z czasem może stać się miejscem pamięci, edukacji i miejskiej tożsamości. Taka przemiana, mordeczko."
+    }
+  }
+}

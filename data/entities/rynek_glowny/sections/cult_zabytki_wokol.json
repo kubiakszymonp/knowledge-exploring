@@ -1,0 +1,22 @@
+{
+  "id": "cult_zabytki_wokol_rynek",
+  "subjectEntityId": "rynek_glowny",
+  "title": "Zabytki wokół rynku",
+  "content": "Rynek Główny jest otoczony zabudową, która opowiada historię miasta poprzez architekturę i funkcje budynków. W centrum znajduje się bryła Sukiennic — symbol handlu i miejskości. Tuż obok wznosi się kościół Mariacki, jeden z najbardziej rozpoznawalnych punktów Krakowa. W przestrzeni rynku obecne są także ślady dawnych instytucji miejskich i miejsca, które przez wieki porządkowały życie publiczne. Dzięki temu rynek działa jak „skondensowana opowieść”: w jednym miejscu spotykają się religia, handel, władza i codzienność.",
+  "importance": 84,
+  "thematicScores": {
+    "culture": 90,
+    "curiosity": 78
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co warto wypatrzyć dookoła, zanim ruszysz dalej?",
+  "variants": {
+    "children": {
+      "title": "Co stoi przy rynku?",
+      "content": "Rynek Główny otaczają budynki, które pokazują historię Krakowa. W środku stoją Sukiennice — symbol handlu i miasta. Obok jest kościół Mariacki, jeden z najbardziej rozpoznawalnych punktów Krakowa. W przestrzeni rynku widać też ślady dawnych instytucji miejskich i miejsca ważne dla życia publicznego. Dzięki temu w jednym miejscu spotykają się różne sprawy: religia, handel, władza i codzienność."
+    },
+    "casual": {
+      "content": "Rynek Główny jest otoczony zabudową, która opowiada historię Krakowa samym wyglądem i funkcją budynków. W środku masz Sukiennice — symbol handlu i miejskiego klimatu. Obok stoi kościół Mariacki, totalny klasyk. W przestrzeni rynku są też ślady dawnych miejskich instytucji i miejsc, które porządkowały życie publiczne. W skrócie: w jednym miejscu spotykają się religia, handel, władza i codzienność."
+    }
+  }
+}

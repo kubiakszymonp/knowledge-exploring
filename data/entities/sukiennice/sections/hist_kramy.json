@@ -1,0 +1,22 @@
+{
+  "id": "hist_kramy_sukiennice",
+  "subjectEntityId": "sukiennice",
+  "title": "Od średniowiecznych kramów do hali targowej",
+  "content": "Sukiennice wyrosły z tradycji handlu na Rynku Głównym. W miejscu, gdzie dziś stoi budynek, przez wieki działały średniowieczne kramy, w których sprzedawano towary i spotykali się kupcy. Z czasem potrzebna była bardziej uporządkowana, stała przestrzeń handlowa — tak narodziła się idea hali targowej. Dzięki temu handel w centrum miasta zyskał formę, która była czytelna i wygodna: pod jednym dachem, w sercu Rynku, z jasnym podziałem przestrzeni i stałym rytmem działania.",
+  "importance": 92,
+  "thematicScores": {
+    "history": 92,
+    "culture": 78
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Jak z kramów powstały Sukiennice?",
+  "variants": {
+    "children": {
+      "title": "Jak to się zaczęło?",
+      "content": "Sukiennice wyrosły z tradycji handlu na Rynku Głównym. W miejscu, gdzie dziś stoi budynek, działały średniowieczne kramy, czyli małe stragany i budki. Z czasem potrzebna była bardziej uporządkowana, stała przestrzeń handlowa — tak powstała hala targowa. Dzięki temu handel w centrum miasta miał jedno, stałe miejsce: pod dachem, w sercu rynku, z jasnym podziałem przestrzeni."
+    },
+    "casual": {
+      "content": "Sukiennice wyrosły z handlu na Rynku Głównym. W tym miejscu przez wieki stały średniowieczne kramy, czyli małe stragany, gdzie kupcy kręcili interesy. Z czasem trzeba było to ogarnąć porządniej i na stałe — tak narodziła się hala targowa. Handel dostał czytelną formę: pod jednym dachem, w sercu rynku, bez chaosu i z konkretnym układem. Proste i skuteczne."
+    }
+  }
+}

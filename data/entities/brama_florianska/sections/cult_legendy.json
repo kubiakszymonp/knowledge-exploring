@@ -11,5 +11,15 @@
     "culture": 88,
     "curiosity": 80
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Skąd wzięła się symbolika św. Floriana?",
+  "variants": {
+    "children": {
+      "title": "Legenda o św. Florianie",
+      "content": "Według lokalnej tradycji św. Florian chronił północny odcinek miasta i samą bramę przed pożarami. Jego wizerunek umieszczono na fasadzie jako symbol ochrony i opieki nad strażnikami. Ta legenda nie wiąże się bezpośrednio z budową bramy, ale z czasem została z nią kulturowo spleciona. Dzięki takim dekoracjom brama zyskała wymiar symboliczny i narodowy, a z obiektu stricte militarnego stała się ikoną kultury i historii."
+    },
+    "casual": {
+      "content": "Według lokalnej tradycji św. Florian miał chronić północny odcinek miasta i samą bramę przed pożarami. Dlatego jego wizerunek trafił na fasadę — jako znak ochrony i opieki nad strażnikami. To nie jest historia wprost o tym, jak bramę zbudowano, ale z czasem legenda tak się z nią skleiła kulturowo, że weszła do „pakietu” znaczeń. Takie dekoracje dały bramie wymiar symboliczny i narodowy: z obiektu stricte militarnego zrobiła się ikona kultury i historii."
+    }
+  }
 }

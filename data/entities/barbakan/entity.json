@@ -2,7 +2,7 @@
   "id": "barbakan",
   "type": "place",
   "name": "Barbakan",
-  "shortDescription": "Późnogotycka budowla obronna, przedbramie Bramy Floriańskiej.",
+  "shortDescription": "Późnogotyckie przedbramie Bramy Floriańskiej — masywna budowla obronna dawnego Krakowa.",
   "geo": { "lat": 50.0670, "lng": 19.9412 },
   "tags": ["zabytek", "fortyfikacje"],
   "relatedEntityIds": ["brama_florianska"],

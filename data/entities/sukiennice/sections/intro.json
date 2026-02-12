@@ -3,6 +3,16 @@
   "subjectEntityId": "sukiennice",
   "title": "O Sukiennicach",
   "content": "Sukiennice to renesansowa hala targowa w centrum Rynku. Powstały w miejscu średniowiecznych kramów. Na piętrze mieści się Galeria Sztuki Polskiej XIX wieku.",
-  "importance": 90,
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "importance": 100,
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Skąd się wzięły i czemu są symbolem Krakowa?",
+  "variants": {
+    "children": {
+      "title": "Sukiennice — co to jest?",
+      "content": "Sukiennice to renesansowa hala targowa w centrum Rynku. Powstały w miejscu średniowiecznych kramów (czyli małych straganów i budek handlowych). Na piętrze mieści się Galeria Sztuki Polskiej XIX wieku."
+    },
+    "casual": {
+      "content": "Sukiennice to renesansowa hala targowa w samym środku Rynku. Stanęły w miejscu średniowiecznych kramów, więc handel tu siedzi od dawna. A na piętrze masz Galerię Sztuki Polskiej XIX wieku — taki miks targu i sztuki, mordeczko. Cholera, dobre połączenie."
+    }
+  }
 }

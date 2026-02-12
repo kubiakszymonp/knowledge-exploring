@@ -10,5 +10,15 @@
   "thematicScores": {
     "culture": 90
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co ma wspólnego brama z królewskimi wjazdami i handlem?",
+  "variants": {
+    "children": {
+      "title": "Królowie i kupcy przy bramie",
+      "content": "Przez Bramę Floriańską wjeżdżali królowie, posłowie i uczestnicy uroczystości państwowych. Podczas ceremonii dekorowano ją chorągwiami i zielenią. Była symbolicznym przejściem ze strefy zewnętrznej do reprezentacyjnego wnętrza miasta. Przez bramę wjeżdżali też kupcy i wozacy z Kleparza i Małopolski. W pobliżu działały warsztaty, a kwitł handel. Cechy rzemieślnicze (grupy rzemieślników) miały obowiązki związane z utrzymaniem fragmentów murów. Brama była więc ekonomicznym filtrem i ważnym węzłem ruchu towarowego."
+    },
+    "casual": {
+      "content": "Przez Bramę Floriańską wjeżdżali królowie, posłowie i ludzie od państwowych uroczystości. Na takie akcje bramę stroiło się chorągwiami i zielenią, bo miało być reprezentacyjnie. To było symboliczne przejście z zewnątrz do „eleganckiego” środka miasta. Ale nie tylko koronowane głowy: przez bramę cisnęli też kupcy i wozacy z Kleparza i Małopolski. W okolicy handel kwitł, warsztaty działały, a cechy rzemieślnicze miały obowiązki utrzymania kawałków murów. W praktyce brama działała jak ekonomiczny filtr i ważny węzeł ruchu towarów."
+    }
+  }
 }

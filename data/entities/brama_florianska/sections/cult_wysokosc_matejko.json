@@ -11,5 +11,15 @@
     "culture": 90,
     "curiosity": 85
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Dlaczego brama jest tak wysoka i co zrobił Jan Matejko?",
+  "variants": {
+    "children": {
+      "title": "Wysoka brama i Matejko",
+      "content": "Brama ma około 33 metry wysokości, dzięki czemu jest jedną z najwyższych bram obronnych w tej części Europy. Taka wysokość dawała dobre pole obserwacji i robiła wrażenie potęgi miasta. Konstrukcja łączy masywne kamienne przyziemie z lżejszą ceglaną nadbudową, a w środku są spiralne schody i liczne otwory strzelnicze. Jan Matejko uważał Bramę Floriańską za ważny symbol polskiej historii. Dzięki niemu na fasadzie od strony miasta umieszczono barokowego orła białego, który miał przypominać o tradycji narodowej w czasach zaborów. Te działania dodały bramie kolejną warstwę znaczeń kulturowych."
+    },
+    "casual": {
+      "content": "Brama ma około 33 metry wysokości, więc to jedna z najwyższych bram obronnych w tej części Europy. Taka wysokość dawała lepszą obserwację i robiła wrażenie: „miasto jest potężne”. Konstrukcja to miks: masywne kamienne przyziemie, lżejsza ceglana nadbudowa, do tego spiralne schody i masa otworów strzelniczych. Jan Matejko traktował Bramę Floriańską jak ważny symbol polskiej historii. To dzięki niemu od strony miasta pojawił się barokowy orzeł biały — przypominajka o tradycji narodowej w okresie zaborów. Jego interwencje dorzuciły bramie dodatkową warstwę znaczeń kulturowych."
+    }
+  }
 }

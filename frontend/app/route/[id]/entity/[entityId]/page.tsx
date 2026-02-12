@@ -12,9 +12,7 @@ import {
   getEntities,
 } from "@/lib/api/pilot";
 import type { Entity, Section, Media } from "@/model/pilot/types";
-import type { ContentStyle } from "@/lib/sectionDisplay";
-
-const VALID_STYLES: ContentStyle[] = ["default", "children", "casual"];
+import { CONTENT_STYLES, type ContentStyle } from "@/lib/sectionDisplay";
 
 function orderedPoints(entityIds: string[], entities: Entity[]): Entity[] {
   const byId = new Map(entities.map((e) => [e.id, e]));
@@ -33,8 +31,8 @@ export default function RouteEntityPage() {
   const routeId = params.id;
   const entityId = params.entityId;
 
-  const styleParam = searchParams.get("style") ?? undefined;
-  const contentStyle: ContentStyle = VALID_STYLES.includes(styleParam as ContentStyle)
+  const styleParam = searchParams.get("style");
+  const contentStyle: ContentStyle = CONTENT_STYLES.includes(styleParam as ContentStyle)
     ? (styleParam as ContentStyle)
     : "default";
 

@@ -10,5 +10,15 @@
   "thematicScores": {
     "history": 95
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Dlaczego bramę chciano zburzyć i kto ją uratował?",
+  "variants": {
+    "children": {
+      "title": "Jak brama prawie zniknęła?",
+      "content": "Od XVII wieku wysokie mury przestały pasować do nowych wojen. Artyleria (działa) sprawiała, że były mniej skuteczne, a utrzymanie kosztowało coraz więcej. Gdy mury zaniedbywano, brama traciła znaczenie militarne. Zasypywano fosy (rowy z wodą przy murach), baszty przerabiano na magazyny, a całą linię murów uznawano za przeszkodę w rozwoju miasta. W latach 1817–1830 planowano zburzyć mury i Bramę Floriańską. Uratowano ją dzięki Feliksowi Radwańskiemu, który przekonywał, że zniszczenie bramy oznaczałoby utratę tożsamości Krakowa. Potem zaczęto restaurację i brama stała się symbolem — świadectwem historii i polskiej kultury w czasach zaborów."
+    },
+    "casual": {
+      "content": "Od XVII wieku klasyczne wysokie mury zaczęły odstawać od nowych realiów wojny. Artyleria robiła swoje — mury były mniej skuteczne, a utrzymanie kosztowało coraz więcej. Jak to bywa, zaniedbania rosły, więc brama traciła znaczenie militarne. Fosy zasypywano, baszty robiły za magazyny, a cała linia murów była traktowana jak przeszkoda w rozwoju miasta. Mało brakowało, kurde: w latach 1817–1830 plan był taki, żeby zburzyć mury i Bramę Floriańską. Ocalono ją dzięki Feliksowi Radwańskiemu, który mówił wprost, że zniszczenie bramy to utrata tożsamości Krakowa. Ruszyła restauracja i brama dostała rolę symbolu — świadectwa historii i polskiej kultury w czasie zaborów."
+    }
+  }
 }

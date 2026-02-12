@@ -1,0 +1,22 @@
+{
+  "id": "arch_konstrukcja_barbakan",
+  "subjectEntityId": "barbakan",
+  "title": "Konstrukcja i rozwiązania obronne",
+  "content": "Barbakan zaprojektowano jako masywną budowlę obronną o układzie podporządkowanym walce. Grube mury i liczne otwory strzelnicze pozwalały prowadzić obronę z różnych poziomów. Okrągły rzut budowli ułatwiał kontrolę otoczenia i ograniczał „martwe pola”, czyli miejsca trudne do ostrzału. Ważną rolę pełniła też fosa oraz połączenie z Bramą Floriańską, dzięki czemu obrońcy mogli organizować obronę warstwową, a nie opierać jej tylko na jednym punkcie.",
+  "importance": 86,
+  "thematicScores": {
+    "architecture": 88,
+    "military": 90
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co w jego budowie pomagało w obronie?",
+  "variants": {
+    "children": {
+      "title": "Jak był zbudowany Barbakan?",
+      "content": "Barbakan zaprojektowano jako bardzo mocną budowlę do obrony. Grube mury i liczne otwory strzelnicze pozwalały bronić się z różnych poziomów. Okrągły kształt pomagał obserwować otoczenie i zmniejszał „martwe pola”, czyli miejsca, w które trudno było celować. Ważna była też fosa oraz połączenie z Bramą Floriańską — dzięki temu obrona mogła być warstwowa, a nie oparta tylko na jednym miejscu."
+    },
+    "casual": {
+      "content": "Barbakan to nie była ozdóbka, tylko masywna obronna bestia. Grube mury i masa otworów strzelniczych pozwalały bronić się z różnych poziomów. Okrągły kształt ułatwiał ogarnięcie terenu dookoła i ograniczał „martwe pola”, czyli miejsca, których nie da się sensownie ostrzelać. Do tego fosa i połączenie z Bramą Floriańską, więc obrona mogła być warstwowa, a nie wszystko na jedną kartę."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cur_symbol_sukiennice",
+  "subjectEntityId": "sukiennice",
+  "title": "Sukiennice jako symbol Rynku",
+  "content": "Sukiennice są jednym z najbardziej rozpoznawalnych znaków Krakowa, bo łączą to, co w mieście najłatwiej zobaczyć i zrozumieć: historię handlu, centralną przestrzeń Rynku oraz charakterystyczną architekturę. Jako budynek „w środku placu” skupiają uwagę i porządkują wyobrażenie o Krakowie — nawet dla osób, które są tu pierwszy raz. To symbol nie dlatego, że jest odizolowany, ale dlatego, że jest w samym centrum życia miasta i od wieków współtworzy jego rytm.",
+  "importance": 78,
+  "thematicScores": {
+    "curiosity": 88,
+    "culture": 82
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Czemu to właśnie Sukiennice wszyscy kojarzą z Krakowem?",
+  "variants": {
+    "children": {
+      "title": "Dlaczego są takie słynne?",
+      "content": "Sukiennice to jeden z najbardziej rozpoznawalnych symboli Krakowa. Łączą historię handlu, centralne miejsce na Rynku i charakterystyczny wygląd. Ponieważ stoją w środku placu, łatwo je zobaczyć i zapamiętać — nawet gdy ktoś jest w Krakowie pierwszy raz. Są symbolem, bo są w centrum życia miasta i od wieków tworzą jego rytm."
+    },
+    "casual": {
+      "content": "Sukiennice to jeden z tych widoków, które każdy kojarzy z Krakowem. Masz tu historię handlu, środek Rynku i charakterystyczną architekturę w jednym. Stoją w samym centrum placu, więc automatycznie skupiają uwagę i porządkują wyobrażenie o mieście — nawet jak jesteś tu pierwszy raz. To symbol nie dlatego, że jest odcięty od życia, tylko dlatego, że od wieków jest jego częścią."
+    }
+  }
+}

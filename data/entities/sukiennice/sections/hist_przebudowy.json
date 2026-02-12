@@ -1,0 +1,22 @@
+{
+  "id": "hist_przebudowy_sukiennice",
+  "subjectEntityId": "sukiennice",
+  "title": "Przebudowy i trwanie symbolu",
+  "content": "Wielowiekowa historia Sukiennic oznaczała także zmiany: remonty, modernizacje i działania konserwatorskie, które pozwalały utrzymać budynek w dobrym stanie i dostosowywać go do kolejnych epok. Choć zmieniały się potrzeby miasta i sposób handlu, Sukiennice zachowywały swoją rolę w przestrzeni Rynku: jako punkt orientacyjny, miejsce skupiające ruch i rozpoznawalny znak Krakowa. Dzięki temu ich historia nie jest tylko opowieścią o jednym momencie, ale o ciągłości — o tym, jak ważne miejsce potrafi trwać, nawet gdy zmienia się jego funkcja i otoczenie.",
+  "importance": 84,
+  "thematicScores": {
+    "history": 88,
+    "culture": 80
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Jak budynek zmieniał się, a jednak pozostał ten sam w roli?",
+  "variants": {
+    "children": {
+      "title": "Dlaczego przetrwały tyle lat?",
+      "content": "Sukiennice mają bardzo długą historię, więc musiały przechodzić remonty i naprawy, żeby nadal dobrze wyglądać i działać. Zmieniały się czasy i sposób handlu, ale Sukiennice wciąż były ważne na Rynku: pomagały się zorientować, skupiały ruch i były rozpoznawalnym znakiem Krakowa. Ich historia to opowieść o ciągłości — o tym, że ważne miejsce może trwać, nawet gdy zmienia się jego funkcja i otoczenie."
+    },
+    "casual": {
+      "content": "Sukiennice mają za sobą wieki, więc wiadomo — remonty, modernizacje i konserwacje musiały się dziać, żeby budynek trzymał formę. Czasy i handel się zmieniały, ale rola w przestrzeni Rynku została: punkt orientacyjny, miejsce, gdzie zbiera się ruch, rozpoznawalny znak Krakowa. To nie jest historia jednego momentu, tylko ciągłości — jak ważne miejsce potrafi trwać, nawet gdy funkcja i otoczenie się zmieniają."
+    }
+  }
+}

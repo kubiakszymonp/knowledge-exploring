@@ -1,0 +1,22 @@
+{
+  "id": "cult_galeria_sukiennice",
+  "subjectEntityId": "sukiennice",
+  "title": "Galeria Sztuki Polskiej XIX wieku",
+  "content": "Na piętrze Sukiennic mieści się Galeria Sztuki Polskiej XIX wieku, która zmienia sposób odbioru tego miejsca. Budynek, kojarzony z handlem i miejskim ruchem, staje się jednocześnie przestrzenią spotkania ze sztuką. Ta dwuznaczność jest charakterystyczna dla Sukiennic: parter przypomina o roli gospodarczej Rynku, a wyższa kondygnacja o ambicjach kulturowych miasta. Dzięki temu obiekt łączy dwie opowieści — o codzienności i o kulturze — w jednym, rozpoznawalnym punkcie Krakowa.",
+  "importance": 86,
+  "thematicScores": {
+    "culture": 95,
+    "curiosity": 78
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Jak to możliwe, że nad targiem jest galeria sztuki?",
+  "variants": {
+    "children": {
+      "title": "Sztuka na piętrze",
+      "content": "Na piętrze Sukiennic mieści się Galeria Sztuki Polskiej XIX wieku. Dzięki temu to miejsce nie kojarzy się tylko z handlem, ale też ze sztuką. Sukiennice mają więc dwa „poziomy historii”: parter przypomina o roli Rynku w handlu, a wyżej można oglądać obrazy i uczyć się o kulturze. W jednym budynku spotykają się codzienność i kultura."
+    },
+    "casual": {
+      "content": "Na piętrze Sukiennic jest Galeria Sztuki Polskiej XIX wieku, więc to miejsce ma podwójny klimat. Z jednej strony handel i ruch miasta, z drugiej — sztuka. I to jest właśnie charakter Sukiennic: parter przypomina o gospodarczym sercu rynku, a wyżej wchodzisz w kulturę i ambicje miasta. Dwie opowieści w jednym, bardzo rozpoznawalnym punkcie Krakowa."
+    }
+  }
+}

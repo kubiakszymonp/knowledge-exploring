@@ -10,5 +10,15 @@
   "thematicScores": {
     "history": 95
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Skąd się wzięła brama i po co była potrzebna?",
+  "variants": {
+    "children": {
+      "title": "Jak i po co powstała brama?",
+      "content": "Brama powstała w końcu XIII wieku, gdy Kraków odbudowywano po najazdach tatarskich. Razem z murami i ponad 40 basztami (baszta to wieża w murach) tworzyła jeden z najnowocześniejszych systemów obronnych w regionie. Miała dwie role: militarną i administracyjną. Sprawdzano tu ruch kupców, pobierano cła (opłaty za wjazd i towary) i zapisywano przyjezdnych. Na początku brama była niższa i surowsza, bo liczyła się przede wszystkim obrona północnej strony miasta."
+    },
+    "casual": {
+      "content": "Brama powstała w końcu XIII wieku, kiedy Kraków ogarniał się po najazdach tatarskich. Razem z murami i ponad 40 basztami tworzyła jeden z najnowocześniejszych systemów obronnych w okolicy. Robota była podwójna: militarka i administracja. Tu się pilnowało ruchu kupców, brało cła i rejestrowało przyjezdnych. Na start brama była niższa, surowsza i totalnie podporządkowana obronie północnego odcinka miasta — no bo wtedy liczyło się bezpieczeństwo."
+    }
+  }
 }

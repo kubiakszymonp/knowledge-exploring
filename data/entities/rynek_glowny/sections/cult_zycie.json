@@ -1,0 +1,22 @@
+{
+  "id": "cult_zycie_rynek",
+  "subjectEntityId": "rynek_glowny",
+  "title": "Życie codzienne, handel i uroczystości",
+  "content": "Przez stulecia Rynek Główny był sceną codzienności: sprzedaży towarów, spotkań i rozmów, ale też wielkich wydarzeń. To tutaj koncentrował się handel i przepływ informacji, a przestrzeń placu pozwalała organizować jarmarki, pochody i ceremonie. Rynek łączył więc funkcję praktyczną z reprezentacyjną: był miejscem pracy i zakupów, a jednocześnie przestrzenią, w której miasto „pokazywało się” światu. Taki charakter pozostał do dziś — zmieniły się formy, ale rola serca życia miejskiego nadal jest czytelna.",
+  "importance": 86,
+  "thematicScores": {
+    "culture": 92,
+    "history": 82
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co się tu działo na co dzień, a co od święta?",
+  "variants": {
+    "children": {
+      "title": "Rynek: codzienność i święto",
+      "content": "Przez stulecia Rynek Główny był miejscem codziennego życia: sprzedaży towarów, spotkań i rozmów, ale też ważnych wydarzeń. Tu skupiał się handel i informacje, a duża przestrzeń pozwalała robić jarmarki, pochody i ceremonie. Rynek był więc jednocześnie praktyczny (zakupy i praca) i reprezentacyjny (miasto pokazywało się światu). Ten charakter widać także dziś — zmieniły się formy, ale rynek nadal jest sercem życia miejskiego."
+    },
+    "casual": {
+      "content": "Przez stulecia Rynek Główny był sceną codzienności: handel, spotkania, gadki — wszystko się tu kręciło. A jak było trzeba, to też wielkie wydarzenia: jarmarki, pochody, ceremonie. Tu płynęły towary i informacje, a plac dawał przestrzeń, żeby to ogarnąć. Rynek łączył praktykę z reprezentacją: praca i zakupy, a jednocześnie miasto „pokazywało się” światu. Dziś formy są inne, ale rola serca miasta dalej jest oczywista."
+    }
+  }
+}

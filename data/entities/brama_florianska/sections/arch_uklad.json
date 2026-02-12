@@ -11,5 +11,15 @@
     "architecture": 90,
     "military": 75
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Jak brama była zaprojektowana do obrony?",
+  "variants": {
+    "children": {
+      "title": "Jak broniła się brama?",
+      "content": "Brama miała masywny przejazd zamykany wrotami i żelazną kratą. Nad przejazdem były pomieszczenia straży. Spiralne schody ukryte w grubych murach łączyły piętra, a strzelnice ustawiono tak, żeby bronić podejścia do bramy. Cały układ miał jak najbardziej spowolnić napastnika i ułatwić obronę. W XIX wieku dodano barokowy kartusz z orłem białym z inicjatywy Jana Matejki. Od północy umieszczono też płaskorzeźbę św. Floriana."
+    },
+    "casual": {
+      "content": "Brama miała masywny przejazd, który zamykało się wrotami i żelazną kratą — nie wchodzisz tak po prostu. Nad przejazdem siedziała straż w swoich pomieszczeniach. Spiralne schody w grubości murów łączyły kondygnacje, a strzelnice rozstawiono tak, żeby dało się bronić podejścia do bramy. Układ był pod to skrojony: maksymalnie spowolnić napastnika i ułatwić obronę. A w XIX wieku dorzucono jeszcze barokowy kartusz z orłem białym (z inicjatywy Jana Matejki) i od północy płaskorzeźbę św. Floriana."
+    }
+  }
 }

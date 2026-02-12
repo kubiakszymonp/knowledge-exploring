@@ -1,0 +1,22 @@
+{
+  "id": "mil_system_barbakan",
+  "subjectEntityId": "barbakan",
+  "title": "Obrona warstwowa i spowalnianie ataku",
+  "content": "Największą siłą Barbakanu była logika „obrony w kilku krokach”. Napastnik nie trafiał od razu pod główną bramę, lecz musiał pokonać kolejne przeszkody: podejście, fosa i przejście prowadzące w stronę Bramy Floriańskiej. W tym czasie obrońcy mogli prowadzić ostrzał z bezpieczniejszych pozycji i reagować na zmieniającą się sytuację. Taki układ ograniczał tempo ataku, utrudniał użycie siły w jednym miejscu i zwiększał szanse na odparcie natarcia.",
+  "importance": 88,
+  "thematicScores": {
+    "military": 95,
+    "history": 80
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Dlaczego atakujący mieli tu pod górkę?",
+  "variants": {
+    "children": {
+      "title": "Jak Barbakan utrudniał atak?",
+      "content": "Największą siłą Barbakanu była obrona „na kilka etapów”. Napastnik nie dochodził od razu do głównej bramy, tylko musiał pokonać kolejne przeszkody: podejście, fosę i przejście prowadzące w stronę Bramy Floriańskiej. W tym czasie obrońcy mogli bronić się z bezpieczniejszych miejsc i reagować na to, co robi przeciwnik. Taki układ spowalniał atak, utrudniał skupienie sił w jednym punkcie i zwiększał szanse na obronę."
+    },
+    "casual": {
+      "content": "Największy trik Barbakanu to obrona „na raty”. Napastnik nie wpadał od razu pod główną bramę — najpierw musiał ogarnąć podejście, fosę i przejście prowadzące w stronę Bramy Floriańskiej. A w tym czasie obrońcy mogli spokojniej prowadzić ostrzał z lepszych, bezpieczniejszych pozycji i reagować na sytuację. Taki układ robił jedno: zabijał tempo ataku, utrudniał zebranie mocy w jednym miejscu i zwiększał szanse, że natarcie się rozsypie."
+    }
+  }
+}

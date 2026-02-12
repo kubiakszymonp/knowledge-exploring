@@ -11,5 +11,15 @@
     "history": 90,
     "architecture": 85
   },
-  "createdAt": "2025-01-01T00:00:00.000Z"
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "teaser": "Co zmieniło się w gotyku i renesansie?",
+  "variants": {
+    "children": {
+      "title": "Jak brama rosła i się zmieniała?",
+      "content": "W XIV–XV wieku bramę mocno podwyższono i nadano jej gotycki wygląd: ostrołukowy przejazd, wąskie strzelnice, masywne mury i wyraźny podział pięter. Z tego czasu pochodzi jej monumentalna forma, widoczna z daleka jako znak potęgi miasta. Podwyższenie bramy było też kwestią prestiżu — Kraków był wtedy ważnym centrum politycznym i gospodarczym, a przez bramę wjeżdżali królowie i ważne delegacje. W renesansie bramę unowocześniano: dodano elegantsze obramienia, poprawiono dachy, wzmocniono ganek obronny i usprawniono odprowadzanie wody. Straż miała wygodniejsze pomieszczenia, a brama coraz bardziej łączyła obronę z funkcją reprezentacyjną."
+    },
+    "casual": {
+      "content": "W XIV–XV wieku bramę solidnie podwyższono i dostała gotycki vibe: ostrołukowy przejazd, wąskie strzelnice, masywne mury i podział kondygnacji jak trzeba. Stąd ta jej monumentalna forma, którą widać z daleka — czysty sygnał: „miasto ma moc”. Podwyższenie to był też prestiż, bo Kraków był wtedy centrum polityczne i gospodarcze, a przez bramę wjeżdżali królowie i ważne delegacje. W renesansie bramę dopieszczono i zmodernizowano: bardziej eleganckie obramienia, poprawione dachy, wzmocniony ganek obronny i lepsze odprowadzanie wody. Straż dostała wygodniejsze pomieszczenia, a brama coraz mocniej łączyła obronę z reprezentacją."
+    }
+  }
 }
