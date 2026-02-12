@@ -110,7 +110,7 @@ export function QrScanner({ open, onOpenChange }: QrScannerProps) {
           } else {
             message =
               "Nie udało się uruchomić kamery (typ błędu: " +
-              (name || "nieznany") +
+              (JSON.stringify(err) || "nieznany") +
               "). Sprawdź uprawnienia do kamery dla tej strony.";
           }
 
